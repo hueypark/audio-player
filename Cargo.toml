@@ -3,6 +3,15 @@ name = "audio-player"
 version = "0.1.0"
 edition = "2021"
 
+# The app is the workspace root; `tools/feedsync` is a native CLI used by CI to
+# regenerate feeds.json. `default-members = ["."]` keeps bare `cargo`/`trunk`
+# builds (wasm32) scoped to the app — feedsync's native deps are built only when
+# requested explicitly (e.g. `cargo build -p feedsync`).
+[workspace]
+members = ["tools/feedsync"]
+default-members = ["."]
+resolver = "2"
+
 [dependencies]
 leptos = { version = "0.8", features = ["csr"] }
 serde = { version = "1", features = ["derive"] }
