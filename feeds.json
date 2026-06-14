@@ -1,0 +1,17 @@
+{
+  "podcasts": [
+    {
+      "title": "Demo Podcast (placeholder — 실제 피드로 교체하세요)",
+      "episodes": [
+        {
+          "title": "Episode 1 — SoundHelix Song 1",
+          "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        },
+        {
+          "title": "Episode 2 — SoundHelix Song 2",
+          "audio_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+        }
+      ]
+    }
+  ]
+}

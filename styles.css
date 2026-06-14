@@ -1,0 +1,66 @@
+:root {
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #111;
+  color: #eee;
+  padding-bottom: 104px;
+}
+header {
+  position: sticky;
+  top: 0;
+  padding: 16px;
+  background: #111;
+  z-index: 1;
+}
+h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+main {
+  padding: 0 16px;
+}
+.podcast h2 {
+  font-size: 1.05rem;
+  margin: 20px 0 8px;
+  color: #9cf;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  padding: 12px 8px;
+  border-bottom: 1px solid #222;
+  cursor: pointer;
+}
+li:active {
+  background: #1c1c1c;
+}
+.player {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #181818;
+  border-top: 1px solid #2a2a2a;
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+}
+.now {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 6px;
+  min-height: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+audio {
+  width: 100%;
+}
