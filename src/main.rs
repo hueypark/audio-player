@@ -469,13 +469,43 @@ fn App() -> impl IntoView {
                                                 if playable { "ep-title" } else { "ep-title unplayable" }
                                             }
                                         };
-                                        let btn_label = move || {
+                                        // Saved episodes show a non-interactive "✓ 저장됨" status badge
+                                        // paired with a *separate* destructive ✕ remove button — the
+                                        // check is a status, never a delete affordance. Pre-download:
+                                        // a single ⬇ button; mid-download: a live percent readout.
+                                        let dl_controls = move || {
                                             if let Some(p) = progress.with(|m| m.get(&k_state).copied()) {
-                                                if p < 0 { "…".to_string() } else { format!("{p}%") }
+                                                let label = if p < 0 {
+                                                    "…".to_string()
+                                                } else {
+                                                    format!("{p}%")
+                                                };
+                                                view! { <span class="dl-progress">{label}</span> }.into_any()
                                             } else if downloaded.with(|s| s.contains(&k_state)) {
-                                                "✓".to_string()
+                                                let ep = ep_del.clone();
+                                                view! {
+                                                    <span class="dl-saved">"✓ 저장됨"</span>
+                                                    <button
+                                                        class="dl-btn dl-del"
+                                                        aria-label="오프라인 저장 삭제"
+                                                        on:click=move |_| delete_dl(ep.clone())
+                                                    >
+                                                        "✕"
+                                                    </button>
+                                                }
+                                                    .into_any()
                                             } else {
-                                                "⬇".to_string()
+                                                let ep = ep_dl.clone();
+                                                view! {
+                                                    <button
+                                                        class="dl-btn"
+                                                        aria-label="오프라인 저장 다운로드"
+                                                        on:click=move |_| download(ep.clone())
+                                                    >
+                                                        "⬇"
+                                                    </button>
+                                                }
+                                                    .into_any()
                                             }
                                         };
                                         view! {
@@ -492,21 +522,7 @@ fn App() -> impl IntoView {
                                                 >
                                                     {e.title.clone()}
                                                 </span>
-                                                <button
-                                                    class="dl-btn"
-                                                    on:click=move |_| {
-                                                        if progress.with_untracked(|m| m.contains_key(&key)) {
-                                                            return;
-                                                        }
-                                                        if downloaded.with_untracked(|s| s.contains(&key)) {
-                                                            delete_dl(ep_del.clone());
-                                                        } else {
-                                                            download(ep_dl.clone());
-                                                        }
-                                                    }
-                                                >
-                                                    {btn_label}
-                                                </button>
+                                                {dl_controls}
                                             </li>
                                         }
                                     }

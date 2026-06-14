@@ -69,6 +69,31 @@ li {
 .dl-btn:active {
   background: #262626;
 }
+/* Downloaded = a passive status badge (never a delete affordance) ... */
+.dl-saved {
+  flex: none;
+  font-size: 0.72rem;
+  color: #6ddf8e;
+  white-space: nowrap;
+}
+/* ... paired with a separate, destructive remove button. */
+.dl-del {
+  min-width: 40px;
+  color: #ff9b9b;
+  border-color: #4a2323;
+}
+.dl-del:active {
+  background: #2a1414;
+}
+/* Mid-download percent readout — a status, not a button. */
+.dl-progress {
+  flex: none;
+  min-width: 48px;
+  margin: 6px 4px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9cf;
+}
 .offline-badge {
   margin-left: 10px;
   padding: 2px 8px;
