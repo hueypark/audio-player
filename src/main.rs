@@ -54,7 +54,9 @@ fn App() -> impl IntoView {
     let current = RwSignal::new(String::new());
     let now_title = RwSignal::new(String::new());
 
-    // Load the hand-maintained subscription list once at startup.
+    // Load the generated feeds cache (episodes) once at startup.
+    // (subscriptions.json is the human-edited source; feeds.json is built from it
+    // by tools/feedsync — see DESIGN.md.)
     spawn_local(async move {
         if let Ok(resp) = gloo_net::http::Request::get("feeds.json").send().await {
             if let Ok(feeds) = resp.json::<Feeds>().await {
