@@ -36,12 +36,64 @@ ul {
   padding: 0;
 }
 li {
-  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   border-bottom: 1px solid #222;
+}
+.ep-title {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 4px 12px 8px;
   cursor: pointer;
 }
-li:active {
+.ep-title:active {
   background: #1c1c1c;
+}
+.ep-title.unplayable {
+  color: #666;
+  cursor: default;
+}
+.dl-btn {
+  flex: none;
+  min-width: 48px;
+  height: 36px;
+  margin: 6px 4px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  background: #1c1c1c;
+  color: #9cf;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.dl-btn:active {
+  background: #262626;
+}
+.offline-badge {
+  margin-left: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #3a1d1d;
+  color: #ff9b9b;
+  font-size: 0.75rem;
+  vertical-align: middle;
+}
+.banner {
+  position: sticky;
+  top: 52px;
+  z-index: 1;
+  margin: 0 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #3a2a1d;
+  color: #ffd9a8;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.storage {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 6px;
 }
 .player {
   position: fixed;

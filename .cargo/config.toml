@@ -1,0 +1,10 @@
+# The Media Session API bindings in web-sys are still gated behind the unstable
+# cfg `web_sys_unstable_apis` (a rustc cfg flag, NOT a Cargo feature — so it must
+# live here as a rustflag, not in Cargo.toml). Without it the MediaSession types
+# don't even exist and the app won't compile.
+#
+# Scope it to the wasm target ONLY: a bare [build] rustflags would also apply to
+# the native `tools/feedsync` host build, changing its fingerprint (needless
+# rebuilds) for a flag it doesn't use.
+[target.wasm32-unknown-unknown]
+rustflags = ["--cfg=web_sys_unstable_apis"]
