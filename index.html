@@ -7,9 +7,53 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <title>Podcasts</title>
+
     <link data-trunk rel="rust" data-wasm-opt="z" />
     <link data-trunk rel="copy-file" href="feeds.json" />
     <link data-trunk rel="css" href="styles.css" />
+
+    <!-- PWA assets: copy-file/copy-dir copy verbatim (no content hashing), so
+         sw.js / manifest / icons keep stable URLs the manifest & SW can rely on. -->
+    <link data-trunk rel="copy-file" href="sw.js" />
+    <link data-trunk rel="copy-file" href="manifest.webmanifest" />
+    <link data-trunk rel="copy-dir" href="icons" />
+
+    <!-- Relative hrefs so the one build works at both / (trunk serve) and
+         /audio-player/ (GitHub Pages). -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/icon-192.png" />
+    <meta name="theme-color" content="#111111" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Podcasts" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png" />
   </head>
-  <body></body>
+  <body>
+    <script>
+      // Register the app-shell service worker. Page-relative './sw.js' resolves
+      // to /audio-player/sw.js in prod and /sw.js in dev — same code, both right.
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .catch((e) => console.warn("SW registration failed:", e));
+        });
+
+        // Warm the runtime cache with THIS page's same-origin assets so the very
+        // first visit is already offline-capable (see sw.js "warm-up").
+        const warm = () => {
+          const ctrl = navigator.serviceWorker.controller;
+          if (!ctrl) return;
+          const urls = performance
+            .getEntriesByType("resource")
+            .map((e) => e.name)
+            .filter((u) => u.startsWith(location.origin));
+          ctrl.postMessage({ type: "warm", urls });
+        };
+        navigator.serviceWorker.addEventListener("controllerchange", warm);
+        navigator.serviceWorker.ready.then(warm);
+      }
+    </script>
+  </body>
 </html>
