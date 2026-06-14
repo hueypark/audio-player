@@ -88,6 +88,37 @@ fn load_pos(url: &str) -> f64 {
         .unwrap_or(0.0)
 }
 
+// ---- Last-played episode (survives a page refresh) ---------------------------
+//
+// `pos:{url}` already remembers *where* you were in each episode; these remember
+// *which* episode so a refresh reloads it instead of starting empty. Stored as
+// three plain keys (no escaping, no serde_json) — written together in `play`.
+// `audio_url` stays the identity; title/artist are kept verbatim so the footer
+// and Media Session restore without re-reading feeds.json (works offline too).
+
+fn save_last_played(url: &str, title: &str, artist: &str) {
+    if let Some(s) = storage() {
+        // Write `last:url` LAST as the commit marker: load_last_played keys off
+        // it, so a mid-write quota failure (url never reached) reads as "nothing
+        // saved" rather than a url paired with a blank title/artist.
+        let _ = s.set_item("last:title", title);
+        let _ = s.set_item("last:artist", artist);
+        let _ = s.set_item("last:url", url);
+    }
+}
+
+fn load_last_played() -> Option<(String, String, String)> {
+    let s = storage()?;
+    let url = s
+        .get_item("last:url")
+        .ok()
+        .flatten()
+        .filter(|v| !v.is_empty())?;
+    let title = s.get_item("last:title").ok().flatten().unwrap_or_default();
+    let artist = s.get_item("last:artist").ok().flatten().unwrap_or_default();
+    Some((url, title, artist))
+}
+
 // ---- Media Session (lock-screen metadata + transport controls) --------------
 
 fn media_session() -> Option<MediaSession> {
@@ -259,6 +290,83 @@ fn refresh_downloads(downloaded: RwSignal<HashSet<String>>, storage_used: RwSign
     });
 }
 
+/// On startup, reload the episode that was last played so a refresh keeps the
+/// player populated. Mirrors `play`'s source resolution — a downloaded episode
+/// plays from its IndexedDB blob (works offline), otherwise it streams the
+/// `audio_url` — then lets the `loadedmetadata` handler seek to the saved resume
+/// position. Left PAUSED on purpose: browsers block autoplay without a user
+/// gesture and a refresh shouldn't blast audio; the user taps play to resume.
+///
+/// Two guards keep the async restore from doing harm: it bails if the user has
+/// already started playback while it was resolving the blob (don't stomp their
+/// choice), and it skips entirely when nothing is actually playable (no local
+/// blob and offline) rather than show a card backed by a src that can't load.
+fn restore_last_played(
+    current: RwSignal<String>,
+    now_title: RwSignal<String>,
+    obj_url: RwSignal<Option<String>>,
+) {
+    let Some((key, title, artist)) = load_last_played() else {
+        return;
+    };
+    spawn_local(async move {
+        // Authoritative downloaded check straight from IndexedDB: the
+        // `downloaded` signal may not be populated yet this early, and offline
+        // playback must use the stored blob, never the unreachable network src.
+        let is_downloaded = match JsFuture::from(js_list_downloaded()).await {
+            Ok(v) => js_sys::Array::from(&v)
+                .iter()
+                .any(|i| i.as_string().as_deref() == Some(key.as_str())),
+            Err(_) => false,
+        };
+        // A local blob plays offline; without one (not downloaded, or the blob
+        // is gone/corrupt) we can only stream.
+        let object_url = if is_downloaded {
+            JsFuture::from(js_get_object_url(&key))
+                .await
+                .ok()
+                .and_then(|v| v.as_string())
+        } else {
+            None
+        };
+
+        // The user tapped an episode while we resolved the blob (`current` is
+        // empty until the first play/restore): don't stomp their choice, and
+        // drop the object URL we minted but won't use.
+        if !current.get_untracked().is_empty() {
+            if let Some(u) = object_url {
+                js_revoke_object_url(&u);
+            }
+            return;
+        }
+        // Nothing playable: no local blob and no network. Skip rather than show
+        // a lock-screen card backed by a src that can't load — a doomed offline
+        // fetch (a deleted download, or a stream with the network gone).
+        let offline = web_sys::window()
+            .map(|w| !w.navigator().on_line())
+            .unwrap_or(false);
+        if object_url.is_none() && offline {
+            return;
+        }
+
+        let src = match object_url {
+            Some(u) => {
+                obj_url.set(Some(u.clone()));
+                u
+            }
+            None => key.clone(),
+        };
+        if let Some(audio) = audio_el() {
+            audio.set_src(&src);
+            current.set(key.clone());
+            now_title.set(title.clone());
+            audio.load(); // fires loadedmetadata → seeks to the saved position
+        }
+        set_now_playing(&title, &artist, "icons/icon-512.png");
+        set_playback(false);
+    });
+}
+
 fn fmt_bytes(b: f64) -> String {
     if b >= 1_073_741_824.0 {
         format!("{:.1} GB", b / 1_073_741_824.0)
@@ -319,6 +427,9 @@ fn App() -> impl IntoView {
     });
     refresh_downloads(downloaded, storage_used);
 
+    // Reload the last-played episode (loaded + paused) so a refresh resumes it.
+    restore_last_played(current, now_title, obj_url);
+
     // Play an episode: from IndexedDB (object URL, fully offline) if downloaded,
     // otherwise stream `audio_url` online. `current` stays the audio_url so the
     // resume-position keying is identical on both paths.
@@ -351,6 +462,8 @@ fn App() -> impl IntoView {
                 audio.load();
                 let _ = audio.play();
             }
+            // Remember this as the last-played so a refresh reloads it.
+            save_last_played(&ep.audio_url, &ep.title, &artist);
             set_now_playing(&ep.title, &artist, "icons/icon-512.png");
             set_playback(true);
         });
@@ -565,7 +678,14 @@ fn App() -> impl IntoView {
                     let url = current.get_untracked();
                     if !url.is_empty() {
                         if let Some(a) = audio_el() {
-                            save_pos(&url, a.current_time());
+                            // load() (on play/restore) resets the element and fires a
+                            // timeupdate at currentTime=0 *before* loadedmetadata. Saving
+                            // then would clobber the stored resume position before the
+                            // loadedmetadata seek can read it. Only persist once the media
+                            // actually has a playback position (HAVE_CURRENT_DATA+).
+                            if a.ready_state() >= web_sys::HtmlMediaElement::HAVE_CURRENT_DATA {
+                                save_pos(&url, a.current_time());
+                            }
                         }
                     }
                     update_position_state();

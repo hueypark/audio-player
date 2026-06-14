@@ -35,9 +35,26 @@ GitHub repo ── feeds.json (구독 + 에피소드 = 수동 관리, git이 진
         Leptos/WASM ──┼─ feeds.json fetch → 목록 렌더
                        ├─ HTML5 <audio> 로 원본 CDN URL 스트리밍 (재생은 CORS 무관)
                        └─ localStorage: 에피소드별 재생 위치 저장 / 이어듣기
+                            ├─ pos:{audio_url}      = 에피소드별 재생 위치(초)
+                            └─ last:url|title|artist = 마지막 재생 에피소드
 ```
 
 v1은 **순수 정적 · 서버 0대 · CORS 0** 으로 동작한다.
+
+### 새로고침 후 마지막 재생 에피소드 복원
+- `play()` 가 재생을 시작할 때 `last:url/title/artist` 를 저장하고(`url` 을 **마지막에** 써서
+  커밋 마커로 삼아 중간 실패 시 빈 제목 복원을 막는다), 시작 시 `restore_last_played` 가 이를
+  다시 불러와 플레이어를 채운다. 소스 결정은 `play()` 와 동일 — 다운로드된 에피소드는
+  IndexedDB blob(오프라인 가능), 아니면 `audio_url` 스트리밍 — 이후 `loadedmetadata` 핸들러가
+  `pos:{audio_url}` 위치로 시킹한다. **자동재생은 하지 않는다**(브라우저가 제스처 없는 재생을
+  막고, 새로고침이 소리를 터뜨리면 안 됨) — 일시정지 상태로 복원하고 사용자가 재생을 누른다.
+- 복원은 비동기(blob 해소)라 두 가드를 둔다: 복원 도중 사용자가 다른 에피소드를 누르면
+  그 선택을 덮어쓰지 않고(`current` 가 비어있을 때만 복원), **재생 불가**(blob 없음 + 오프라인)
+  이면 로드 불가한 src 로 잠금화면 카드를 만들지 않도록 통째로 건너뛴다.
+- **주의(이어듣기 클로버 버그):** `load()` 는 엘리먼트를 리셋하며 `loadedmetadata` **이전에**
+  `currentTime=0` 으로 `timeupdate` 를 한 번 쏜다. 이때 위치를 저장하면 시킹 전에 저장된 위치가
+  0 으로 덮어써진다. 그래서 `timeupdate` 저장은 `readyState >= HAVE_CURRENT_DATA` 일 때만 한다
+  (이 가드가 없으면 이어듣기 자체가 깨진다 — play() 경로도 동일).
 
 ## 아키텍처 (v2 — RSS 자동 갱신)
 
