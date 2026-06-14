@@ -1,0 +1,77 @@
+name: Sync feeds
+
+# Regenerate feeds.json from subscriptions.json by fetching the subscribed RSS
+# feeds server-side (no browser CORS limit — git is the cache DB). See DESIGN.md
+# "v2 — RSS 자동 갱신".
+
+on:
+  schedule:
+    # Hourly at :17 — offset from the top of the hour to dodge GitHub's busy
+    # scheduling queue. Scheduled runs may still be delayed by GitHub.
+    - cron: "17 * * * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      # A human edited the subscription list, or the sync logic itself changed.
+      - "subscriptions.json"
+      - "tools/feedsync/**"
+      - ".github/workflows/feedsync.yml"
+
+permissions:
+  contents: write # commit the regenerated feeds.json back to main
+  actions: write # gh workflow run deploy.yml (workflow_dispatch API)
+
+# Serialize runs; never cancel a half-finished commit/push.
+concurrency:
+  group: feedsync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    # Backstop: feedsync sets its own HTTP timeouts, but cap the job too so a
+    # regression can never wedge the hourly schedule (cancel-in-progress is off).
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        # Native host build only — the CLI does not target wasm32.
+
+      - name: Cache cargo + target
+        uses: Swatinem/rust-cache@v2
+        with:
+          # Distinct from deploy.yml's wasm32 cache so they don't evict each other.
+          shared-key: feedsync
+
+      - name: Build feedsync
+        # -p (not --bin) because default-members = ["."] scopes bare cargo to
+        # the app; feedsync must be requested explicitly.
+        run: cargo build --release --locked -p feedsync
+
+      - name: Regenerate feeds.json
+        run: ./target/release/feedsync
+        # Deterministic output: unchanged feeds → byte-identical feeds.json → no commit.
+
+      - name: Commit feeds.json if changed
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "chore(feeds): regenerate feeds.json [skip ci]"
+          file_pattern: feeds.json
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+
+      # A commit pushed with the default GITHUB_TOKEN does NOT auto-trigger other
+      # push workflows (GitHub's recursion guard), so deploy.yml would otherwise
+      # never republish. workflow_dispatch is exempt from that guard, so dispatch
+      # it explicitly — but only when feeds.json actually changed.
+      - name: Redeploy GitHub Pages
+        if: steps.commit.outputs.changes_detected == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main
