@@ -30,6 +30,43 @@ main {
   margin: 20px 0 8px;
   color: #9cf;
 }
+/* The podcast heading doubles as a collapse/expand toggle for its episode list. */
+.podcast-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.podcast-head::before {
+  content: "▾";
+  flex: none;
+  font-size: 0.85em;
+  color: #9cf;
+  transition: transform 0.15s ease;
+}
+.podcast.collapsed .podcast-head::before {
+  transform: rotate(-90deg);
+}
+.podcast-head:focus-visible {
+  outline: 2px solid #9cf;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.podcast-title {
+  flex: 1;
+  min-width: 0;
+}
+/* Episode count — handy while a list is folded shut. */
+.ep-count {
+  flex: none;
+  font-size: 0.72rem;
+  font-weight: normal;
+  color: #777;
+}
+.podcast.collapsed ul {
+  display: none;
+}
 ul {
   list-style: none;
   margin: 0;

@@ -106,6 +106,42 @@ fn load_dur(url: &str) -> f64 {
         .unwrap_or(0.0)
 }
 
+// ---- Collapsed podcasts (which episode lists are folded; survives a refresh) --
+//
+// Mirrors the per-key localStorage pattern (`pos:`/`dur:`): one boolean key per
+// podcast, keyed by title (the same identity used as the <For> key). An absent
+// key == expanded (the default), so a fresh visitor sees every list open.
+
+fn save_collapsed(title: &str, collapsed: bool) {
+    if let Some(s) = storage() {
+        let key = format!("collapsed:{title}");
+        if collapsed {
+            let _ = s.set_item(&key, "1");
+        } else {
+            let _ = s.remove_item(&key);
+        }
+    }
+}
+
+fn load_collapsed(title: &str) -> bool {
+    storage()
+        .and_then(|s| s.get_item(&format!("collapsed:{title}")).ok().flatten())
+        .is_some()
+}
+
+/// Fold/unfold a podcast's episode list and persist the choice. Shared by the
+/// header's click and keyboard (Enter/Space) handlers.
+fn toggle_collapsed(collapsed: RwSignal<HashSet<String>>, title: &str) {
+    collapsed.update(|s| {
+        if s.remove(title) {
+            save_collapsed(title, false);
+        } else {
+            s.insert(title.to_string());
+            save_collapsed(title, true);
+        }
+    });
+}
+
 // ---- Last-played episode (survives a page refresh) ---------------------------
 //
 // `pos:{url}` already remembers *where* you were in each episode; these remember
@@ -444,6 +480,9 @@ fn download_error_msg(reason: &str) -> String {
 #[component]
 fn App() -> impl IntoView {
     let podcasts = RwSignal::new(Vec::<Podcast>::new());
+    // Podcast titles whose episode lists are folded. Seeded from localStorage
+    // when feeds load; the header toggles membership. Absent == expanded.
+    let collapsed = RwSignal::new(HashSet::<String>::new());
     let current = RwSignal::new(String::new());
     let now_title = RwSignal::new(String::new());
     // Live position/duration (seconds) of the *current* episode, feeding its list
@@ -496,6 +535,14 @@ fn App() -> impl IntoView {
                     }
                 }
                 saved_frac.set(fracs);
+                // Restore which podcast lists were folded last time.
+                let mut folded = HashSet::new();
+                for p in &feeds.podcasts {
+                    if load_collapsed(&p.title) {
+                        folded.insert(p.title.clone());
+                    }
+                }
+                collapsed.set(folded);
                 podcasts.set(feeds.podcasts);
             }
         }
@@ -645,10 +692,37 @@ fn App() -> impl IntoView {
                 key=|p| p.title.clone()
                 children=move |p: Podcast| {
                     let eps = p.episodes.clone();
+                    let ep_count = eps.len();
                     let artist = p.title.clone();
+                    let title = p.title.clone();
+                    let t_class = title.clone();
+                    let t_aria = title.clone();
+                    let t_click = title.clone();
+                    let t_key = title.clone();
                     view! {
-                        <section class="podcast">
-                            <h2>{p.title}</h2>
+                        <section
+                            class="podcast"
+                            class:collapsed=move || collapsed.with(|s| s.contains(&t_class))
+                        >
+                            <h2
+                                class="podcast-head"
+                                role="button"
+                                tabindex="0"
+                                aria-expanded=move || {
+                                    (!collapsed.with(|s| s.contains(&t_aria))).to_string()
+                                }
+                                on:click=move |_| toggle_collapsed(collapsed, &t_click)
+                                on:keydown=move |ev| {
+                                    let k = ev.key();
+                                    if k == "Enter" || k == " " {
+                                        ev.prevent_default();
+                                        toggle_collapsed(collapsed, &t_key);
+                                    }
+                                }
+                            >
+                                <span class="podcast-title">{title}</span>
+                                <span class="ep-count">{ep_count}</span>
+                            </h2>
                             <ul>
                                 <For
                                     each=move || eps.clone()
