@@ -106,6 +106,15 @@ fn load_dur(url: &str) -> f64 {
         .unwrap_or(0.0)
 }
 
+// Listened fraction (0..1) at/above which an episode is auto-classified as
+// *played* (finished). 0.95 mirrors the ~95%-of-duration heuristic Pocket Casts
+// and Overcast use: a listener usually stops a little before the true end
+// (outro/credits), so requiring a full 100% would leave finished episodes stuck
+// reading "in progress". This is the only state line in a three-state model —
+// below it (and above 0) is "in progress", exactly 0 is "unplayed". Detection is
+// automatic; there is no manual mark-as-played override.
+const PLAYED_FRAC: f64 = 0.95;
+
 // ---- Collapsed podcasts (which episode lists are folded; survives a refresh) --
 //
 // Mirrors the per-key localStorage pattern (`pos:`/`dur:`): one boolean key per
@@ -737,14 +746,48 @@ fn App() -> impl IntoView {
                                         let k_cls = key.clone();
                                         let k_click = key.clone();
                                         let k_prog = key.clone();
+                                        // Listened fraction (0..1) for this row, and the derived
+                                        // "played" flag. Read `current` FIRST and only touch the
+                                        // live signals when this row IS playing: a Leptos closure
+                                        // subscribes to exactly the signals it reads, so non-playing
+                                        // rows depend on `current`/`saved_frac` alone and stay inert
+                                        // during the ~4Hz timeupdate stream — only the playing row's
+                                        // `frac` re-runs. `played` is a *bool* memo so the badge and
+                                        // title dim it feeds flip just once (at the threshold), not
+                                        // on every tick.
+                                        let frac = Memo::new(move |_| {
+                                            if current.get() == k_prog {
+                                                let dur = play_dur.get();
+                                                if dur > 0.0 {
+                                                    (play_pos.get() / dur).clamp(0.0, 1.0)
+                                                } else {
+                                                    // Pre-metadata (e.g. just after a refresh):
+                                                    // fall back to the saved fraction.
+                                                    saved_frac
+                                                        .with(|m| m.get(&k_prog).copied())
+                                                        .unwrap_or(0.0)
+                                                }
+                                            } else {
+                                                saved_frac.with(|m| m.get(&k_prog).copied()).unwrap_or(0.0)
+                                            }
+                                        });
+                                        let played = Memo::new(move |_| frac.get() >= PLAYED_FRAC);
                                         // Episodes you can't act on offline: not downloaded
-                                        // and no network.
+                                        // and no network. A finished episode also gets a `played`
+                                        // class so its title recedes (dimmed) in the list.
                                         let title_cls = {
                                             let k = k_cls.clone();
                                             move || {
                                                 let playable = online.get()
                                                     || downloaded.with(|s| s.contains(&k));
-                                                if playable { "ep-title" } else { "ep-title unplayable" }
+                                                let mut cls = String::from("ep-title");
+                                                if !playable {
+                                                    cls.push_str(" unplayable");
+                                                }
+                                                if played.get() {
+                                                    cls.push_str(" played");
+                                                }
+                                                cls
                                             }
                                         };
                                         // Saved episodes show a non-interactive "✓ 저장됨" status badge
@@ -786,31 +829,17 @@ fn App() -> impl IntoView {
                                                     .into_any()
                                             }
                                         };
-                                        // Listened-progress bar for this row. Read `current`
-                                        // FIRST and only touch the live signals when this row
-                                        // IS playing: a Leptos closure subscribes to exactly
-                                        // the signals it reads, so non-playing rows depend on
-                                        // `current`/`saved_frac` alone and stay inert during the
-                                        // ~4Hz timeupdate stream — only the playing row re-runs.
+                                        // In-progress strip on the row's bottom edge, shown only
+                                        // while 0 < frac < PLAYED_FRAC. A finished (played) row
+                                        // drops the strip and shows the "들음" badge instead, so the
+                                        // three states — unplayed / in progress / played — each read
+                                        // distinctly. The width still tracks live for the playing row.
                                         let progress_bar = move || {
-                                            let frac = if current.get() == k_prog {
-                                                let dur = play_dur.get();
-                                                if dur > 0.0 {
-                                                    (play_pos.get() / dur).clamp(0.0, 1.0)
-                                                } else {
-                                                    // Pre-metadata (e.g. just after a refresh):
-                                                    // fall back to the saved fraction.
-                                                    saved_frac
-                                                        .with(|m| m.get(&k_prog).copied())
-                                                        .unwrap_or(0.0)
-                                                }
+                                            let f = frac.get();
+                                            if f <= 0.0 || played.get() {
+                                                ().into_any() // unplayed or finished → no strip
                                             } else {
-                                                saved_frac.with(|m| m.get(&k_prog).copied()).unwrap_or(0.0)
-                                            };
-                                            if frac <= 0.0 {
-                                                ().into_any() // never started → no bar
-                                            } else {
-                                                let pct = frac * 100.0;
+                                                let pct = f * 100.0;
                                                 view! {
                                                     <div
                                                         class="ep-bar"
@@ -818,6 +847,16 @@ fn App() -> impl IntoView {
                                                     ></div>
                                                 }
                                                     .into_any()
+                                            }
+                                        };
+                                        // Auto-marked "played" badge — a passive status, visually
+                                        // distinct from the green "✓ 저장됨" download badge.
+                                        let played_badge = move || {
+                                            if played.get() {
+                                                view! { <span class="ep-played">"✓ 들음"</span> }
+                                                    .into_any()
+                                            } else {
+                                                ().into_any()
                                             }
                                         };
                                         view! {
@@ -834,6 +873,7 @@ fn App() -> impl IntoView {
                                                 >
                                                     {e.title.clone()}
                                                 </span>
+                                                {played_badge}
                                                 {dl_controls}
                                                 {progress_bar}
                                             </li>

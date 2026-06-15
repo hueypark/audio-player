@@ -92,6 +92,20 @@ li {
   color: #666;
   cursor: default;
 }
+/* Finished (auto-detected at >=95% listened): the title recedes so played
+   episodes read as "done" against unplayed/in-progress ones. Still tappable to
+   replay. Placed after .unplayable so a played row dims even when also offline. */
+.ep-title.played {
+  color: #6f6f6f;
+}
+/* Passive "played" status badge. Neutral grey — deliberately NOT the green of
+   the "✓ 저장됨" download badge, so the two checks never read as the same thing. */
+.ep-played {
+  flex: none;
+  font-size: 0.72rem;
+  color: #8a8a8a;
+  white-space: nowrap;
+}
 /* Listening progress: a thin strip on the bottom edge of each episode row. The
    width is set inline (0..100%); the currently-playing row's width updates live,
    other rows show their last-saved resume point. */
