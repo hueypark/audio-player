@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 6/15(월) 美 AI 수출통제 | AI 가격경쟁 | 스페이스X 공모주 | 국제유가",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260615.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260615.mp3"
+        },
+        {
+          "title": "[플러스] 6/14(일) 전쟁을 부르는 날씨 슈퍼 엘니뇨가 온다 - 국종성 교수 (서울대 지구환경과학부)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260614.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260614.mp3"
+        },
+        {
           "title": "[플러스] 6/13(토) 젠슨황의 방한으로 엿본 우리나라의 무한 잠재력 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260613.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260613.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 5/20(수) LH 이색 공급 방안 | 농어촌특별세",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260520.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260520.mp3"
-        },
-        {
-          "title": "[플러스] 5/19(화) SONY의 원대한 계획, 덕후 지갑 싹 다 털립니다 - 서병수 애널리스트",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260519.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260519.mp3"
-        },
-        {
-          "title": "[손경제] 5/19(화) 소아 필수의약품 | 삼성전자 2차 사후조정 | 중국 CXMT 실적 | 국민연금법 개편",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260519.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260519.mp3"
         }
       ]
     }
