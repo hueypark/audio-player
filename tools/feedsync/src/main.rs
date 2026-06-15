@@ -49,6 +49,12 @@ const RESOLVE_TIMEOUT: Duration = Duration::from_secs(15);
 /// this.
 const MAX_FEED_BYTES: u64 = 20 * 1024 * 1024;
 
+/// The browser origin the deployed app is served from (GitHub Pages project site
+/// `https://hueypark.github.io/audio-player/` — origin is scheme+host, no path).
+/// Sent as `Origin` on download_url probes and used to judge whether a hop's
+/// `Access-Control-Allow-Origin` would permit an in-browser `fetch`.
+const APP_ORIGIN: &str = "https://hueypark.github.io";
+
 /// `subscriptions.json` — the human-edited source of truth.
 #[derive(Deserialize)]
 struct Subscriptions {
@@ -161,11 +167,14 @@ fn main() -> Result<(), Box<dyn Error>> {
 ///
 /// Best-effort and deterministic: an episode is probed only when no resolved
 /// `download_url` is already carried forward from the previous feeds.json. Once a
-/// redirecting host resolves, the value sticks and that episode is never probed
-/// again, so steady-state runs make no extra HTTP requests and emit byte-
-/// identical output. (A host that does NOT redirect resolves to nothing and so is
-/// re-probed each run — fine for the current single redirecting feed; revisit if
-/// a high-volume non-redirecting feed is ever added.)
+/// CORS-dropping host resolves to a stable direct URL, the value sticks and that
+/// episode is never probed again, so steady-state runs make no extra HTTP
+/// requests and emit byte-identical output. (An episode that resolves to nothing
+/// — no redirect, OR a fully CORS-clean chain like libsyn where the app can fetch
+/// `audio_url` directly — is re-probed every run. It still emits byte-identical
+/// output, the `download_url` field just stays absent; it only costs the probe
+/// requests. Fine for the current feeds; revisit if a high-volume such feed is
+/// ever added.)
 fn resolve_download_urls(podcasts: &mut [Podcast], feeds_path: &str) {
     let prev_dl = load_previous(feeds_path);
 
@@ -216,12 +225,29 @@ fn load_previous(path: &str) -> HashMap<String, String> {
     map
 }
 
-/// Walk the redirect chain (HEAD, no body) to the first non-redirect URL. Returns
-/// it only if it differs from `audio_url` (i.e. a redirect actually happened);
-/// `None` means "already direct, just fetch `audio_url`" or "couldn't resolve"
-/// — both of which the app handles by falling back to `audio_url`.
+/// Walk `audio_url`'s redirect chain and decide whether the app needs a separate
+/// `download_url` to fetch it for offline storage.
+///
+/// `download_url` exists ONLY to work around hosts that drop CORS on a redirect:
+/// the browser streams any `<audio src>` without CORS, but `fetch()`-ing to store
+/// offline needs *every* response in the redirect chain to be CORS-readable. So
+/// we send the app's `Origin` and check `Access-Control-Allow-Origin` at each hop:
+///
+/// - Whole chain CORS-clean → the app can `fetch(audio_url)` directly → `None`.
+///   This is also what spares us from caching a signed/expiring final URL — e.g.
+///   libsyn's `traffic.*` 302s to a `content.*?Expires=&Signature=` URL that dies
+///   within hours; the chain is CORS-clean, so we return `None` and the browser
+///   re-derives a fresh signed URL by following the redirect on every download.
+/// - CORS dropped on some hop, but the final *direct* URL is itself CORS-readable
+///   → hand the app that final URL (e.g. MBC's stable `podcastfiledown.*`).
+/// - Otherwise (no redirect, or even the final URL isn't CORS-readable) → `None`;
+///   there's nothing better than letting the app try `audio_url` itself.
 fn resolve_one(agent: &ureq::Agent, audio_url: &str) -> Option<String> {
     let mut current = audio_url.to_string();
+    let mut redirected = false;
+    // Would a browser `mode:"cors"` fetch of audio_url survive every hop so far?
+    // One non-CORS response anywhere in the chain breaks the whole fetch.
+    let mut chain_cors_ok = true;
     for _ in 0..6 {
         // SSRF guard: never probe loopback/private/link-local/localhost targets.
         // A malicious feed could otherwise redirect us at e.g. cloud metadata
@@ -233,10 +259,17 @@ fn resolve_one(agent: &ureq::Agent, audio_url: &str) -> Option<String> {
         // GET, not HEAD: this host returns an empty Location to HEAD. With
         // redirects disabled the 3xx body is empty, and on the final 2xx we read
         // only status/headers and drop the response without consuming the body,
-        // so no episode audio is actually downloaded.
-        let resp = agent.get(&current).call().ok()?;
+        // so no episode audio is actually downloaded. Send the app's Origin so
+        // hosts that vary CORS by origin reveal the header a browser would see.
+        let resp = agent
+            .get(&current)
+            .header("Origin", APP_ORIGIN)
+            .call()
+            .ok()?;
         let status = resp.status();
+        let cors_ok = cors_allows(resp.headers());
         if status.is_redirection() {
+            chain_cors_ok = chain_cors_ok && cors_ok;
             let loc = resp
                 .headers()
                 .get(ureq::http::header::LOCATION)?
@@ -250,14 +283,39 @@ fn resolve_one(agent: &ureq::Agent, audio_url: &str) -> Option<String> {
                 return None; // self-referential redirect
             }
             current = next;
+            redirected = true;
             continue;
         }
         if status.is_success() {
-            return (current != audio_url).then_some(current);
+            // Whole chain (incl. this final hop) CORS-clean → the app fetches
+            // audio_url directly; emit no download_url (and cache no expiring URL).
+            if chain_cors_ok && cors_ok {
+                return None;
+            }
+            // CORS was dropped upstream; only a different, itself-CORS-readable
+            // final URL is worth handing the app.
+            if redirected && cors_ok && current != audio_url {
+                return Some(current);
+            }
+            return None;
         }
         return None; // 4xx/5xx — leave unresolved
     }
     None // redirect loop / too many hops
+}
+
+/// Whether a probe response's CORS headers would let the app (`APP_ORIGIN`) read
+/// it from a `mode:"cors"` fetch. The app fetches without credentials, so `*`
+/// always passes; otherwise the header must echo our exact origin.
+fn cors_allows(headers: &ureq::http::HeaderMap) -> bool {
+    headers
+        .get(ureq::http::header::ACCESS_CONTROL_ALLOW_ORIGIN)
+        .and_then(|v| v.to_str().ok())
+        .map(|v| {
+            let v = v.trim();
+            v == "*" || v.eq_ignore_ascii_case(APP_ORIGIN)
+        })
+        .unwrap_or(false)
 }
 
 /// Minimal URL joiner for a redirect `Location` (absolute, protocol-relative,
