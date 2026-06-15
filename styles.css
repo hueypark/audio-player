@@ -40,6 +40,7 @@ li {
   align-items: center;
   gap: 8px;
   border-bottom: 1px solid #222;
+  position: relative; /* anchor for the .ep-bar progress strip */
 }
 .ep-title {
   flex: 1;
@@ -53,6 +54,19 @@ li {
 .ep-title.unplayable {
   color: #666;
   cursor: default;
+}
+/* Listening progress: a thin strip on the bottom edge of each episode row. The
+   width is set inline (0..100%); the currently-playing row's width updates live,
+   other rows show their last-saved resume point. */
+.ep-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background: #9cf;
+  border-radius: 0 2px 2px 0;
+  pointer-events: none; /* never steal taps from .ep-title */
+  transition: width 0.25s linear; /* smooth the ~4Hz live steps */
 }
 .dl-btn {
   flex: none;

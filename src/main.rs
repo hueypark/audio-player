@@ -88,6 +88,24 @@ fn load_pos(url: &str) -> f64 {
         .unwrap_or(0.0)
 }
 
+// Episode duration (seconds), persisted so a list progress bar can be drawn for
+// episodes that aren't currently loaded in the <audio> element. `pos:{url}` alone
+// can't yield a fraction without it, and feeds.json carries no duration. Learned
+// from playback (loadedmetadata/durationchange) and keyed by the same audio_url.
+
+fn save_dur(url: &str, secs: f64) {
+    if let Some(s) = storage() {
+        let _ = s.set_item(&format!("dur:{url}"), &secs.to_string());
+    }
+}
+
+fn load_dur(url: &str) -> f64 {
+    storage()
+        .and_then(|s| s.get_item(&format!("dur:{url}")).ok().flatten())
+        .and_then(|v| v.parse::<f64>().ok())
+        .unwrap_or(0.0)
+}
+
 // ---- Last-played episode (survives a page refresh) ---------------------------
 //
 // `pos:{url}` already remembers *where* you were in each episode; these remember
@@ -182,6 +200,36 @@ fn update_position_state() {
     state.set_position(pos);
     state.set_playback_rate(rate);
     session.set_position_state_with_state(&state);
+}
+
+/// Mirror the `<audio>` element's position/duration into reactive signals that
+/// feed the currently-playing episode's in-list progress bar. Mirrors
+/// `update_position_state`'s guard: a non-finite or non-positive duration
+/// (pre-metadata, or a live stream) collapses to `0.0` == "unknown", which the
+/// view renders as no bar. Duration is persisted (once, when it first becomes
+/// known) so other episodes can draw their bar after a reload.
+fn update_play_state(
+    current: RwSignal<String>,
+    play_pos: RwSignal<f64>,
+    play_dur: RwSignal<f64>,
+) {
+    let Some(a) = audio_el() else {
+        return;
+    };
+    let dur = a.duration();
+    let dur = if dur.is_finite() && dur > 0.0 { dur } else { 0.0 };
+    // Only touch play_dur (and persist) when it actually changes — not on every
+    // ~4Hz timeupdate — to avoid a redundant localStorage write/notify per tick.
+    if play_dur.get_untracked() != dur {
+        play_dur.set(dur);
+        if dur > 0.0 {
+            let url = current.get_untracked();
+            if !url.is_empty() {
+                save_dur(&url, dur);
+            }
+        }
+    }
+    play_pos.set(a.current_time().max(0.0));
 }
 
 /// Read an optional f64 field (seekTime / seekOffset) off the action details.
@@ -305,6 +353,8 @@ fn restore_last_played(
     current: RwSignal<String>,
     now_title: RwSignal<String>,
     obj_url: RwSignal<Option<String>>,
+    play_pos: RwSignal<f64>,
+    play_dur: RwSignal<f64>,
 ) {
     let Some((key, title, artist)) = load_last_played() else {
         return;
@@ -359,6 +409,10 @@ fn restore_last_played(
         if let Some(audio) = audio_el() {
             audio.set_src(&src);
             current.set(key.clone());
+            // The seeded bar shows the saved point immediately; loadedmetadata
+            // then drives it live. Reset so a stale duration can't skew it first.
+            play_pos.set(0.0);
+            play_dur.set(0.0);
             now_title.set(title.clone());
             audio.load(); // fires loadedmetadata → seeks to the saved position
         }
@@ -392,6 +446,14 @@ fn App() -> impl IntoView {
     let podcasts = RwSignal::new(Vec::<Podcast>::new());
     let current = RwSignal::new(String::new());
     let now_title = RwSignal::new(String::new());
+    // Live position/duration (seconds) of the *current* episode, feeding its list
+    // progress bar; reset on every episode switch so a new row never inherits the
+    // old bar. 0.0 duration == unknown (pre-metadata / live stream) → no bar.
+    let play_pos = RwSignal::new(0.0_f64);
+    let play_dur = RwSignal::new(0.0_f64);
+    // audio_url → last-known listened fraction (0..1) for *every* episode's bar.
+    // Seeded from localStorage at startup; refreshed on switch (never per tick).
+    let saved_frac = RwSignal::new(HashMap::<String, f64>::new());
     // audio_url keys of episodes saved for offline playback.
     let downloaded = RwSignal::new(HashSet::<String>::new());
     // audio_url key → download percent (-1 = indeterminate) while downloading.
@@ -421,6 +483,19 @@ fn App() -> impl IntoView {
     spawn_local(async move {
         if let Ok(resp) = gloo_net::http::Request::get("feeds.json").send().await {
             if let Ok(feeds) = resp.json::<Feeds>().await {
+                // Seed each episode's list bar from its persisted position/duration
+                // so previously-listened episodes show their resume point on load.
+                let mut fracs = HashMap::new();
+                for p in &feeds.podcasts {
+                    for e in &p.episodes {
+                        let pos = load_pos(&e.audio_url);
+                        let dur = load_dur(&e.audio_url);
+                        if dur > 0.0 && pos > 0.0 {
+                            fracs.insert(e.audio_url.clone(), (pos / dur).clamp(0.0, 1.0));
+                        }
+                    }
+                }
+                saved_frac.set(fracs);
                 podcasts.set(feeds.podcasts);
             }
         }
@@ -428,7 +503,7 @@ fn App() -> impl IntoView {
     refresh_downloads(downloaded, storage_used);
 
     // Reload the last-played episode (loaded + paused) so a refresh resumes it.
-    restore_last_played(current, now_title, obj_url);
+    restore_last_played(current, now_title, obj_url, play_pos, play_dur);
 
     // Play an episode: from IndexedDB (object URL, fully offline) if downloaded,
     // otherwise stream `audio_url` online. `current` stays the audio_url so the
@@ -438,6 +513,17 @@ fn App() -> impl IntoView {
             if let Some(prev) = obj_url.get_untracked() {
                 js_revoke_object_url(&prev);
                 obj_url.set(None);
+            }
+            // Freeze the outgoing episode's list bar at where we left it — the live
+            // signals are about to be reset for the new episode, so capture its
+            // fraction into saved_frac now (untracked: this is event handling).
+            let prev = current.get_untracked();
+            let prev_dur = play_dur.get_untracked();
+            if !prev.is_empty() && prev_dur > 0.0 {
+                let frac = (play_pos.get_untracked() / prev_dur).clamp(0.0, 1.0);
+                saved_frac.update(|m| {
+                    m.insert(prev, frac);
+                });
             }
             let key = ep.audio_url.clone();
             let src = if downloaded.with_untracked(|s| s.contains(&key)) {
@@ -458,6 +544,10 @@ fn App() -> impl IntoView {
             if let Some(audio) = audio_el() {
                 audio.set_src(&src);
                 current.set(ep.audio_url.clone());
+                // Reset live progress so the new row starts clean; loadedmetadata
+                // repopulates it for the now-current episode.
+                play_pos.set(0.0);
+                play_dur.set(0.0);
                 now_title.set(ep.title.clone());
                 audio.load();
                 let _ = audio.play();
@@ -572,6 +662,7 @@ fn App() -> impl IntoView {
                                         let k_state = key.clone();
                                         let k_cls = key.clone();
                                         let k_click = key.clone();
+                                        let k_prog = key.clone();
                                         // Episodes you can't act on offline: not downloaded
                                         // and no network.
                                         let title_cls = {
@@ -621,6 +712,40 @@ fn App() -> impl IntoView {
                                                     .into_any()
                                             }
                                         };
+                                        // Listened-progress bar for this row. Read `current`
+                                        // FIRST and only touch the live signals when this row
+                                        // IS playing: a Leptos closure subscribes to exactly
+                                        // the signals it reads, so non-playing rows depend on
+                                        // `current`/`saved_frac` alone and stay inert during the
+                                        // ~4Hz timeupdate stream — only the playing row re-runs.
+                                        let progress_bar = move || {
+                                            let frac = if current.get() == k_prog {
+                                                let dur = play_dur.get();
+                                                if dur > 0.0 {
+                                                    (play_pos.get() / dur).clamp(0.0, 1.0)
+                                                } else {
+                                                    // Pre-metadata (e.g. just after a refresh):
+                                                    // fall back to the saved fraction.
+                                                    saved_frac
+                                                        .with(|m| m.get(&k_prog).copied())
+                                                        .unwrap_or(0.0)
+                                                }
+                                            } else {
+                                                saved_frac.with(|m| m.get(&k_prog).copied()).unwrap_or(0.0)
+                                            };
+                                            if frac <= 0.0 {
+                                                ().into_any() // never started → no bar
+                                            } else {
+                                                let pct = frac * 100.0;
+                                                view! {
+                                                    <div
+                                                        class="ep-bar"
+                                                        style=format!("width:{pct:.2}%")
+                                                    ></div>
+                                                }
+                                                    .into_any()
+                                            }
+                                        };
                                         view! {
                                             <li>
                                                 <span
@@ -636,6 +761,7 @@ fn App() -> impl IntoView {
                                                     {e.title.clone()}
                                                 </span>
                                                 {dl_controls}
+                                                {progress_bar}
                                             </li>
                                         }
                                     }
@@ -673,7 +799,11 @@ fn App() -> impl IntoView {
                         }
                     }
                     update_position_state();
+                    // Fires after the resume-seek, so the list bar reflects the
+                    // restored position even while paused (post-refresh restore).
+                    update_play_state(current, play_pos, play_dur);
                 }
+                on:durationchange=move |_| update_play_state(current, play_pos, play_dur)
                 on:timeupdate=move |_| {
                     let url = current.get_untracked();
                     if !url.is_empty() {
@@ -689,6 +819,7 @@ fn App() -> impl IntoView {
                         }
                     }
                     update_position_state();
+                    update_play_state(current, play_pos, play_dur);
                 }
             ></audio>
         </footer>
