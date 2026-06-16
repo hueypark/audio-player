@@ -24,6 +24,8 @@ extern "C" {
     fn js_delete_episode(key: &str) -> js_sys::Promise;
     #[wasm_bindgen(js_name = listDownloaded)]
     fn js_list_downloaded() -> js_sys::Promise;
+    #[wasm_bindgen(js_name = listDownloadedMeta)]
+    fn js_list_downloaded_meta() -> js_sys::Promise;
     #[wasm_bindgen(js_name = estimateStorage)]
     fn js_estimate_storage() -> js_sys::Promise;
 }
@@ -143,6 +145,19 @@ fn load_seen(url: &str) -> f64 {
 // below it (and above 0) is "in progress", exactly 0 is "unplayed". Detection is
 // automatic; there is no manual mark-as-played override.
 const PLAYED_FRAC: f64 = 0.95;
+
+// How long after an episode was DOWNLOADED its offline blob is kept once the
+// episode is finished, before the startup sweep reclaims it. Anchored on the IDB
+// record's `savedAt` (download time) — the only timestamp that always exists for
+// a downloaded blob: `seen:` is stamped only on episode switch (there is no
+// `ended` handler), so an episode played straight to the end has no `seen:` and a
+// seen-based clock could never reclaim exactly the storage this targets. Keying
+// on savedAt also defends the re-download case for free (a fresh re-download
+// resets savedAt, so a just-saved trip download is never swept). The trade: this
+// measures download time, not completion time, so an episode downloaded long ago
+// and only just finished can be reclaimed soon after — acceptable because the
+// blob is re-downloadable and all progress/metadata survive. Tunable; one knob.
+const RETENTION_MS: f64 = 14.0 * 24.0 * 60.0 * 60.0 * 1000.0; // 14 days
 
 // Sentinel "podcast title" for the 이어듣기 (Continue Listening) section, so it
 // can reuse the per-podcast collapse machinery (collapsed:{title}, the <For>
@@ -415,6 +430,104 @@ fn refresh_downloads(downloaded: RwSignal<HashSet<String>>, storage_used: RwSign
                 storage_used.set(bytes);
             }
         }
+    });
+}
+
+/// One-shot startup sweep that reclaims storage: delete the IndexedDB blob of
+/// every downloaded episode that is FINISHED (saved pos/dur >= PLAYED_FRAC) AND
+/// was downloaded long ago (`savedAt` older than RETENTION_MS). ONLY the blob is
+/// removed — pos:/dur:/seen: and all other localStorage keys are left intact
+/// (the never-GC invariant), so the resume position, the "들음" badge, and 이어듣기
+/// ordering all survive and the episode re-downloads on demand while online. The
+/// row simply reverts from "✓ 저장됨" to "⬇".
+///
+/// Iterates the IndexedDB download records (NOT feeds.json), so it also reclaims
+/// episodes that rolled out of the rolling feed window — their pos:/dur: still
+/// live in localStorage keyed by url. Staleness is anchored on `savedAt`, the
+/// only timestamp every downloaded blob has (see RETENTION_MS); a fresh
+/// re-download resets savedAt, so a just-saved trip download is never swept.
+///
+/// Protected from deletion: the currently-playing episode (don't revoke its live
+/// blob: URL), the last-played/restore target (re-read from localStorage so it
+/// holds regardless of how this races restore_last_played), and any in-flight
+/// download. Every ambiguous read (missing/non-finite savedAt, unknown pos/dur)
+/// biases toward KEEP.
+///
+/// Reactivity-safe: all reads are untracked / direct-localStorage, it creates no
+/// Memo/Effect/subscription, and its only signal writes are the per-key
+/// `downloaded` removals plus ONE trailing refresh_downloads — none on the ~4Hz
+/// timeupdate stream.
+fn sweep_stale_downloads(
+    current: RwSignal<String>,
+    downloaded: RwSignal<HashSet<String>>,
+    storage_used: RwSignal<f64>,
+    progress: RwSignal<HashMap<String, i32>>,
+    status: RwSignal<String>,
+) {
+    spawn_local(async move {
+        // Snapshot the protected keys up front. last:url is read from localStorage
+        // (not the `current` signal) so the resume blob is shielded even if this
+        // runs before restore_last_played has set `current`.
+        let protected_last = load_last_played().map(|(u, _, _)| u);
+        let cur = current.get_untracked();
+        let now = js_sys::Date::now();
+
+        let meta = match JsFuture::from(js_list_downloaded_meta()).await {
+            Ok(v) => v,
+            Err(_) => return, // can't read IDB → keep everything
+        };
+
+        let mut victims: Vec<String> = Vec::new();
+        for entry in js_sys::Array::from(&meta).iter() {
+            let Some(key) = js_sys::Reflect::get(&entry, &JsValue::from_str("key"))
+                .ok()
+                .and_then(|v| v.as_string())
+            else {
+                continue;
+            };
+            // Protected: playing, last-played/restore target, or mid-download.
+            if key == cur || protected_last.as_deref() == Some(key.as_str()) {
+                continue;
+            }
+            if progress.with_untracked(|m| m.contains_key(&key)) {
+                continue;
+            }
+            // Stale: downloaded long ago. Missing/non-finite savedAt → keep.
+            let saved_at = js_sys::Reflect::get(&entry, &JsValue::from_str("savedAt"))
+                .ok()
+                .and_then(|v| v.as_f64())
+                .filter(|v| v.is_finite() && *v > 0.0);
+            let Some(saved_at) = saved_at else {
+                continue;
+            };
+            if now - saved_at < RETENTION_MS {
+                continue;
+            }
+            // Finished: same pos/dur and PLAYED_FRAC line the UI uses. Unknown or
+            // non-finite metadata can't prove "finished" → keep.
+            let dur = load_dur(&key);
+            let pos = load_pos(&key);
+            if !(dur.is_finite() && dur > 0.0 && pos.is_finite() && pos / dur >= PLAYED_FRAC) {
+                continue;
+            }
+            victims.push(key);
+        }
+
+        if victims.is_empty() {
+            return;
+        }
+        for key in &victims {
+            let _ = JsFuture::from(js_delete_episode(key)).await;
+            downloaded.update(|s| {
+                s.remove(key);
+            });
+        }
+        // One batched resync of the key-set and storage_used from IDB.
+        refresh_downloads(downloaded, storage_used);
+        // Announce it: a silent badge revert ("✓ 저장됨" → "⬇") plus a dropping
+        // offline count would read as data loss on the app's headline feature.
+        let n = victims.len();
+        status.set(format!("재생을 마친 오프라인 파일 {n}개를 정리해 저장 공간을 확보했어요."));
     });
 }
 
@@ -825,6 +938,12 @@ fn App() -> impl IntoView {
 
     // Reload the last-played episode (loaded + paused) so a refresh resumes it.
     restore_last_played(current, now_title, obj_url, play_pos, play_dur);
+
+    // Reclaim storage: drop the offline blobs of episodes finished long ago.
+    // Independent one-shot task; protects the playing/last-played/in-flight
+    // episodes and re-reads last:url from localStorage so it's safe against the
+    // restore_last_played race regardless of ordering.
+    sweep_stale_downloads(current, downloaded, storage_used, progress, status);
 
     // Play an episode: from IndexedDB (object URL, fully offline) if downloaded,
     // otherwise stream `audio_url` online. `current` stays the audio_url so the

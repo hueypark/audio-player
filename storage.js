@@ -188,6 +188,37 @@ export async function listDownloaded() {
   return await idbKeys().catch(() => []);
 }
 
+/// Lightweight metadata for every downloaded episode: { key, savedAt } per
+/// record, for the startup auto-remove sweep (which needs savedAt — the download
+/// time — to decide staleness; listDownloaded returns keys only). Uses a cursor
+/// and reads ONLY key + savedAt so the audio blobs are never materialized into
+/// the JS heap (getAll() would deserialize every Blob just to read two fields).
+/// A record missing savedAt (none should exist — it shipped with the field)
+/// reports 0, which the Rust predicate treats as "unknown age → never sweep".
+export async function listDownloadedMeta() {
+  return openDB()
+    .then(
+      (db) =>
+        new Promise((resolve, reject) => {
+          const tx = db.transaction(STORE, "readonly");
+          const out = [];
+          const r = tx.objectStore(STORE).openCursor();
+          r.onsuccess = () => {
+            const cur = r.result;
+            if (!cur) {
+              resolve(out);
+              return;
+            }
+            out.push({ key: cur.key, savedAt: (cur.value || {}).savedAt || 0 });
+            cur.continue();
+          };
+          r.onerror = () => reject(r.error);
+          tx.onabort = () => reject(tx.error || new Error("aborted"));
+        }),
+    )
+    .catch(() => []);
+}
+
 /// Total bytes this origin is using (dominated by the audio blobs); for the UI's
 /// storage line. Estimated/padded by the browser — display only.
 export async function estimateStorage() {
