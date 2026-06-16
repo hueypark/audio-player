@@ -119,6 +119,33 @@ li {
   pointer-events: none; /* never steal taps from .ep-title */
   transition: width 0.25s linear; /* smooth the ~4Hz live steps */
 }
+/* 이어듣기 (Continue Listening): a cross-podcast section pinned above the feed,
+   reusing .podcast / <h2> / <li> verbatim. Cap its height so a long resume list
+   can't bury the feed below the fold on a phone — it scrolls internally instead,
+   and the count pill still signals there are more. */
+.continue ul {
+  max-height: calc(4.5 * 64px);
+  overflow-y: auto;
+}
+/* Inside 이어듣기 the title stacks over a second line (podcast name + time left),
+   so the same row reads as a cross-podcast item. The main list is untouched. */
+.continue .ep-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.ep-sub {
+  display: flex;
+  gap: 6px;
+  font-size: 0.75rem;
+}
+.ep-sub .pod {
+  color: #8ab; /* the cross-podcast disambiguator — the stronger of the two */
+}
+.ep-sub .left {
+  color: #888;
+}
 .dl-btn {
   flex: none;
   min-width: 48px;

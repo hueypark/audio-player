@@ -106,6 +106,35 @@ fn load_dur(url: &str) -> f64 {
         .unwrap_or(0.0)
 }
 
+// When an episode was last listened to (epoch-ms). `pos:`/`dur:` say *how far*
+// you got, never *when*; the 이어듣기 (Continue Listening) section needs recency
+// to order the episodes you're juggling, most-recent first. Stamped at episode
+// switch (in `play`), keyed by the same audio_url. Stored as a plain f64 string,
+// mirroring pos:/dur:.
+//
+// Like pos:/dur:, seen: is intentionally never garbage-collected: feeds.json is a
+// rolling window, so an episode absent from it today may reappear, and pruning
+// keys for "missing" episodes would erase real listening progress. Growth is
+// bounded — three small keys per episode ever played — and far from the storage
+// quota for a curated feed.
+
+fn save_seen(url: &str, ts: f64) {
+    if let Some(s) = storage() {
+        let _ = s.set_item(&format!("seen:{url}"), &ts.to_string());
+    }
+}
+
+fn load_seen(url: &str) -> f64 {
+    storage()
+        .and_then(|s| s.get_item(&format!("seen:{url}")).ok().flatten())
+        .and_then(|v| v.parse::<f64>().ok())
+        // Reject NaN/inf (only reachable via manual storage tampering) so the
+        // backfill heals it and the recency sort keeps a total order. Mirrors
+        // detail_f64's finiteness guard.
+        .filter(|v| v.is_finite())
+        .unwrap_or(0.0)
+}
+
 // Listened fraction (0..1) at/above which an episode is auto-classified as
 // *played* (finished). 0.95 mirrors the ~95%-of-duration heuristic Pocket Casts
 // and Overcast use: a listener usually stops a little before the true end
@@ -114,6 +143,12 @@ fn load_dur(url: &str) -> f64 {
 // below it (and above 0) is "in progress", exactly 0 is "unplayed". Detection is
 // automatic; there is no manual mark-as-played override.
 const PLAYED_FRAC: f64 = 0.95;
+
+// Sentinel "podcast title" for the 이어듣기 (Continue Listening) section, so it
+// can reuse the per-podcast collapse machinery (collapsed:{title}, the <For>
+// key, toggle_collapsed) without colliding with any real Podcast.title — a feed
+// title can never contain a NUL byte.
+const CONTINUE_KEY: &str = "\u{0}continue";
 
 // ---- Collapsed podcasts (which episode lists are folded; survives a refresh) --
 //
@@ -478,12 +513,204 @@ fn fmt_bytes(b: f64) -> String {
     }
 }
 
+/// Human "time left" for a 이어듣기 row, ceiled to whole minutes so a nearly
+/// finished (but still in-progress) episode never reads "0분 남음". Under a
+/// minute collapses to a single label.
+fn fmt_left(remaining_secs: f64) -> String {
+    if remaining_secs < 60.0 {
+        "1분 미만 남음".to_string()
+    } else {
+        let mins = (remaining_secs / 60.0).ceil() as i64;
+        format!("{mins}분 남음")
+    }
+}
+
 fn download_error_msg(reason: &str) -> String {
     match reason {
         "cors" => "다운로드 실패: 이 호스트가 오프라인 저장(CORS)을 허용하지 않습니다. 온라인 재생만 가능합니다.".into(),
         "quota" => "다운로드 실패: 저장 공간이 부족합니다.".into(),
         _ => format!("다운로드 실패: {reason}"),
     }
+}
+
+/// One episode row, shared by the per-podcast lists and the 이어듣기 (Continue
+/// Listening) section. With `show_subline=false` it is byte-identical to the
+/// original inline row, so the main list is unchanged; `show_subline=true` adds
+/// the 이어듣기 second line (podcast name + "N분 남음"). `cached_dur` is the
+/// persisted duration used to compute remaining time for a *non-playing* row
+/// (the playing row uses the live `play_dur`), so non-playing rows touch neither
+/// the `<audio>` element nor localStorage.
+///
+/// The `frac`/`played` Memos preserve the original subscription discipline: a
+/// non-playing row reads only `current`/`saved_frac` and stays inert during the
+/// ~4Hz timeupdate stream — only the playing row re-runs.
+#[allow(clippy::too_many_arguments)]
+fn episode_row(
+    e: Episode,
+    artist: String,
+    show_subline: bool,
+    cached_dur: f64,
+    current: RwSignal<String>,
+    online: RwSignal<bool>,
+    downloaded: RwSignal<HashSet<String>>,
+    progress: RwSignal<HashMap<String, i32>>,
+    saved_frac: RwSignal<HashMap<String, f64>>,
+    play_pos: RwSignal<f64>,
+    play_dur: RwSignal<f64>,
+    play: impl Fn(Episode, String) + Copy + Send + Sync + 'static,
+    download: impl Fn(Episode) + Copy + Send + Sync + 'static,
+    delete_dl: impl Fn(Episode) + Copy + Send + Sync + 'static,
+) -> AnyView {
+    let key = e.audio_url.clone();
+    let title_text = e.title.clone();
+    let artist_play = artist.clone();
+    let ep_play = e.clone();
+    let ep_dl = e.clone();
+    let ep_del = e.clone();
+    let k_state = key.clone();
+    let k_cls = key.clone();
+    let k_click = key.clone();
+    let k_prog = key.clone();
+    let k_left = key.clone();
+
+    let frac = Memo::new(move |_| {
+        if current.get() == k_prog {
+            let dur = play_dur.get();
+            if dur > 0.0 {
+                (play_pos.get() / dur).clamp(0.0, 1.0)
+            } else {
+                // Pre-metadata (e.g. just after a refresh): fall back to the
+                // saved fraction.
+                saved_frac.with(|m| m.get(&k_prog).copied()).unwrap_or(0.0)
+            }
+        } else {
+            saved_frac.with(|m| m.get(&k_prog).copied()).unwrap_or(0.0)
+        }
+    });
+    let played = Memo::new(move |_| frac.get() >= PLAYED_FRAC);
+
+    // Episodes you can't act on offline: not downloaded and no network. A
+    // finished episode also gets a `played` class so its title recedes (dimmed).
+    let title_cls = {
+        let k = k_cls.clone();
+        move || {
+            let playable = online.get() || downloaded.with(|s| s.contains(&k));
+            let mut cls = String::from("ep-title");
+            if !playable {
+                cls.push_str(" unplayable");
+            }
+            if played.get() {
+                cls.push_str(" played");
+            }
+            cls
+        }
+    };
+
+    // Saved episodes show a non-interactive "✓ 저장됨" status badge paired with a
+    // *separate* destructive ✕ remove button. Pre-download: a single ⬇ button;
+    // mid-download: a live percent readout.
+    let dl_controls = move || {
+        if let Some(p) = progress.with(|m| m.get(&k_state).copied()) {
+            let label = if p < 0 { "…".to_string() } else { format!("{p}%") };
+            view! { <span class="dl-progress">{label}</span> }.into_any()
+        } else if downloaded.with(|s| s.contains(&k_state)) {
+            let ep = ep_del.clone();
+            view! {
+                <span class="dl-saved">"✓ 저장됨"</span>
+                <button
+                    class="dl-btn dl-del"
+                    aria-label="오프라인 저장 삭제"
+                    on:click=move |_| delete_dl(ep.clone())
+                >
+                    "✕"
+                </button>
+            }
+                .into_any()
+        } else {
+            let ep = ep_dl.clone();
+            view! {
+                <button
+                    class="dl-btn"
+                    aria-label="오프라인 저장 다운로드"
+                    on:click=move |_| download(ep.clone())
+                >
+                    "⬇"
+                </button>
+            }
+                .into_any()
+        }
+    };
+
+    // In-progress strip on the row's bottom edge, shown only while
+    // 0 < frac < PLAYED_FRAC. A finished (played) row drops the strip and shows
+    // the "들음" badge instead. The width still tracks live for the playing row.
+    let progress_bar = move || {
+        let f = frac.get();
+        if f <= 0.0 || played.get() {
+            ().into_any() // unplayed or finished → no strip
+        } else {
+            let pct = f * 100.0;
+            view! { <div class="ep-bar" style=format!("width:{pct:.2}%")></div> }.into_any()
+        }
+    };
+
+    // Auto-marked "played" badge — a passive status, visually distinct from the
+    // green "✓ 저장됨" download badge. (Never shown in 이어듣기: played items are
+    // filtered out of that section.)
+    let played_badge = move || {
+        if played.get() {
+            view! { <span class="ep-played">"✓ 들음"</span> }.into_any()
+        } else {
+            ().into_any()
+        }
+    };
+
+    // 이어듣기 second line: podcast name + remaining time. Remaining is live for
+    // the playing row (frac drives it) and uses the cached duration for others,
+    // so non-playing rows touch neither the <audio> element nor storage.
+    let subline = if show_subline {
+        let artist_sub = artist.clone();
+        let left = Memo::new(move |_| {
+            let f = frac.get();
+            let dur = if current.get() == k_left {
+                let d = play_dur.get();
+                if d > 0.0 { d } else { cached_dur }
+            } else {
+                cached_dur
+            };
+            fmt_left((dur * (1.0 - f)).max(0.0))
+        });
+        Some(view! {
+            <span class="ep-sub">
+                <span class="pod">{artist_sub}</span>
+                <span class="left">{move || left.get()}</span>
+            </span>
+        })
+    } else {
+        None
+    };
+
+    view! {
+        <li>
+            <span
+                class=title_cls
+                on:click=move |_| {
+                    let playable = online.get_untracked()
+                        || downloaded.with_untracked(|s| s.contains(&k_click));
+                    if playable {
+                        play(ep_play.clone(), artist_play.clone());
+                    }
+                }
+            >
+                {title_text}
+                {subline}
+            </span>
+            {played_badge}
+            {dl_controls}
+            {progress_bar}
+        </li>
+    }
+    .into_any()
 }
 
 #[component]
@@ -502,6 +729,17 @@ fn App() -> impl IntoView {
     // audio_url → last-known listened fraction (0..1) for *every* episode's bar.
     // Seeded from localStorage at startup; refreshed on switch (never per tick).
     let saved_frac = RwSignal::new(HashMap::<String, f64>::new());
+    // audio_url → when last listened (epoch-ms), for ordering the 이어듣기 list
+    // most-recent-first. Seeded at feeds-load (with a first-session backfill);
+    // refreshed on switch in `play` so within-session reorder is reactive.
+    let seen_map = RwSignal::new(HashMap::<String, f64>::new());
+    // audio_url → (podcast title, Episode, duration secs). Built once at
+    // feeds-load so the 이어듣기 section can reverse-lookup an in-progress
+    // audio_url to its Episode (resume via `play`), its podcast name, and a
+    // cached duration for "N분 남음" — all without scanning podcasts or hitting
+    // localStorage per render. Stores the title (not the whole Podcast) so it
+    // never clones a podcast's full episode Vec per key.
+    let episode_map = RwSignal::new(HashMap::<String, (String, Episode, f64)>::new());
     // audio_url keys of episodes saved for offline playback.
     let downloaded = RwSignal::new(HashSet::<String>::new());
     // audio_url key → download percent (-1 = indeterminate) while downloading.
@@ -531,25 +769,52 @@ fn App() -> impl IntoView {
     spawn_local(async move {
         if let Ok(resp) = gloo_net::http::Request::get("feeds.json").send().await {
             if let Ok(feeds) = resp.json::<Feeds>().await {
-                // Seed each episode's list bar from its persisted position/duration
-                // so previously-listened episodes show their resume point on load.
+                // One pass over every episode: seed each row's resume fraction
+                // (saved_frac), build the audio_url → (podcast, episode, dur) map
+                // the 이어듣기 section resolves against, and seed the recency map
+                // used to order it. First-session backfill: an in-progress episode
+                // with no `seen:` stamp yet gets one now, stepped down by feed
+                // order, so the very first render is deterministically recency-
+                // sorted (newest feed items first) rather than arbitrary. It
+                // self-heals to a real listen time on the next `play`.
                 let mut fracs = HashMap::new();
+                let mut emap = HashMap::new();
+                let mut smap = HashMap::new();
+                let now = js_sys::Date::now();
+                let mut idx = 0.0_f64;
                 for p in &feeds.podcasts {
                     for e in &p.episodes {
                         let pos = load_pos(&e.audio_url);
                         let dur = load_dur(&e.audio_url);
+                        emap.insert(e.audio_url.clone(), (p.title.clone(), e.clone(), dur));
                         if dur > 0.0 && pos > 0.0 {
-                            fracs.insert(e.audio_url.clone(), (pos / dur).clamp(0.0, 1.0));
+                            let frac = (pos / dur).clamp(0.0, 1.0);
+                            fracs.insert(e.audio_url.clone(), frac);
+                            if frac > 0.0 && frac < PLAYED_FRAC {
+                                let mut seen = load_seen(&e.audio_url);
+                                if seen <= 0.0 {
+                                    seen = now - idx;
+                                    save_seen(&e.audio_url, seen);
+                                }
+                                smap.insert(e.audio_url.clone(), seen);
+                            }
                         }
+                        idx += 1.0;
                     }
                 }
                 saved_frac.set(fracs);
-                // Restore which podcast lists were folded last time.
+                seen_map.set(smap);
+                episode_map.set(emap);
+                // Restore which podcast lists were folded last time — including the
+                // 이어듣기 section (keyed by CONTINUE_KEY).
                 let mut folded = HashSet::new();
                 for p in &feeds.podcasts {
                     if load_collapsed(&p.title) {
                         folded.insert(p.title.clone());
                     }
+                }
+                if load_collapsed(CONTINUE_KEY) {
+                    folded.insert(CONTINUE_KEY.to_string());
                 }
                 collapsed.set(folded);
                 podcasts.set(feeds.podcasts);
@@ -570,15 +835,23 @@ fn App() -> impl IntoView {
                 js_revoke_object_url(&prev);
                 obj_url.set(None);
             }
+            let ts = js_sys::Date::now();
             // Freeze the outgoing episode's list bar at where we left it — the live
             // signals are about to be reset for the new episode, so capture its
-            // fraction into saved_frac now (untracked: this is event handling).
+            // fraction into saved_frac now (untracked: this is event handling) — and
+            // stamp its recency so 이어듣기 can order it by "last listened".
             let prev = current.get_untracked();
             let prev_dur = play_dur.get_untracked();
-            if !prev.is_empty() && prev_dur > 0.0 {
-                let frac = (play_pos.get_untracked() / prev_dur).clamp(0.0, 1.0);
-                saved_frac.update(|m| {
-                    m.insert(prev, frac);
+            if !prev.is_empty() {
+                if prev_dur > 0.0 {
+                    let frac = (play_pos.get_untracked() / prev_dur).clamp(0.0, 1.0);
+                    saved_frac.update(|m| {
+                        m.insert(prev.clone(), frac);
+                    });
+                }
+                save_seen(&prev, ts);
+                seen_map.update(|m| {
+                    m.insert(prev.clone(), ts);
                 });
             }
             let key = ep.audio_url.clone();
@@ -610,6 +883,15 @@ fn App() -> impl IntoView {
             }
             // Remember this as the last-played so a refresh reloads it.
             save_last_played(&ep.audio_url, &ep.title, &artist);
+            // Stamp the now-current episode's recency too, so a fresh start sorts
+            // to the top of 이어듣기 and a reload (which restores it) keeps it there.
+            // One millisecond newer than the outgoing stamp so the two never tie
+            // (a tie would order by non-deterministic HashMap iteration).
+            let in_ts = ts + 1.0;
+            save_seen(&ep.audio_url, in_ts);
+            seen_map.update(|m| {
+                m.insert(ep.audio_url.clone(), in_ts);
+            });
             set_now_playing(&ep.title, &artist, "icons/icon-512.png");
             set_playback(true);
         });
@@ -683,6 +965,83 @@ fn App() -> impl IntoView {
         });
     };
 
+    // The single live-gated read for the 이어듣기 membership: Some(url) iff the
+    // currently-playing episode is itself in-progress (0 < frac < PLAYED_FRAC).
+    // Without it, membership would only refresh at the next episode switch
+    // (saved_frac is frozen mid-listen), so a freshly-started episode would be
+    // invisible during its first play and a finished one would linger. This Memo
+    // recomputes on every ~4Hz timeupdate but only NOTIFIES when the Option flips
+    // (a threshold crossing or a switch), so it is the ONLY thing subscribing to
+    // play_pos/play_dur — the list Memo below stays inert per tick.
+    let current_in_progress = Memo::new(move |_| {
+        let url = current.get();
+        if url.is_empty() {
+            return None;
+        }
+        // Prefer the LIVE fraction once it's meaningful (so a finished episode
+        // drops the instant it crosses 95%, and re-seeking backwards re-adds it),
+        // but fall back to the SAVED fraction while the live position is still 0 —
+        // i.e. pre-metadata, or the brief load/seek window when `play` has reset
+        // play_pos to 0 before the resume-seek lands. Without the fallback a
+        // just-tapped resume item would flicker out of the list and back during
+        // load.
+        let dur = play_dur.get();
+        let live_f = if dur > 0.0 { play_pos.get() / dur } else { 0.0 };
+        let f = if live_f > 0.0 {
+            live_f
+        } else {
+            saved_frac.with(|m| m.get(&url).copied()).unwrap_or(0.0)
+        };
+        if f > 0.0 && f < PLAYED_FRAC {
+            Some(url)
+        } else {
+            None
+        }
+    });
+
+    // The ordered audio_urls feeding the 이어듣기 section. Membership = every
+    // episode known started-but-unfinished from saved_frac, EXCEPT the currently-
+    // playing one — whose membership is decided live by current_in_progress, so
+    // it enters on first play and leaves the instant it crosses 95% rather than
+    // at the next switch. Ordered most-recently-listened first (seen_map), with
+    // the playing episode forced to the top. Depends only on switch-cadence
+    // signals plus the memoized current_in_progress flag — never play_pos/play_dur
+    // directly — so the <For> never churns on the 4Hz stream.
+    let in_progress = Memo::new(move |_| {
+        let cur_url = current.get();
+        let cip = current_in_progress.get();
+        let mut urls: Vec<String> = saved_frac.with(|fracs| {
+            episode_map.with(|emap| {
+                fracs
+                    .iter()
+                    .filter(|(u, &f)| f > 0.0 && f < PLAYED_FRAC && emap.contains_key(*u))
+                    .map(|(u, _)| u.clone())
+                    .filter(|u| *u != cur_url)
+                    .collect()
+            })
+        });
+        if let Some(c) = cip {
+            if episode_map.with(|m| m.contains_key(&c)) {
+                urls.push(c);
+            }
+        }
+        // Borrow seen_map in place (don't clone the whole map per switch) while
+        // still registering the reactive dependency on it.
+        seen_map.with(|seen| {
+            urls.sort_by(|a, b| {
+                let ac = *a == cur_url;
+                let bc = *b == cur_url;
+                if ac != bc {
+                    return bc.cmp(&ac); // currently-playing first
+                }
+                let sa = seen.get(a).copied().unwrap_or(0.0);
+                let sb = seen.get(b).copied().unwrap_or(0.0);
+                sb.partial_cmp(&sa).unwrap_or(std::cmp::Ordering::Equal)
+            })
+        });
+        urls
+    });
+
     view! {
         <header>
             <h1>"🎧 Podcasts"</h1>
@@ -696,6 +1055,65 @@ fn App() -> impl IntoView {
             </div>
         </Show>
         <main>
+            // 이어듣기 (Continue Listening): a cross-podcast collection of every
+            // started-but-unfinished episode, pinned above the feed and resumable
+            // in one tap. Reuses the .podcast section + episode_row verbatim; the
+            // whole section unmounts when nothing is resumable.
+            <Show when=move || in_progress.with(|v| !v.is_empty())>
+                <section
+                    class="podcast continue"
+                    class:collapsed=move || collapsed.with(|s| s.contains(CONTINUE_KEY))
+                >
+                    <h2
+                        class="podcast-head"
+                        role="button"
+                        tabindex="0"
+                        aria-expanded=move || {
+                            (!collapsed.with(|s| s.contains(CONTINUE_KEY))).to_string()
+                        }
+                        on:click=move |_| toggle_collapsed(collapsed, CONTINUE_KEY)
+                        on:keydown=move |ev| {
+                            let k = ev.key();
+                            if k == "Enter" || k == " " {
+                                ev.prevent_default();
+                                toggle_collapsed(collapsed, CONTINUE_KEY);
+                            }
+                        }
+                    >
+                        <span class="podcast-title">"이어듣기"</span>
+                        <span class="ep-count">{move || in_progress.with(|v| v.len())}</span>
+                    </h2>
+                    <ul>
+                        <For
+                            each=move || in_progress.get()
+                            key=|u| u.clone()
+                            children=move |u: String| {
+                                match episode_map.with(|m| m.get(&u).cloned()) {
+                                    Some((artist, ep, dur)) => {
+                                        episode_row(
+                                            ep,
+                                            artist,
+                                            true,
+                                            dur,
+                                            current,
+                                            online,
+                                            downloaded,
+                                            progress,
+                                            saved_frac,
+                                            play_pos,
+                                            play_dur,
+                                            play,
+                                            download,
+                                            delete_dl,
+                                        )
+                                    }
+                                    None => ().into_any(),
+                                }
+                            }
+                        />
+                    </ul>
+                </section>
+            </Show>
             <For
                 each=move || podcasts.get()
                 key=|p| p.title.clone()
@@ -737,147 +1155,22 @@ fn App() -> impl IntoView {
                                     each=move || eps.clone()
                                     key=|e| e.audio_url.clone()
                                     children=move |e: Episode| {
-                                        let key = e.audio_url.clone();
-                                        let artist = artist.clone();
-                                        let ep_play = e.clone();
-                                        let ep_dl = e.clone();
-                                        let ep_del = e.clone();
-                                        let k_state = key.clone();
-                                        let k_cls = key.clone();
-                                        let k_click = key.clone();
-                                        let k_prog = key.clone();
-                                        // Listened fraction (0..1) for this row, and the derived
-                                        // "played" flag. Read `current` FIRST and only touch the
-                                        // live signals when this row IS playing: a Leptos closure
-                                        // subscribes to exactly the signals it reads, so non-playing
-                                        // rows depend on `current`/`saved_frac` alone and stay inert
-                                        // during the ~4Hz timeupdate stream — only the playing row's
-                                        // `frac` re-runs. `played` is a *bool* memo so the badge and
-                                        // title dim it feeds flip just once (at the threshold), not
-                                        // on every tick.
-                                        let frac = Memo::new(move |_| {
-                                            if current.get() == k_prog {
-                                                let dur = play_dur.get();
-                                                if dur > 0.0 {
-                                                    (play_pos.get() / dur).clamp(0.0, 1.0)
-                                                } else {
-                                                    // Pre-metadata (e.g. just after a refresh):
-                                                    // fall back to the saved fraction.
-                                                    saved_frac
-                                                        .with(|m| m.get(&k_prog).copied())
-                                                        .unwrap_or(0.0)
-                                                }
-                                            } else {
-                                                saved_frac.with(|m| m.get(&k_prog).copied()).unwrap_or(0.0)
-                                            }
-                                        });
-                                        let played = Memo::new(move |_| frac.get() >= PLAYED_FRAC);
-                                        // Episodes you can't act on offline: not downloaded
-                                        // and no network. A finished episode also gets a `played`
-                                        // class so its title recedes (dimmed) in the list.
-                                        let title_cls = {
-                                            let k = k_cls.clone();
-                                            move || {
-                                                let playable = online.get()
-                                                    || downloaded.with(|s| s.contains(&k));
-                                                let mut cls = String::from("ep-title");
-                                                if !playable {
-                                                    cls.push_str(" unplayable");
-                                                }
-                                                if played.get() {
-                                                    cls.push_str(" played");
-                                                }
-                                                cls
-                                            }
-                                        };
-                                        // Saved episodes show a non-interactive "✓ 저장됨" status badge
-                                        // paired with a *separate* destructive ✕ remove button — the
-                                        // check is a status, never a delete affordance. Pre-download:
-                                        // a single ⬇ button; mid-download: a live percent readout.
-                                        let dl_controls = move || {
-                                            if let Some(p) = progress.with(|m| m.get(&k_state).copied()) {
-                                                let label = if p < 0 {
-                                                    "…".to_string()
-                                                } else {
-                                                    format!("{p}%")
-                                                };
-                                                view! { <span class="dl-progress">{label}</span> }.into_any()
-                                            } else if downloaded.with(|s| s.contains(&k_state)) {
-                                                let ep = ep_del.clone();
-                                                view! {
-                                                    <span class="dl-saved">"✓ 저장됨"</span>
-                                                    <button
-                                                        class="dl-btn dl-del"
-                                                        aria-label="오프라인 저장 삭제"
-                                                        on:click=move |_| delete_dl(ep.clone())
-                                                    >
-                                                        "✕"
-                                                    </button>
-                                                }
-                                                    .into_any()
-                                            } else {
-                                                let ep = ep_dl.clone();
-                                                view! {
-                                                    <button
-                                                        class="dl-btn"
-                                                        aria-label="오프라인 저장 다운로드"
-                                                        on:click=move |_| download(ep.clone())
-                                                    >
-                                                        "⬇"
-                                                    </button>
-                                                }
-                                                    .into_any()
-                                            }
-                                        };
-                                        // In-progress strip on the row's bottom edge, shown only
-                                        // while 0 < frac < PLAYED_FRAC. A finished (played) row
-                                        // drops the strip and shows the "들음" badge instead, so the
-                                        // three states — unplayed / in progress / played — each read
-                                        // distinctly. The width still tracks live for the playing row.
-                                        let progress_bar = move || {
-                                            let f = frac.get();
-                                            if f <= 0.0 || played.get() {
-                                                ().into_any() // unplayed or finished → no strip
-                                            } else {
-                                                let pct = f * 100.0;
-                                                view! {
-                                                    <div
-                                                        class="ep-bar"
-                                                        style=format!("width:{pct:.2}%")
-                                                    ></div>
-                                                }
-                                                    .into_any()
-                                            }
-                                        };
-                                        // Auto-marked "played" badge — a passive status, visually
-                                        // distinct from the green "✓ 저장됨" download badge.
-                                        let played_badge = move || {
-                                            if played.get() {
-                                                view! { <span class="ep-played">"✓ 들음"</span> }
-                                                    .into_any()
-                                            } else {
-                                                ().into_any()
-                                            }
-                                        };
-                                        view! {
-                                            <li>
-                                                <span
-                                                    class=title_cls
-                                                    on:click=move |_| {
-                                                        let playable = online.get_untracked()
-                                                            || downloaded.with_untracked(|s| s.contains(&k_click));
-                                                        if playable {
-                                                            play(ep_play.clone(), artist.clone());
-                                                        }
-                                                    }
-                                                >
-                                                    {e.title.clone()}
-                                                </span>
-                                                {played_badge}
-                                                {dl_controls}
-                                                {progress_bar}
-                                            </li>
-                                        }
+                                        episode_row(
+                                            e,
+                                            artist.clone(),
+                                            false,
+                                            0.0,
+                                            current,
+                                            online,
+                                            downloaded,
+                                            progress,
+                                            saved_frac,
+                                            play_pos,
+                                            play_dur,
+                                            play,
+                                            download,
+                                            delete_dl,
+                                        )
                                     }
                                 />
                             </ul>
