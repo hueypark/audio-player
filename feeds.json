@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 6/15(월) AI 수출 통제 (김덕진 소장) | 일본 노인 범죄 | 아일랜드 청년 주택난 | 중국 로봇 피부 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260615.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260615.mp3"
+        },
+        {
           "title": "[손경제] 6/15(월) 美 AI 수출통제 | AI 가격경쟁 | 스페이스X 공모주 | 국제유가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260615.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260615.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 5/20(수) 미국 초대형 IPO (하수정 경제전문기자) | 거장들의 포트폴리오 (이윤수 대표)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260520.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260520.mp3"
-        },
-        {
-          "title": "[손경제] 5/20(수) LH 이색 공급 방안 | 농어촌특별세",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260520.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260520.mp3"
         }
       ]
     },
