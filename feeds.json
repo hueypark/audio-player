@@ -259,6 +259,10 @@
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
         {
+          "title": "Episode #740: 12.0.7 Revelations has arrived!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_740.mp3?dest-id=244124"
+        },
+        {
           "title": "Episode #739: Revelations June 16!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_739.mp3?dest-id=244124"
         },
@@ -453,10 +457,6 @@
         {
           "title": "Episode #691: Greedy Emissaries!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_691.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #690: Are our Spells too Dense?",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_690.mp3?dest-id=244124"
         }
       ]
     }
