@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 6/17(수) 맥도날드 (하수정 경제전문기자) | 헤어케어 시장 (오린아 LS증권 연구원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260617.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260617.mp3"
+        },
+        {
           "title": "[손경제] 6/17(수) 이란 재건기금 | 호르무즈 수수료 | 日 기준금리 인상",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260617.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260617.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 5/22(금) 급등한 채권 금리가 시장에 던지는 경고 - 김한진 박사",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260522.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260522.mp3"
-        },
-        {
-          "title": "[손경제] 5/22(금) 돈 벌 때 더 써야 산다? 메모리 초격차의 조건 - 김정호 교수 (카이스트 전자및전기공학부)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260522.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260522.mp3"
         }
       ]
     },
