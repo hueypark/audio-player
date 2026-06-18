@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 6/18(목) FOMC | 이란 원유 | 한은 물가 전망 | 퇴직연금 ETF",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260618.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260618.mp3"
+        },
+        {
           "title": "[플러스] 6/17(수) 맥도날드 (하수정 경제전문기자) | 헤어케어 시장 (오린아 LS증권 연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260617.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260617.mp3"
@@ -247,11 +252,6 @@
           "title": "커피타임 - 삼전닉스, 샌디스크 그 다음 타자는?",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee260522.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee260522.mp3"
-        },
-        {
-          "title": "[플러스] 5/22(금) 급등한 채권 금리가 시장에 던지는 경고 - 김한진 박사",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260522.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260522.mp3"
         }
       ]
     },
