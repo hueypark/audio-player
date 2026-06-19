@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 6/19(금) 실업급여 | 판다 본드 | C-뷰티",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260619.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260619.mp3"
+        },
+        {
+          "title": "[플러스] 6/18(목) 치매 완치의 희망 장에서 찾았습니다 - 묵인희 교수 (서울대 의대 치매융합연구센터장)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260618.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260618.mp3"
+        },
+        {
           "title": "[손경제] 6/18(목) FOMC | 이란 원유 | 한은 물가 전망 | 퇴직연금 ETF",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260618(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260618(1).mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 5/24(일) 천재들도 쓸려나간 주식시장 광기의 역사 - 재원쌤",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260524.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260524.mp3"
-        },
-        {
-          "title": "[플러스] 5/23(토) 압도적 특혜 없이는 균형발전도 없습니다 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260523.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260523.mp3"
-        },
-        {
-          "title": "커피타임 - 삼전닉스, 샌디스크 그 다음 타자는?",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee260522.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee260522.mp3"
         }
       ]
     },
