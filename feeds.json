@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[커피타임] 가난해서 죄송합니다",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260619.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260619.mp3"
+        },
+        {
           "title": "[손경제] 6/19(금) 실업급여 | 판다 본드 | C-뷰티",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260619.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260619.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 5/25(월) 환율 1500원대 | 국민성장펀드 | 매입임대 6.6만호 | 학력별 출산율",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260525.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260525.mp3"
-        },
-        {
-          "title": "[플러스] 5/24(일) 천재들도 쓸려나간 주식시장 광기의 역사 - 재원쌤",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260524.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260524.mp3"
         }
       ]
     },
