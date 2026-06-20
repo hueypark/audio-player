@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 6/19(금) 가장 방어적인 전략이 반도체 50%입니다 - 윤지호 경제 평론가",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260619.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260619.mp3"
+        },
+        {
           "title": "[커피타임] 가난해서 죄송합니다",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260619.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260619.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 5/25(월) 구글 컨퍼런스 (김덕진 소장) | 중국 후커우제 | 美 쿠바 압박 | 뉴욕 청소원 연봉 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260525.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260525.mp3"
-        },
-        {
-          "title": "[손경제] 5/25(월) 환율 1500원대 | 국민성장펀드 | 매입임대 6.6만호 | 학력별 출산율",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260525.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260525.mp3"
         }
       ]
     },
