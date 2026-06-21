@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 6/21(일) 땅값 한푼 안 들이고 주택 짓는 5가지 방법 - 최상희 선임연구위원 (토지주택연구원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260621.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260621.mp3"
+        },
+        {
           "title": "[플러스] 6/20(토) 아마존은 왜 클로드의 뒤통수를 쳤나 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260620.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260620.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 5/26(화) 계속 커지는 변동성, 폭등장의 숙명입니다 - 이선엽 대표 (AFW 파트너스)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260526.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260526.mp3"
-        },
-        {
-          "title": "[손경제] 5/26(화) 현대차 원가절감 | 레버리지 ETF | 삼성 성과급 후폭풍",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260526.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260526.mp3"
         }
       ]
     },
