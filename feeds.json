@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 6/23(화) SK하이닉스 | 레버리지 ETF | 상호금융권 | 호텔 투자",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260623.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260623.mp3"
+        },
+        {
+          "title": "[플러스] 6/22(월) AI 효율성 논쟁 (김덕진 소장) | 쿠바 시장경제 | 중국 가상부모 | 역노화 기술 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260622.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260622.mp3"
+        },
+        {
           "title": "[손경제] 6/22(월) 국민연금 | 청년미래적금 | 참다랑어 | 고등어",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260622.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260622.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 5/28(목) 2배 ETF 첫날 | 샤오미 실적 | 미국 예측시장",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_260528_1.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_260528_1.mp3"
-        },
-        {
-          "title": "[플러스] 5/27(수) 패션브랜드 '망고' (하수정 경제전문기자) | 태양광 산업 (윤재성 하나증권 수석연구위원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260527.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260527.mp3"
-        },
-        {
-          "title": "[손경제] 5/27(수) 건보료 4조 | 시간 단위 연차 | 장기전세 만기",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_260527_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_260527_1.mp3"
         }
       ]
     },
