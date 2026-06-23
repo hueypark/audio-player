@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 6/23(화) 전례 없는 머니 무브 아직 안 끝났습니다 - 김학균 리서치센터장 (신영증권)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260623.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260623.mp3"
+        },
+        {
           "title": "[손경제] 6/23(화) SK하이닉스 | 레버리지 ETF | 상호금융권 | 호텔 투자",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260623.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260623.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 5/28(목) 한국 기업에 열린 유럽 마지막 기회의 땅 - 김지영 교수 (숭실대 한국기독교문화연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260528.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260528.mp3"
-        },
-        {
-          "title": "[손경제] 5/28(목) 2배 ETF 첫날 | 샤오미 실적 | 미국 예측시장",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_260528_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_260528_1.mp3"
         }
       ]
     },
