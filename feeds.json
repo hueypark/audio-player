@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 6/24(수) 팔란티어 (하수정 경제전문기자) | 호텔 산업 (남성현 IBK 투자증권 연구원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260624.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260624.mp3"
+        },
+        {
           "title": "[손경제] 6/24(수) 코스피 폭락 | 석화업계 반도체 투자",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260624.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260624.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 5/29(금) 중국 드라마 열풍.. K-콘텐츠가 위험합니다 - 조영신 작가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260529.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260529.mp3"
-        },
-        {
-          "title": "[손경제] 5/29(금) 기준금리 동결 | 국민연금 국내주식 비중 | 가상자산 과세 | 미국 반도체",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_260529_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_260529_1.mp3"
         }
       ]
     },
