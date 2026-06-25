@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 6/25(목)  SK하이닉스 ADR | 호남 반도체 | 성과급 제동 | 주택 공급",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260625.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260625.mp3"
+        },
+        {
           "title": "[플러스] 6/24(수) 팔란티어 (하수정 경제전문기자) | 호텔 산업 (남성현 IBK 투자증권 연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260624.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260624.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 5/30(토) 스타트업 돈줄 뚫어라, IPO 전쟁이 시작됐습니다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260530.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260530.mp3"
-        },
-        {
-          "title": "[플러스] 5/29(금) 중국 드라마 열풍.. K-콘텐츠가 위험합니다 - 조영신 작가",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260529.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260529.mp3"
         }
       ]
     },
