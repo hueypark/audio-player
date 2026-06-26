@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 6/26(금) 마이크론 | 액티브 ETF | 건강보험 수가",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260626.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260626.mp3"
+        },
+        {
+          "title": "[플러스] 6/25(목) 우주 패권 전쟁에 일본이 참전했습니다 - 서병수 애널리스트",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260625.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260625.mp3"
+        },
+        {
           "title": "[손경제] 6/25(목)  SK하이닉스 ADR | 호남 반도체 | 성과급 제동 | 주택 공급",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260625.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260625.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 6/1(월) 국민연금 채권 | 외환시장 24시간 | 유럽 데이터센터 | 페라리 전기차",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260601.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260601.mp3"
-        },
-        {
-          "title": "[플러스] 5/31(일) 나눠먹기식 성과급은 국가경쟁력에 독입니다 - 송재용 석좌교수 (서울대 경영대학)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260531.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260531.mp3"
-        },
-        {
-          "title": "[플러스] 5/30(토) 스타트업 돈줄 뚫어라, IPO 전쟁이 시작됐습니다 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260530.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260530.mp3"
         }
       ]
     },
