@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[경제콘서트] 지거국 리턴즈",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYCONCERT_20260626.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYCONCERT_20260626.mp3"
+        },
+        {
           "title": "[손경제] 6/26(금) 마이크론 | 액티브 ETF | 건강보험 수가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260626.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260626.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/1(월) 휴머노이드 로봇 (김덕진 소장) | 부자들의 아르헨행 | 러시아 은행원과 드론 | 밥 로스 (한명현 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260601.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260601.mp3"
-        },
-        {
-          "title": "[손경제] 6/1(월) 국민연금 채권 | 외환시장 24시간 | 유럽 데이터센터 | 페라리 전기차",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260601.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260601.mp3"
         }
       ]
     },
