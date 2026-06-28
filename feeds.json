@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 6/27(토) 동남아 화폐가 휴지가 되고 있는 이유 - 박정호 명지대 교수",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260627.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260627.mp3"
+        },
+        {
           "title": "[플러스] 6/26(금) 러브버그와의 전쟁 이제는 끝내야 합니다 - 김동건 교수 (삼육대 환경생태연구소)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260626.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260626.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/2(화) 폭등장에서 지켜야 하는 불변의 투자 원칙 - 홍춘욱 대표 (프리즘 투자자문)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260602.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260602.mp3"
-        },
-        {
-          "title": "[손경제] 6/2(화) 5억 사내대출 | GTC | 장례업",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260602.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260602.mp3"
         }
       ]
     },
