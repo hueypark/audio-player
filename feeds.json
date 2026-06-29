@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 6/29(월) 올드테크 | 양도제한조건부주식 | 전동킥보드",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260629.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260629.mp3"
+        },
+        {
+          "title": "[플러스] 6/28(일) 전세는 우리나라만의 전유물이 아닙니다 - 재원쌤",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260628.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260628.mp3"
+        },
+        {
           "title": "[플러스] 6/27(토) 동남아 화폐가 휴지가 되고 있는 이유 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260627.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260627.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 6/4(목) 美 강제노동 관세 | 스페이스X 공모가 | 세계 외환보유자산",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260604.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260604.mp3"
-        },
-        {
-          "title": "[손경제] 6/3(수) 중복상장 가이드라인 | 구글 유상증자 | 삼성 시총 10위",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260603.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260603.mp3"
-        },
-        {
-          "title": "[플러스] 6/2(화) 폭등장에서 지켜야 하는 불변의 투자 원칙 - 홍춘욱 대표 (프리즘 투자자문)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260602.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260602.mp3"
         }
       ]
     },
