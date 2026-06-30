@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 6/30(화) 반도체 집단소송 | 정유사 보상 | 반도체 투자 | 역직구",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260630.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260630.mp3"
+        },
+        {
+          "title": "[플러스] 6/29(월) AI 패권 (김덕진 소장) | 유럽 폭염 | 중국 대만 갈등 | 퀘백 조력사망 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260629.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260629.mp3"
+        },
+        {
           "title": "[손경제] 6/29(월) 올드테크 | 양도제한조건부주식 | 전동킥보드",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260629.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260629.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 6/5(금) 환율 1540원대 | 전력 가격상한제 | 브라질 원유 증산",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260605.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260605.mp3"
-        },
-        {
-          "title": "[플러스] 6/4(목) 푸틴이 드디어 종전을 언급하기 시작했습니다 - 이문영 교수 (서울대 통일평화연구원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260604.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260604.mp3"
-        },
-        {
-          "title": "[손경제] 6/4(목) 美 강제노동 관세 | 스페이스X 공모가 | 세계 외환보유자산",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260604.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260604.mp3"
         }
       ]
     },
