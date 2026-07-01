@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/1(수) 동탄·기흥·구리 | EU 철강 장벽 | 슈퍼엔저",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260701.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260701.mp3"
+        },
+        {
+          "title": "[플러스] 6/30(화) '10년 사이 총리만 7명' 영국은 왜 콩가루가 됐나 - 윤영휘 교수 (경북대 사학과)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260630.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260630.mp3"
+        },
+        {
           "title": "[손경제] 6/30(화) 반도체 집단소송 | 정유사 보상 | 반도체 투자 | 역직구",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260630.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260630.mp3"
@@ -242,22 +252,16 @@
           "title": "커피타임(협찬) - 고든 램지도 손종원도 저희 것만 씁니다 with 바다숲",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/260527badasoop.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/260527badasoop.mp3"
-        },
-        {
-          "title": "[플러스] 6/5(금) 신통기획 보다 훨씬 빠른 서울시 정비 사업의 정체 - 박합수 겸임교수 (건국대 부동산대학원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260605.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260605.mp3"
-        },
-        {
-          "title": "[손경제] 6/5(금) 환율 1540원대 | 전력 가격상한제 | 브라질 원유 증산",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260605.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260605.mp3"
         }
       ]
     },
     {
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
+        {
+          "title": "Episode #742: The 12.1 Hype Train!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_742.mp3?dest-id=244124"
+        },
         {
           "title": "Episode #741: 12.1 WoWCast Coverage!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_741.mp3?dest-id=244124"
@@ -453,10 +457,6 @@
         {
           "title": "Episode #693: What to do before Season 3!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_693.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #692: Season 3 August 5th!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_692.mp3?dest-id=244124"
         }
       ]
     }
