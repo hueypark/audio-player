@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/2(목) 태평양 깊은 곳에서 희토류 직접 캤습니다 - 김윤미 센터장 (한국지질자원연구원 해저지질연구센터)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260702.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260702.mp3"
+        },
+        {
           "title": "[손경제] 7/2(목) 수출 데이터 | 메타 클라우드 | 오픈 USD | 풍선효과 | 앱마켓",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260702.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260702.mp3"
@@ -247,11 +252,6 @@
           "title": "커피타임 - 1부 위기의 중년 남자는 스페인에 가야합니다",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee260605_1.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee260605_1.mp3"
-        },
-        {
-          "title": "커피타임 - 2부 독일 남녀혼탕에서 만난 여성이...",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee260605_2.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee260605_2.mp3"
         }
       ]
     },
