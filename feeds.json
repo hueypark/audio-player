@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[커피타임] 노후상가가 아파트가 되는 기적",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_0703_2_RE.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_0703_2_RE.mp3"
+        },
+        {
+          "title": "[커피타임] 리더의 권한과 책임｜SK하이닉스와 애국",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_0703_1.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_0703_1.mp3"
+        },
+        {
           "title": "[손경제] 7/3(금) 케빈 워시 | 국민연금 개혁 | 오픈AI",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260703.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260703.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 6/8(월) 젠슨황 방한 (김덕진 소장) | 영국 청년 군입대 | CIA 금괴 절도 | 스웨덴 10대 교도소 (한명현 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260608.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260608.mp3"
-        },
-        {
-          "title": "[손경제] 6/8(월) 블랙먼데이 공포 | 상호관세 환급 | AI 지분 배분",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260608.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260608.mp3"
-        },
-        {
-          "title": "[플러스] 6/7(일) 한반도의 금광이 부활을 노리고 있습니다 - 박상준 선임연구원 (한국지질자원연구원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260607.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260607.mp3"
         }
       ]
     },
