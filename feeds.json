@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/3(금) 달걀값 오른 건 유통탓? 범인은 따로 있습니다 - 노준기 대표 (계림농장)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260703.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260703.mp3"
+        },
+        {
           "title": "[커피타임] 노후상가가 아파트가 되는 기적",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_0703_2_RE.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_0703_2_RE.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 6/9(화) NDF 거래 | 앤트로픽 | 장바구니 물가상승",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260609.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260609.mp3"
-        },
-        {
-          "title": "[플러스] 6/8(월) 젠슨황 방한 (김덕진 소장) | 영국 청년 군입대 | CIA 금괴 절도 | 스웨덴 10대 교도소 (한명현 기자)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260608.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260608.mp3"
         }
       ]
     },
