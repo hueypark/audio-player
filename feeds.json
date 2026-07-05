@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/4(토) 패권 전쟁의 숨겨진 전장 동남아시아인 이유 - 박정호 명지대 교수",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260704.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260704.mp3"
+        },
+        {
           "title": "[플러스] 7/3(금) 달걀값 오른 건 유통탓? 범인은 따로 있습니다 - 노준기 대표 (계림농장)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260703.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260703.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/9(화) 조합장이 파리 목숨이니 재개발이 늦어지는 겁니다 - 이재식 전문조합관리인 (연희1구역)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260609.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260609.mp3"
-        },
-        {
-          "title": "[손경제] 6/9(화) NDF 거래 | 앤트로픽 | 장바구니 물가상승",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260609.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260609.mp3"
         }
       ]
     },
