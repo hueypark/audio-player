@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/5(일) 강북 집값이 덜 오르는 건 사실 버스 때문입니다 - 임삼진 원장 (녹색도시연구원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260705.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260705.mp3"
+        },
+        {
           "title": "[플러스] 7/4(토) 패권 전쟁의 숨겨진 전장 동남아시아인 이유 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260704.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260704.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 6/10(수) WWDC26 | 엔비디아 동맹 | 레버리지ETF",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260610.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260610.mp3"
-        },
-        {
-          "title": "[플러스] 6/9(화) 조합장이 파리 목숨이니 재개발이 늦어지는 겁니다 - 이재식 전문조합관리인 (연희1구역)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260609.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260609.mp3"
         }
       ]
     },
