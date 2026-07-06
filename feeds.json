@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/6(월) 엔캐리 트레이드 | 반도체 비관론 | 홈플러스",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260706.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260706.mp3"
+        },
+        {
           "title": "[플러스] 7/5(일) 강북 집값이 덜 오르는 건 사실 버스 때문입니다 - 임삼진 원장 (녹색도시연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260705.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260705.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/10(수) 월드컵 경제 (하수정 경제전문기자) | 스페이스X 상장 (정의훈 유진투자증권 선임연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260610.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260610.mp3"
-        },
-        {
-          "title": "[손경제] 6/10(수) WWDC26 | 엔비디아 동맹 | 레버리지ETF",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260610.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260610.mp3"
         }
       ]
     },
