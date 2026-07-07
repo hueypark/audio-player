@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/7(화) 삼성전자 실적 | 국민연금 리밸런싱 유예 | 중복상장 금지 | 반도체 추가 세수",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260707.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260707.mp3"
+        },
+        {
+          "title": "[플러스] 7/6(월) 메타 컴퓨트 (김덕진 소장) | 중국 청년 유령도시 | 남아공 이주민 갈등 | 러시아 연료난 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260706.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260706.mp3"
+        },
+        {
           "title": "[손경제] 7/6(월) 엔캐리 트레이드 | 반도체 비관론 | 홈플러스",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260706.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260706.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 6/11(목) 모즈타바 나타나도 종전 장담 못 합니다 - 김덕일 연구위원 (고려대 아연 중동·이슬람센터)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260611(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260611(1).mp3"
-        },
-        {
-          "title": "[손경제] 6/11(목) 美 CPI | 스페이스X 공모주 | 은행채",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260611.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260611.mp3"
-        },
-        {
-          "title": "[플러스] 6/10(수) 월드컵 경제 (하수정 경제전문기자) | 스페이스X 상장 (정의훈 유진투자증권 선임연구원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260610.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260610.mp3"
         }
       ]
     },
