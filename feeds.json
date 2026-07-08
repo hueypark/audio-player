@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/7(화) 금의 슈퍼사이클 앞으로 5년 남았습니다 - 조규원 대표 (스태커스)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260707.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260707.mp3"
+        },
+        {
           "title": "[손경제] 7/7(화) 삼성전자 실적 | 국민연금 리밸런싱 유예 | 중복상장 금지 | 반도체 추가 세수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260707.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260707.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 6/12(금) 일자리 급감 | 가계대출 | 양극화 | 셔세권 집값",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260612.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260612.mp3"
-        },
-        {
-          "title": "[플러스] 6/11(목) 모즈타바 나타나도 종전 장담 못 합니다 - 김덕일 연구위원 (고려대 아연 중동·이슬람센터)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260611(1).mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260611(1).mp3"
         }
       ]
     },
