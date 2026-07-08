@@ -259,6 +259,10 @@
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
         {
+          "title": "Episode #743: 12.1 New Rewards!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_743.mp3?dest-id=244124"
+        },
+        {
           "title": "Episode #742: The 12.1 Hype Train!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_742.mp3?dest-id=244124"
         },
@@ -453,10 +457,6 @@
         {
           "title": "Episode #694: The lull before the patch!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_694.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #693: What to do before Season 3!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_693.mp3?dest-id=244124"
         }
       ]
     }
