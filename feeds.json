@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/9(목) 딥시크 AI칩 | 중국 AI 장벽 | SK하이닉스 ADR | 중고폰 시장",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260709.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260709.mp3"
+        },
+        {
+          "title": "[플러스] 7/8(수) 450조 중동 재건사업 한국이 1순위인 이유 - 임병구 한국대표 (러머스 테크놀로지)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260708.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260708.mp3"
+        },
+        {
           "title": "[손경제] 7/8(수) 레버리지ETF | 예금 금리 | 소비자물가 개편",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260708.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260708.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 6/12(금) 뚝 끊기는 오일머니 리그 하나가 파산합니다 - 이종훈 스포츠평론가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260612.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260612.mp3"
-        },
-        {
-          "title": "[협찬인가] 화장품 불신지옥에 떨어진 어린 양",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_sponsorship_260612(gash).mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_sponsorship_260612(gash).mp3"
-        },
-        {
-          "title": "[커피타임] 주식 걱정｜선관위 걱정｜환율 걱정",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffeetime_20260612.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffeetime_20260612.mp3"
         }
       ]
     },
