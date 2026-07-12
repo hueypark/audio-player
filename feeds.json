@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/11(토) 세상의 통화가 달러로 통일되고 있습니다 - 박정호 명지대 교수",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260711.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260711.mp3"
+        },
+        {
           "title": "[플러스] 7/10(금) 살 수 있다는 헛된 희망이 가장 잔인한 위로입니다 - 박중철 교수 (연세암병원 완화의료센터)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260710.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260710.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/16(화) 중국이 북을 못 버리는 건 사실 동해 때문입니다 - 조한범 석좌연구위원 (통일연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260616.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260616.mp3"
-        },
-        {
-          "title": "[손경제] 6/16(화) 디지털세 | 정비사업 규제 | 농어촌기본소득",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260616.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260616.mp3"
         }
       ]
     },
