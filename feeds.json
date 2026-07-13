@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/12(일) 화성 이주의 꿈은 판타지입니다 - 지웅배 교수 (세종대 자유전공학부)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260712.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260712.mp3"
+        },
+        {
           "title": "[플러스] 7/11(토) 세상의 통화가 달러로 통일되고 있습니다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260711.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260711.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 6/17(수) 이란 재건기금 | 호르무즈 수수료 | 日 기준금리 인상",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260617.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260617.mp3"
-        },
-        {
-          "title": "[플러스] 6/16(화) 중국이 북을 못 버리는 건 사실 동해 때문입니다 - 조한범 석좌연구위원 (통일연구원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260616.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260616.mp3"
         }
       ]
     },
