@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/13(월) SK하이닉스 ADR | 미국 반도체 투자 | 현대차 월급제",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260713.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260713.mp3"
+        },
+        {
           "title": "[플러스] 7/12(일) 화성 이주의 꿈은 판타지입니다 - 지웅배 교수 (세종대 자유전공학부)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260712.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260712.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/17(수) 맥도날드 (하수정 경제전문기자) | 헤어케어 시장 (오린아 LS증권 연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260617.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260617.mp3"
-        },
-        {
-          "title": "[손경제] 6/17(수) 이란 재건기금 | 호르무즈 수수료 | 日 기준금리 인상",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260617.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260617.mp3"
         }
       ]
     },
