@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/14(화) 슈퍼 확장재정 | 애플-오픈AI 소송 | 국민연금",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260714.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260714.mp3"
+        },
+        {
           "title": "[플러스] 7/13(월) AI 신모델 (김덕진 소장) | 대만 TSMC | 미국 쿠바 압박 | 러시아 올림픽 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260713.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260713.mp3"
@@ -247,17 +252,16 @@
           "title": "[플러스] 6/18(목) 치매 완치의 희망 장에서 찾았습니다 - 묵인희 교수 (서울대 의대 치매융합연구센터장)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260618.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260618.mp3"
-        },
-        {
-          "title": "[손경제] 6/18(목) FOMC | 이란 원유 | 한은 물가 전망 | 퇴직연금 ETF",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260618(1).mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260618(1).mp3"
         }
       ]
     },
     {
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
+        {
+          "title": "Episode #744: Quality of life incoming!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_744.mp3?dest-id=244124"
+        },
         {
           "title": "Episode #743: 12.1 New Rewards!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_743.mp3?dest-id=244124"
@@ -453,10 +457,6 @@
         {
           "title": "Episode #695: Ghosts of K'aresh!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_695.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #694: The lull before the patch!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_694.mp3?dest-id=244124"
         }
       ]
     }
