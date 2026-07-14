@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/13(월) AI 신모델 (김덕진 소장) | 대만 TSMC | 미국 쿠바 압박 | 러시아 올림픽 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260713.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260713.mp3"
+        },
+        {
           "title": "[손경제] 7/13(월) SK하이닉스 ADR | 미국 반도체 투자 | 현대차 월급제",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260713.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260713.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 6/18(목) FOMC | 이란 원유 | 한은 물가 전망 | 퇴직연금 ETF",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260618(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260618(1).mp3"
-        },
-        {
-          "title": "[플러스] 6/17(수) 맥도날드 (하수정 경제전문기자) | 헤어케어 시장 (오린아 LS증권 연구원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260617.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260617.mp3"
         }
       ]
     },
