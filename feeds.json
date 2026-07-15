@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/15(수) AI워싱 (하수정 경제전문기자) | 중국 기술주 (박수현 KB증권 아시아시장팀장)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260715.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260715.mp3"
+        },
+        {
           "title": "[손경제] 7/15(수) 국제유가 상승 | 345 성장 전략 | 중소기업 취업 혜택 | 주가 누르기 차단",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260715.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260715.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/19(금) 가장 방어적인 전략이 반도체 50%입니다 - 윤지호 경제 평론가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260619.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260619.mp3"
-        },
-        {
-          "title": "[커피타임] 가난해서 죄송합니다",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260619.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260619.mp3"
         }
       ]
     },
