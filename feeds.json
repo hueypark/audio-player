@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "협찬인가 - 보험사 말을 믿으십니까?",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_sponsor_260720.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_sponsor_260720.mp3"
+        },
+        {
           "title": "[플러스] 7/18(토) 엔캐리의 시대가 저물면 위안화의 시대가 옵니다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260718.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260718.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/23(화) 전례 없는 머니 무브 아직 안 끝났습니다 - 김학균 리서치센터장 (신영증권)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260623.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260623.mp3"
-        },
-        {
-          "title": "[손경제] 6/23(화) SK하이닉스 | 레버리지 ETF | 상호금융권 | 호텔 투자",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260623.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260623.mp3"
         }
       ]
     },
