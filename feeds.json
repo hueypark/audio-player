@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/18(토) 엔캐리의 시대가 저물면 위안화의 시대가 옵니다 - 박정호 명지대 교수",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260718.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260718.mp3"
+        },
+        {
           "title": "[플러스] 7/17(금) 세금으로 끌어낸 매물은 부잣집 자식이 채갑니다 - 김인만 부동산경제연구소장",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260717.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260717.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 6/23(화) SK하이닉스 | 레버리지 ETF | 상호금융권 | 호텔 투자",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260623.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260623.mp3"
-        },
-        {
-          "title": "[플러스] 6/22(월) AI 효율성 논쟁 (김덕진 소장) | 쿠바 시장경제 | 중국 가상부모 | 역노화 기술 (이혜인 기자)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260622.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260622.mp3"
         }
       ]
     },
