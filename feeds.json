@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/20(월) 중국 AI (김덕진 소장) | 미국 기업 약물 검사 | 미국 상원의원 고령화 | 일본 빈티지 맨션 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260720.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260720.mp3"
+        },
+        {
           "title": "협찬인가 - 보험사 말을 믿으십니까?",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_sponsor_260720.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_sponsor_260720.mp3"
@@ -247,17 +252,16 @@
           "title": "[손경제] 6/25(목)  SK하이닉스 ADR | 호남 반도체 | 성과급 제동 | 주택 공급",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260625.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260625.mp3"
-        },
-        {
-          "title": "[플러스] 6/24(수) 팔란티어 (하수정 경제전문기자) | 호텔 산업 (남성현 IBK 투자증권 연구원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260624.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260624.mp3"
         }
       ]
     },
     {
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
+        {
+          "title": "Episode #745: Dungeon Theory!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_745.mp3?dest-id=244124"
+        },
         {
           "title": "Episode #744: Quality of life incoming!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_744.mp3?dest-id=244124"
@@ -453,10 +457,6 @@
         {
           "title": "Episode #696: TWW Season 3 Begins!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_696.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #695: Ghosts of K'aresh!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_695.mp3?dest-id=244124"
         }
       ]
     }
