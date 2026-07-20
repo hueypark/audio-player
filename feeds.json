@@ -9,6 +9,11 @@
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_sponsor_260720.mp3"
         },
         {
+          "title": "[플러스] 7/19(일) 한국의 미친 교육열 언제부터 시작됐나 - 재원쌤",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260719.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260719.mp3"
+        },
+        {
           "title": "[플러스] 7/18(토) 엔캐리의 시대가 저물면 위안화의 시대가 옵니다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260718.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260718.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 6/24(수) 코스피 폭락 | 석화업계 반도체 투자",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260624.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260624.mp3"
-        },
-        {
-          "title": "[플러스] 6/23(화) 전례 없는 머니 무브 아직 안 끝났습니다 - 김학균 리서치센터장 (신영증권)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260623.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260623.mp3"
         }
       ]
     },
