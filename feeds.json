@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/21(화) 국내생산촉진세제 | 세계화 역전 | 명품업계 관행",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260721.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260721.mp3"
+        },
+        {
           "title": "[플러스] 7/20(월) 중국 AI (김덕진 소장) | 미국 기업 약물 검사 | 미국 상원의원 고령화 | 일본 빈티지 맨션 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260720.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260720.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/25(목) 우주 패권 전쟁에 일본이 참전했습니다 - 서병수 애널리스트",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260625.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260625.mp3"
-        },
-        {
-          "title": "[손경제] 6/25(목)  SK하이닉스 ADR | 호남 반도체 | 성과급 제동 | 주택 공급",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260625.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260625.mp3"
         }
       ]
     },
