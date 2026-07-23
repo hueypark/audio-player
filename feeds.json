@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/22(수) 데이터센터 (하수정 경제전문기자) | 레버리지ETF (윤선중 동국대 경영학과 교수)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260722.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260722.mp3"
+        },
+        {
           "title": "[손경제] 7/22(수) 홈플러스 | 로봇 사업",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260722.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260722.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 6/26(금) 러브버그와의 전쟁 이제는 끝내야 합니다 - 김동건 교수 (삼육대 환경생태연구소)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260626.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260626.mp3"
-        },
-        {
-          "title": "[경제콘서트] 지거국 리턴즈",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYCONCERT_20260626.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYCONCERT_20260626.mp3"
         }
       ]
     },
