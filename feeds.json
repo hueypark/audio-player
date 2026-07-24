@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/24(금) 미국 강제노동 관세 | 부동산 대토론회 | AI 투자 확대 | 2분기 경제성장률",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260724.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260724.mp3"
+        },
+        {
+          "title": "[플러스] 7/23(목) 구글 실적 뜯어 보니 투자 규모 더 키웁니다 - 홍춘욱 대표 (프리즘 투자자문)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260723.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260723.mp3"
+        },
+        {
           "title": "[손경제] 7/23(목) SK하이닉스 ADR | 주가누르기 방지법 | 국내 음악 플랫폼 | 의료기기 간납사",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260723(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260723(1).mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 6/29(월) 올드테크 | 양도제한조건부주식 | 전동킥보드",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260629.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260629.mp3"
-        },
-        {
-          "title": "[플러스] 6/28(일) 전세는 우리나라만의 전유물이 아닙니다 - 재원쌤",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260628.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260628.mp3"
-        },
-        {
-          "title": "[플러스] 6/27(토) 동남아 화폐가 휴지가 되고 있는 이유 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260627.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260627.mp3"
         }
       ]
     },
