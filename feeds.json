@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[커피타임] 부동산 '소'토론회",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260724_2.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260724_2.mp3"
+        },
+        {
+          "title": "[커피타임] 불편과 운",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260724_1.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260724_1.mp3"
+        },
+        {
           "title": "[손경제] 7/24(금) 미국 강제노동 관세 | 부동산 대토론회 | AI 투자 확대 | 2분기 경제성장률",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260724.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260724.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 6/30(화) 반도체 집단소송 | 정유사 보상 | 반도체 투자 | 역직구",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260630.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260630.mp3"
-        },
-        {
-          "title": "[플러스] 6/29(월) AI 패권 (김덕진 소장) | 유럽 폭염 | 중국 대만 갈등 | 퀘백 조력사망 (이혜인 기자)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260629.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260629.mp3"
-        },
-        {
-          "title": "[손경제] 6/29(월) 올드테크 | 양도제한조건부주식 | 전동킥보드",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260629.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260629.mp3"
         }
       ]
     },
