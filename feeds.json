@@ -259,6 +259,10 @@
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
         {
+          "title": "Episode #746: The Season One Checklist!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_746.mp3?dest-id=244124"
+        },
+        {
           "title": "Episode #745: Dungeon Theory!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_745.mp3?dest-id=244124"
         },
@@ -453,10 +457,6 @@
         {
           "title": "Episode #697: Season 3 First Impressions!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_697.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #696: TWW Season 3 Begins!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_696.mp3?dest-id=244124"
         }
       ]
     }
