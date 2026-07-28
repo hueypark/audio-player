@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/27(월) 키미 K3 (김덕진 소장) | 미국-베네수엘라 재건 부담 | 미국 정치인 AI 평판관리 | 미국 베이비부머 업사이징 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260727.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260727.mp3"
+        },
+        {
           "title": "[손경제] 7/27(월) 엔화 약세 | 중국AI 규제",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260727.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260727.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 7/2(목) 태평양 깊은 곳에서 희토류 직접 캤습니다 - 김윤미 센터장 (한국지질자원연구원 해저지질연구센터)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260702.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260702.mp3"
-        },
-        {
-          "title": "[손경제] 7/2(목) 수출 데이터 | 메타 클라우드 | 오픈 USD | 풍선효과 | 앱마켓",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260702.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260702.mp3"
         }
       ]
     },
