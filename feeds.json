@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/29(수) SK하이닉스 실적 | 뉴욕 반값마트 | 한국 초고령사회 | 애플 시총 1위",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260729.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260729.mp3"
+        },
+        {
           "title": "[플러스] 7/28(화) 데이터센터 돌리려면 그냥 전기론 안 됩니다 - 김광호 교수 (강원대 전기전자공학과)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260728.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260728.mp3"
@@ -247,11 +252,6 @@
           "title": "[커피타임] 노후상가가 아파트가 되는 기적",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_0703_2_RE.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_0703_2_RE.mp3"
-        },
-        {
-          "title": "[커피타임] 리더의 권한과 책임｜SK하이닉스와 애국",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_0703_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_0703_1.mp3"
         }
       ]
     },
