@@ -4,8 +4,14 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 7/30(목) 서킷브레이커 | 미국 기준금리 | 로봇 수입 규제",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260730.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260730.mp3"
+        },
+        {
           "title": "[플러스] 7/29(수) 일라이릴리 (하수정 경제전문기자) | 창업자-투자자 소송 (신철호 OGQ 주식회사 대표)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260729.mp3"
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260729(1).mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260729(1).mp3"
         },
         {
           "title": "[손경제] 7/29(수) SK하이닉스 실적 | 뉴욕 반값마트 | 한국 초고령사회 | 애플 시총 1위",
@@ -246,11 +252,6 @@
           "title": "[플러스] 7/4(토) 패권 전쟁의 숨겨진 전장 동남아시아인 이유 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260704.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260704.mp3"
-        },
-        {
-          "title": "[플러스] 7/3(금) 달걀값 오른 건 유통탓? 범인은 따로 있습니다 - 노준기 대표 (계림농장)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260703.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260703.mp3"
         }
       ]
     },
