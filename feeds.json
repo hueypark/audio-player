@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 7/30(목) 전쟁 영웅 몰아냈다 젤렌스키의 생존 방식 - 이문영 교수 (서울대 통일평화연구원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260730.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260730.mp3"
+        },
+        {
           "title": "[손경제] 7/30(목) 서킷브레이커 | 미국 기준금리 | 로봇 수입 규제",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260730.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260730.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 7/5(일) 강북 집값이 덜 오르는 건 사실 버스 때문입니다 - 임삼진 원장 (녹색도시연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260705.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260705.mp3"
-        },
-        {
-          "title": "[플러스] 7/4(토) 패권 전쟁의 숨겨진 전장 동남아시아인 이유 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260704.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260704.mp3"
         }
       ]
     },
