@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "커피타임 - 상처 입은 분들께",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/cofee_260731_2.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/cofee_260731_2.mp3"
+        },
+        {
+          "title": "커피타임 - 청년 여행 대출",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/cofee_260731_1.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/cofee_260731_1.mp3"
+        },
+        {
           "title": "[협찬인가] 오징어의 국적",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_sponsor_suhyup.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_sponsor_suhyup.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 7/7(화) 금의 슈퍼사이클 앞으로 5년 남았습니다 - 조규원 대표 (스태커스)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260707.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260707.mp3"
-        },
-        {
-          "title": "[손경제] 7/7(화) 삼성전자 실적 | 국민연금 리밸런싱 유예 | 중복상장 금지 | 반도체 추가 세수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260707.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260707.mp3"
-        },
-        {
-          "title": "[플러스] 7/6(월) 메타 컴퓨트 (김덕진 소장) | 중국 청년 유령도시 | 남아공 이주민 갈등 | 러시아 연료난 (이혜인 기자)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260706.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260706.mp3"
         }
       ]
     },
