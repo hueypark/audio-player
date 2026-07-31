@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[협찬인가] 오징어의 국적",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_sponsor_suhyup.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_sponsor_suhyup.mp3"
+        },
+        {
           "title": "[손경제] 7/31(금) 반도체 주식 | 비상장 스타트업 | 배터리 흑자 | 일본 소비세",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260731(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260731(1).mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 7/6(월) 메타 컴퓨트 (김덕진 소장) | 중국 청년 유령도시 | 남아공 이주민 갈등 | 러시아 연료난 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260706.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260706.mp3"
-        },
-        {
-          "title": "[손경제] 7/6(월) 엔캐리 트레이드 | 반도체 비관론 | 홈플러스",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260706.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260706.mp3"
         }
       ]
     },
