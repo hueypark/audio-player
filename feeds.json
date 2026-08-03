@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 8/3(월) 미-일 환율 공조 | 긴급조치권 | 중국 자동차부품",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260803.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260803.mp3"
+        },
+        {
+          "title": "[플러스] 8/2(일) 우리 국민이 굶고 있어도 외국 빈민을 도와야 할까? - 김부열 교수 (서울대 환경대학원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260802.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260802.mp3"
+        },
+        {
           "title": "[플러스] 8/1(토) 분배의 딜레마가 낳은 무책임의 정치학 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260801.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260801.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 7/9(목) 새로운 병목의 등장 얼마 남지 않았습니다 - 이선엽 대표 (AFW 파트너스)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260709.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260709.mp3"
-        },
-        {
-          "title": "[손경제] 7/9(목) 딥시크 AI칩 | 중국 AI 장벽 | SK하이닉스 ADR | 중고폰 시장",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260709.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260709.mp3"
-        },
-        {
-          "title": "[플러스] 7/8(수) 450조 중동 재건사업 한국이 1순위인 이유 - 임병구 한국대표 (러머스 테크놀로지)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260708.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260708.mp3"
         }
       ]
     },
