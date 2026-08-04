@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 8/4(화) 부동산 세제개편안 | 코스닥 부진 | 한은 금 매입 | 구리가격",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260804.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260804.mp3"
+        },
+        {
           "title": "[플러스] 8/3(월) 마이크로소프트 (김덕진 소장) | 스페인 불법이민 | 수도권 이탈 | 중동 부자 재산상속 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260803.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260803.mp3"
@@ -247,11 +252,6 @@
           "title": "[커피타임] 그놈의 레버리지 ETF",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260710_1.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260710_1.mp3"
-        },
-        {
-          "title": "[손경제] 7/10(금) 외환위기 망령 | 모아주택 규제 완화 | 먹거리 물가",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260710.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260710.mp3"
         }
       ]
     },
