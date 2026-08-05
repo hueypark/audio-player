@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 8/5(수) 주가누르기 방지법 | 폭염 국가재난",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260805.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260805.mp3"
+        },
+        {
+          "title": "[플러스] 8/4(화) 월 500만원 현금흐름 6억이면 가능합니다 - 구혜영 차장 (NH투자증권)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260804.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260804.mp3"
+        },
+        {
           "title": "[손경제] 8/4(화) 부동산 세제개편안 | 코스닥 부진 | 한은 금 매입 | 구리가격",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260804.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260804.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 7/10(금) 살 수 있다는 헛된 희망이 가장 잔인한 위로입니다 - 박중철 교수 (연세암병원 완화의료센터)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260710.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260710.mp3"
-        },
-        {
-          "title": "[커피타임] 세상만사 9할이 우연인데",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260710_2.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260710_2.mp3"
-        },
-        {
-          "title": "[커피타임] 그놈의 레버리지 ETF",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260710_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260710_1.mp3"
         }
       ]
     },
