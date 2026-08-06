@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 8/6(목) 엔화 공동개입 | 주택 공급 | 국민연금 임대주택 | 지방대 무상교육",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260806.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260806.mp3"
+        },
+        {
           "title": "[플러스] 8/5(수) AI 순환금융 (하수정 경제전문기자) | 한국 서비스 수출 (고대영 산업연구원 연구위원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260805.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260805.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 7/12(일) 화성 이주의 꿈은 판타지입니다 - 지웅배 교수 (세종대 자유전공학부)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260712.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260712.mp3"
-        },
-        {
-          "title": "[플러스] 7/11(토) 세상의 통화가 달러로 통일되고 있습니다 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260711.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260711.mp3"
         }
       ]
     },
