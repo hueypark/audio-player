@@ -137,6 +137,40 @@ fn load_seen(url: &str) -> f64 {
         .unwrap_or(0.0)
 }
 
+// Dismissed from 이어듣기: `skip:{url}` marks an episode you started but decided
+// you don't want to finish. It hides the episode from the 이어듣기 section ONLY —
+// `pos:`/`dur:`/`seen:` are deliberately left untouched, so the episode keeps its
+// progress bar in its own podcast list and one tap still resumes it exactly where
+// you stopped. A dismissal is a list opt-out, never a progress reset; that's what
+// makes it safe to offer as a single tap.
+//
+// Cleared in `play`: deliberately starting an episode again *is* the decision to
+// resume it, so it returns to 이어듣기. `restore_last_played` pointedly does NOT
+// clear it — a page refresh is not that decision, so an episode dismissed while
+// it was playing stays dismissed across a reload.
+//
+// Absent == not dismissed, mirroring `collapsed:`. Like pos:/dur:/seen: these keys
+// are never garbage-collected (feeds.json is a rolling window, so an episode gone
+// today may return and should return still-dismissed); growth is one small key per
+// dismissal.
+
+fn save_skip(url: &str, skip: bool) {
+    if let Some(s) = storage() {
+        let key = format!("skip:{url}");
+        if skip {
+            let _ = s.set_item(&key, "1");
+        } else {
+            let _ = s.remove_item(&key);
+        }
+    }
+}
+
+fn load_skip(url: &str) -> bool {
+    storage()
+        .and_then(|s| s.get_item(&format!("skip:{url}")).ok().flatten())
+        .is_some()
+}
+
 // Listened fraction (0..1) at/above which an episode is auto-classified as
 // *played* (finished). 0.95 mirrors the ~95%-of-duration heuristic Pocket Casts
 // and Overcast use: a listener usually stops a little before the true end
@@ -462,7 +496,7 @@ fn sweep_stale_downloads(
     downloaded: RwSignal<HashSet<String>>,
     storage_used: RwSignal<f64>,
     progress: RwSignal<HashMap<String, i32>>,
-    status: RwSignal<String>,
+    banner: RwSignal<Banner>,
 ) {
     spawn_local(async move {
         // Snapshot the protected keys up front. last:url is read from localStorage
@@ -527,7 +561,9 @@ fn sweep_stale_downloads(
         // Announce it: a silent badge revert ("✓ 저장됨" → "⬇") plus a dropping
         // offline count would read as data loss on the app's headline feature.
         let n = victims.len();
-        status.set(format!("재생을 마친 오프라인 파일 {n}개를 정리해 저장 공간을 확보했어요."));
+        banner.set(Banner::plain(format!(
+            "재생을 마친 오프라인 파일 {n}개를 정리해 저장 공간을 확보했어요."
+        )));
     });
 }
 
@@ -638,6 +674,29 @@ fn fmt_left(remaining_secs: f64) -> String {
     }
 }
 
+/// The transient banner at the top of the page: a message plus, optionally, the
+/// audio_url of a 이어듣기 dismissal that its "되돌리기" button restores. An empty
+/// `msg` == no banner.
+///
+/// Message and undo target are ONE value on purpose: a later, unrelated message
+/// (a download error, the startup cleanup notice) structurally cannot inherit a
+/// stale undo button, so no call site has to remember to clear it.
+#[derive(Clone, Default)]
+struct Banner {
+    msg: String,
+    undo: Option<String>,
+}
+
+impl Banner {
+    /// A plain message with nothing to undo.
+    fn plain(text: String) -> Self {
+        Self {
+            msg: text,
+            undo: None,
+        }
+    }
+}
+
 fn download_error_msg(reason: &str) -> String {
     match reason {
         "cors" => "다운로드 실패: 이 호스트가 오프라인 저장(CORS)을 허용하지 않습니다. 온라인 재생만 가능합니다.".into(),
@@ -647,12 +706,13 @@ fn download_error_msg(reason: &str) -> String {
 }
 
 /// One episode row, shared by the per-podcast lists and the 이어듣기 (Continue
-/// Listening) section. With `show_subline=false` it is byte-identical to the
-/// original inline row, so the main list is unchanged; `show_subline=true` adds
-/// the 이어듣기 second line (podcast name + "N분 남음"). `cached_dur` is the
-/// persisted duration used to compute remaining time for a *non-playing* row
-/// (the playing row uses the live `play_dur`), so non-playing rows touch neither
-/// the `<audio>` element nor localStorage.
+/// Listening) section. With `in_continue=false` it is byte-identical to the
+/// original inline row, so the main list is unchanged; `in_continue=true` adds
+/// the 이어듣기 second line (podcast name + "N분 남음") and the "remove from this
+/// list" button. `cached_dur` is the persisted duration used to compute
+/// remaining time for a *non-playing* row (the playing row uses the live
+/// `play_dur`), so non-playing rows touch neither the `<audio>` element nor
+/// localStorage.
 ///
 /// The `frac`/`played` Memos preserve the original subscription discipline: a
 /// non-playing row reads only `current`/`saved_frac` and stays inert during the
@@ -661,7 +721,7 @@ fn download_error_msg(reason: &str) -> String {
 fn episode_row(
     e: Episode,
     artist: String,
-    show_subline: bool,
+    in_continue: bool,
     cached_dur: f64,
     current: RwSignal<String>,
     online: RwSignal<bool>,
@@ -673,6 +733,7 @@ fn episode_row(
     play: impl Fn(Episode, String) + Copy + Send + Sync + 'static,
     download: impl Fn(Episode) + Copy + Send + Sync + 'static,
     delete_dl: impl Fn(Episode) + Copy + Send + Sync + 'static,
+    dismiss: impl Fn(Episode) + Copy + Send + Sync + 'static,
 ) -> AnyView {
     let key = e.audio_url.clone();
     let title_text = e.title.clone();
@@ -680,6 +741,7 @@ fn episode_row(
     let ep_play = e.clone();
     let ep_dl = e.clone();
     let ep_del = e.clone();
+    let ep_skip = e.clone();
     let k_state = key.clone();
     let k_cls = key.clone();
     let k_click = key.clone();
@@ -781,7 +843,7 @@ fn episode_row(
     // 이어듣기 second line: podcast name + remaining time. Remaining is live for
     // the playing row (frac drives it) and uses the cached duration for others,
     // so non-playing rows touch neither the <audio> element nor storage.
-    let subline = if show_subline {
+    let subline = if in_continue {
         let artist_sub = artist.clone();
         let left = Memo::new(move |_| {
             let f = frac.get();
@@ -798,6 +860,28 @@ fn episode_row(
                 <span class="pod">{artist_sub}</span>
                 <span class="left">{move || left.get()}</span>
             </span>
+        })
+    } else {
+        None
+    };
+
+    // 이어듣기 only: "I'm done with this one" — drop the row from the resume list
+    // without touching its progress. A neutral grey "−" (remove from *list*),
+    // never the red "✕" of the download-delete button it can sit beside: one
+    // hides a row, the other erases a file, and they must never read alike. The
+    // button is offered on the playing row too — deciding you're done is exactly
+    // something you do mid-listen.
+    let skip_btn = if in_continue {
+        let ep = ep_skip.clone();
+        Some(view! {
+            <button
+                class="dl-btn ep-skip"
+                aria-label="이어듣기 목록에서 제거"
+                title="이어듣기 목록에서 제거"
+                on:click=move |_| dismiss(ep.clone())
+            >
+                "−"
+            </button>
         })
     } else {
         None
@@ -820,6 +904,7 @@ fn episode_row(
             </span>
             {played_badge}
             {dl_controls}
+            {skip_btn}
             {progress_bar}
         </li>
     }
@@ -846,6 +931,11 @@ fn App() -> impl IntoView {
     // most-recent-first. Seeded at feeds-load (with a first-session backfill);
     // refreshed on switch in `play` so within-session reorder is reactive.
     let seen_map = RwSignal::new(HashMap::<String, f64>::new());
+    // audio_url keys the user removed from 이어듣기 ("더 듣기 싫음"). Seeded from
+    // the `skip:` keys at feeds-load for the in-progress backlog, added to by the
+    // row's "−" button, cleared in `play`. Switch-cadence only — never written on
+    // the ~4Hz timeupdate stream, so filtering `in_progress` by it is free.
+    let skipped = RwSignal::new(HashSet::<String>::new());
     // audio_url → (podcast title, Episode, duration secs). Built once at
     // feeds-load so the 이어듣기 section can reverse-lookup an in-progress
     // audio_url to its Episode (resume via `play`), its podcast name, and a
@@ -861,8 +951,8 @@ fn App() -> impl IntoView {
     let online = RwSignal::new(true);
     // Active blob: object URL backing downloaded playback; revoked on switch.
     let obj_url = RwSignal::new(Option::<String>::None);
-    // Transient status/error banner (tap to dismiss).
-    let status = RwSignal::new(String::new());
+    // Transient status/error banner, optionally carrying an undo (tap to dismiss).
+    let banner = RwSignal::new(Banner::default());
 
     // Lock-screen controls can be wired immediately (no DOM dependency).
     register_media_handlers();
@@ -893,6 +983,7 @@ fn App() -> impl IntoView {
                 let mut fracs = HashMap::new();
                 let mut emap = HashMap::new();
                 let mut smap = HashMap::new();
+                let mut skips = HashSet::new();
                 let now = js_sys::Date::now();
                 let mut idx = 0.0_f64;
                 for p in &feeds.podcasts {
@@ -910,6 +1001,13 @@ fn App() -> impl IntoView {
                                     save_seen(&e.audio_url, seen);
                                 }
                                 smap.insert(e.audio_url.clone(), seen);
+                                // Only in-progress episodes can ever be dismissed,
+                                // so the `skip:` read rides along inside this
+                                // branch rather than costing a localStorage hit
+                                // for every episode in the feed.
+                                if load_skip(&e.audio_url) {
+                                    skips.insert(e.audio_url.clone());
+                                }
                             }
                         }
                         idx += 1.0;
@@ -917,6 +1015,7 @@ fn App() -> impl IntoView {
                 }
                 saved_frac.set(fracs);
                 seen_map.set(smap);
+                skipped.set(skips);
                 episode_map.set(emap);
                 // Restore which podcast lists were folded last time — including the
                 // 이어듣기 section (keyed by CONTINUE_KEY).
@@ -943,7 +1042,7 @@ fn App() -> impl IntoView {
     // Independent one-shot task; protects the playing/last-played/in-flight
     // episodes and re-reads last:url from localStorage so it's safe against the
     // restore_last_played race regardless of ordering.
-    sweep_stale_downloads(current, downloaded, storage_used, progress, status);
+    sweep_stale_downloads(current, downloaded, storage_used, progress, banner);
 
     // Play an episode: from IndexedDB (object URL, fully offline) if downloaded,
     // otherwise stream `audio_url` online. `current` stays the audio_url so the
@@ -1011,6 +1110,16 @@ fn App() -> impl IntoView {
             seen_map.update(|m| {
                 m.insert(ep.audio_url.clone(), in_ts);
             });
+            // Deliberately playing an episode is the decision to resume it, so it
+            // rejoins 이어듣기 — this is also the recovery path for a mis-tapped
+            // "−" once the undo banner is gone. (`restore_last_played` runs no
+            // such clear: a refresh is not that decision.)
+            if skipped.with_untracked(|s| s.contains(&ep.audio_url)) {
+                save_skip(&ep.audio_url, false);
+                skipped.update(|s| {
+                    s.remove(&ep.audio_url);
+                });
+            }
             set_now_playing(&ep.title, &artist, "icons/icon-512.png");
             set_playback(true);
         });
@@ -1025,7 +1134,7 @@ fn App() -> impl IntoView {
         if progress.with_untracked(|m| m.contains_key(&key)) {
             return; // already downloading
         }
-        status.set(String::new());
+        banner.set(Banner::default());
         progress.update(|m| {
             m.insert(key.clone(), 0);
         });
@@ -1058,8 +1167,14 @@ fn App() -> impl IntoView {
                     });
                     refresh_downloads(downloaded, storage_used);
                 }
-                Some(reason) => status.set(format!("‘{title}’ — {}", download_error_msg(reason))),
-                None => status.set(format!("‘{title}’ — {}", download_error_msg("unknown"))),
+                Some(reason) => banner.set(Banner::plain(format!(
+                    "‘{title}’ — {}",
+                    download_error_msg(reason)
+                ))),
+                None => banner.set(Banner::plain(format!(
+                    "‘{title}’ — {}",
+                    download_error_msg("unknown")
+                ))),
             }
         });
     };
@@ -1081,6 +1196,30 @@ fn App() -> impl IntoView {
                 s.remove(&key);
             });
             refresh_downloads(downloaded, storage_used);
+        });
+    };
+
+    // Remove an episode from 이어듣기 without touching a byte of its progress:
+    // `skip:` hides the row, pos:/dur:/seen: stay put, and the episode keeps its
+    // bar (and its resume point) in its own podcast list. Synchronous — the row
+    // disappears on the tap, no spawn_local needed.
+    //
+    // It announces itself with a one-tap 되돌리기 because the row vanishes
+    // instantly and the "−" can sit right next to the download-delete "✕": a
+    // mis-tap would otherwise cost a hunt through the feed below, and the 이어듣기
+    // sub-line (the only place that told you which podcast it was) goes with it.
+    let dismiss = move |ep: Episode| {
+        let key = ep.audio_url.clone();
+        save_skip(&key, true);
+        skipped.update(|s| {
+            s.insert(key.clone());
+        });
+        // Same 36-char clamp as the download banner, so a long episode title
+        // can't push the 되돌리기 button off a phone screen.
+        let title: String = ep.title.chars().take(36).collect();
+        banner.set(Banner {
+            msg: format!("‘{title}’ — 이어듣기에서 제거했어요."),
+            undo: Some(key),
         });
     };
 
@@ -1144,6 +1283,12 @@ fn App() -> impl IntoView {
                 urls.push(c);
             }
         }
+        // Drop everything the user removed from this list. Applied AFTER the
+        // live-current union so a dismissed episode stays hidden even while it is
+        // the one playing — `play` clears the flag when you deliberately resume
+        // it, which is the one thing that should bring it back. `skipped` only
+        // changes on a dismiss/undo/play, so this adds no per-tick work.
+        skipped.with(|skip| urls.retain(|u| !skip.contains(u)));
         // Borrow seen_map in place (don't clone the whole map per switch) while
         // still registering the reactive dependency on it.
         seen_map.with(|seen| {
@@ -1168,9 +1313,30 @@ fn App() -> impl IntoView {
                 <span class="offline-badge">"오프라인"</span>
             </Show>
         </header>
-        <Show when=move || !status.get().is_empty()>
-            <div class="banner" on:click=move |_| status.set(String::new())>
-                {move || status.get()}
+        // Tap anywhere to dismiss; the 되돌리기 button (present only while the
+        // banner carries an undo target) restores a 이어듣기 removal. Its click
+        // also bubbles to the dismiss handler, which is harmless — both end with
+        // the banner cleared.
+        <Show when=move || banner.with(|b| !b.msg.is_empty())>
+            <div class="banner" on:click=move |_| banner.set(Banner::default())>
+                <span class="banner-msg">{move || banner.with(|b| b.msg.clone())}</span>
+                <Show when=move || banner.with(|b| b.undo.is_some())>
+                    <button
+                        class="banner-undo"
+                        on:click=move |_| {
+                            if let Some(url) = banner.with_untracked(|b| b.undo.clone()) {
+                                save_skip(&url, false);
+                                skipped
+                                    .update(|s| {
+                                        s.remove(&url);
+                                    });
+                            }
+                            banner.set(Banner::default());
+                        }
+                    >
+                        "되돌리기"
+                    </button>
+                </Show>
             </div>
         </Show>
         <main>
@@ -1224,6 +1390,7 @@ fn App() -> impl IntoView {
                                             play,
                                             download,
                                             delete_dl,
+                                            dismiss,
                                         )
                                     }
                                     None => ().into_any(),
@@ -1289,6 +1456,7 @@ fn App() -> impl IntoView {
                                             play,
                                             download,
                                             delete_dl,
+                                            dismiss,
                                         )
                                     }
                                 />

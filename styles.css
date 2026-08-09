@@ -177,6 +177,16 @@ li {
 .dl-del:active {
   background: #2a1414;
 }
+/* 이어듣기 전용: 이 목록에서 빼기. Neutral grey and a "−" (remove from a *list*)
+   so it never reads as the red "✕" download-delete button it sits beside — one
+   hides a row, the other erases a file. The li gap + both buttons' side margins
+   leave ~16px between them, which is the real mis-tap defence. */
+.ep-skip {
+  min-width: 40px;
+  color: #9a9a9a;
+  font-size: 1.15rem;
+  line-height: 1;
+}
 /* Mid-download percent readout — a status, not a button. */
 .dl-progress {
   flex: none;
@@ -199,6 +209,9 @@ li {
   position: sticky;
   top: 52px;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 0 16px;
   padding: 10px 12px;
   border-radius: 8px;
@@ -206,6 +219,26 @@ li {
   color: #ffd9a8;
   font-size: 0.85rem;
   cursor: pointer;
+}
+.banner-msg {
+  flex: 1;
+  min-width: 0;
+}
+/* One-tap undo for a 이어듣기 removal. Inherits the banner's amber so it reads as
+   part of the notice, not a second alert. */
+.banner-undo {
+  flex: none;
+  padding: 7px 12px;
+  border: 1px solid #6b512e;
+  border-radius: 8px;
+  background: #4a3521;
+  color: #ffd9a8;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.banner-undo:active {
+  background: #5a4229;
 }
 .storage {
   font-size: 0.75rem;
