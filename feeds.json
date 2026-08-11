@@ -259,6 +259,10 @@
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
         {
+          "title": "Episode #748: 12.1 The Curse of Ula'tek is Live!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_748.mp3?dest-id=244124"
+        },
+        {
           "title": "Episode #747: Curse of Ula'tek Goes Live August 11!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_747.mp3?dest-id=244124"
         },
@@ -453,10 +457,6 @@
         {
           "title": "Episode #699: Gamescom Part Two!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_699.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #698: Gamescom Part One!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_698.mp3?dest-id=244124"
         }
       ]
     }
