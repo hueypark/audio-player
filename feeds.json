@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[협찬인가] 수천억 흔드는 소수 지분의 위력",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_20260814_2.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_20260814_2.mp3"
+        },
+        {
+          "title": "[커피타임] 구조조정의 파도｜미국유람기",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_20260814_1.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_20260814_1.mp3"
+        },
+        {
           "title": "[손경제] 8/14(금) 8·13 부동산 대책 | 중국 반도체 | 전기요금 차등제",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260814.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260814.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 7/22(수) 홈플러스 | 로봇 사업",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260722.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260722.mp3"
-        },
-        {
-          "title": "[플러스] 7/21(화) 서울 도심의 미래를 도쿄에서 찾았습니다 - 남성현, 조정현 연구원 (IBK투자증권)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260721.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260721.mp3"
-        },
-        {
-          "title": "[손경제] 7/21(화) 국내생산촉진세제 | 세계화 역전 | 명품업계 관행",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260721.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260721.mp3"
         }
       ]
     },
