@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 8/15(토) 세계 바다에서 펼쳐질 호르무즈발 부동산 전쟁 - 박정호 명지대 교수",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260815.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260815.mp3"
+        },
+        {
           "title": "[플러스] 8/14(금) 진짜 검증의 시험대 내년 봄입니다 - 윤지호 경제평론가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260814.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260814.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 7/23(목) SK하이닉스 ADR | 주가누르기 방지법 | 국내 음악 플랫폼 | 의료기기 간납사",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260723(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260723(1).mp3"
-        },
-        {
-          "title": "[플러스] 7/22(수) 데이터센터 (하수정 경제전문기자) | 레버리지ETF (윤선중 동국대 경영학과 교수)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260722.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260722.mp3"
         }
       ]
     },
