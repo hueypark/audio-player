@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 8/18(화) 미국 AI 동맹 경고 | 조각투자 | 금값 반등",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260818.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260818.mp3"
+        },
+        {
           "title": "[플러스] 8/17(월) 인공지능 바이러스 (김덕진 소장) | 중국 간부 숙청 | 미국 유품 정리 | 미국 별장세 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260817.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260817.mp3"
@@ -247,11 +252,6 @@
           "title": "[커피타임] 부동산 '소'토론회",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260724_2.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260724_2.mp3"
-        },
-        {
-          "title": "[커피타임] 불편과 운",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260724_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260724_1.mp3"
         }
       ]
     },
