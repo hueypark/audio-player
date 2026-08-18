@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 8/18(화) 데이터센터 들어와도 물 없으면 끝입니다 - 한혜진 선임연구위원 (한국환경연구원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260818.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260818.mp3"
+        },
+        {
           "title": "[손경제] 8/18(화) 미국 AI 동맹 경고 | 조각투자 | 금값 반등",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260818.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260818.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 7/24(금) 이란 지도부의 오판이  기회를 걷어찼습니다 - 김덕일 연구위원 (고려대 아연 중동·이슬람센터)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260724.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260724.mp3"
-        },
-        {
-          "title": "[커피타임] 부동산 '소'토론회",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_coffee_260724_2.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_coffee_260724_2.mp3"
         }
       ]
     },
