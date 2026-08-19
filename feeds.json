@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 8/19(수) 엔진오일 품귀 (하수정 경제전문기자) | 조선업 성장동력 (엄경아 신영증권 연구위원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260819.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260819.mp3"
+        },
+        {
           "title": "[손경제] 8/19(수) 대만 AI 배당금 | 미국 국채금리",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260819.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260819.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 7/26(일) 트럼프의 이민자 때리기 속내는 따로 있습니다 - 박구병 교수 (아주대 사학과)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260726.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260726.mp3"
-        },
-        {
-          "title": "[플러스] 7/25(토) 인구 소멸 문제 직면해야 지방을 살릴 수 있습니다 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260725.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260725.mp3"
         }
       ]
     },
