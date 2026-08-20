@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 8/20(목) 북극항로를 둘러싼 치열한 눈치게임 - 김근섭 선임연구위원 (한국해양수산개발원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260820.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260820.mp3"
+        },
+        {
           "title": "[손경제] 8/20(목) 자사주 소각 | K9 미국 수출 | 집단대출 | 가비아",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260820.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260820.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 7/27(월) 키미 K3 (김덕진 소장) | 미국-베네수엘라 재건 부담 | 미국 정치인 AI 평판관리 | 미국 베이비부머 업사이징 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260727.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260727.mp3"
-        },
-        {
-          "title": "[손경제] 7/27(월) 엔화 약세 | 중국AI 규제",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260727.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260727.mp3"
         }
       ]
     },
