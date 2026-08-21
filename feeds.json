@@ -4,6 +4,21 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[커피타임] 김덕진의 인생",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260821_2.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260821_2.mp3"
+        },
+        {
+          "title": "[커피타임] 용산 공원에 주택",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260821_1.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260821_1.mp3"
+        },
+        {
+          "title": "[협찬인가] 엄마의 손맛을 수출하는 법",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffeesponsor_tumblesoup.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffeesponsor_tumblesoup.mp3"
+        },
+        {
           "title": "[손경제] 8/21(금) 美 국채 바이백 | 전월세 안심신탁 | 일본 초과근무 규제 완화",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260821.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260821.mp3"
@@ -237,21 +252,6 @@
           "title": "[플러스] 7/29(수) 일라이릴리 (하수정 경제전문기자) | 창업자-투자자 소송 (신철호 OGQ 주식회사 대표)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260729(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260729(1).mp3"
-        },
-        {
-          "title": "[손경제] 7/29(수) SK하이닉스 실적 | 뉴욕 반값마트 | 한국 초고령사회 | 애플 시총 1위",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260729.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260729.mp3"
-        },
-        {
-          "title": "[플러스] 7/28(화) 데이터센터 돌리려면 그냥 전기론 안 됩니다 - 김광호 교수 (강원대 전기전자공학과)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260728.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260728.mp3"
-        },
-        {
-          "title": "[손경제] 7/28(화) 창신메모리 | 中 DUV 양산 |  엔비디아-네이버 투자 | 부동산 토론회",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260728.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260728.mp3"
         }
       ]
     },
