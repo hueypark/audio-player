@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 8/25(화) 소비자물가 집값 | 삼전 주주환원 | 전기차 충전시장",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260825.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260825.mp3"
+        },
+        {
           "title": "[플러스] 8/24(월) 피지컬 AI (김덕진 소장) | 캐나다 결집 | 인도네시아 니켈 | 유럽인 절약 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260824.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260824.mp3"
@@ -247,11 +252,6 @@
           "title": "커피타임 - 상처 입은 분들께",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/cofee_260731_2.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/cofee_260731_2.mp3"
-        },
-        {
-          "title": "커피타임 - 청년 여행 대출",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/cofee_260731_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/cofee_260731_1.mp3"
         }
       ]
     },
