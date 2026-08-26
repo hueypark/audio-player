@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 8/26(수) 미국 관세 환급 (하수정 경제전문기자) | 알트코인 (김준우 쟁글 대표)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260826.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260826.mp3"
+        },
+        {
           "title": "[손경제] 8/26(수) 전력 인프라 투자 | 황제사택",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260826.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260826.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 8/2(일) 우리 국민이 굶고 있어도 외국 빈민을 도와야 할까? - 김부열 교수 (서울대 환경대학원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260802.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260802.mp3"
-        },
-        {
-          "title": "[플러스] 8/1(토) 분배의 딜레마가 낳은 무책임의 정치학 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260801.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260801.mp3"
         }
       ]
     },
