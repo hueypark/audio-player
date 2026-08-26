@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 8/26(수) 전력 인프라 투자 | 황제사택",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260826.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260826.mp3"
+        },
+        {
           "title": "[플러스] 8/25(화) 천연가스 기업은 이제 단연코 고성장주입니다 - 서병수 애널리스트",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260825.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260825.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 8/1(토) 분배의 딜레마가 낳은 무책임의 정치학 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260801.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260801.mp3"
-        },
-        {
-          "title": "[플러스] 7/31(금) 불확실한 시장의 투자처 원자재가 뜨고 있습니다 - 이석진 겸임교수 (한국금융연수원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260731.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260731.mp3"
         }
       ]
     },
