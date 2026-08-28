@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "커피타임 - 그의 인스타",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260828.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260828.mp3"
+        },
+        {
           "title": "[손경제] 8/28(금) 기준금리 | 엔비디아 주가 | 메타 합의금 | 기초연금 개편",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260828.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260828.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 8/4(화) 월 500만원 현금흐름 6억이면 가능합니다 - 구혜영 차장 (NH투자증권)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260804.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260804.mp3"
-        },
-        {
-          "title": "[손경제] 8/4(화) 부동산 세제개편안 | 코스닥 부진 | 한은 금 매입 | 구리가격",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260804.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260804.mp3"
         }
       ]
     },
