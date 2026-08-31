@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 8/31(월) 청소년 SNS 규제 (김덕진 소장) | 미국 집값 | 일본 운동부 | 호주 제3의 신분 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260831.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260831.mp3"
+        },
+        {
           "title": "[손경제] 8/31(월) 미국 금리 인상 | 탈모 치료제 시장",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260831.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260831.mp3"
@@ -247,11 +252,6 @@
           "title": "[커피타임] 중년의 비애｜매출 1억｜튀르키예 여행기",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffeetime_260807.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffeetime_260807.mp3"
-        },
-        {
-          "title": "[플러스] 8/6(목) 일본 엔화 떠받치는 미국의 진짜 속셈 - 이창민 교수 (한국외대 융합일본지역학부)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260806.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260806.mp3"
         }
       ]
     },
