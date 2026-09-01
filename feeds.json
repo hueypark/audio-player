@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/1(화) 노란봉투법 시행지침 | 미-중 무역전쟁 | 미국 시장 개입",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260901.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260901.mp3"
+        },
+        {
           "title": "[플러스] 8/31(월) 청소년 SNS 규제 (김덕진 소장) | 미국 집값 | 일본 운동부 | 호주 제3의 신분 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260831.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260831.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 8/7(금) 단일종목 레버리지 | 중국 세무조사 | 국유자산 관리",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260807.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260807.mp3"
-        },
-        {
-          "title": "[커피타임] 중년의 비애｜매출 1억｜튀르키예 여행기",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffeetime_260807.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffeetime_260807.mp3"
         }
       ]
     },
