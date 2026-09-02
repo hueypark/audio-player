@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/2(수) 베네수엘라 석유 | 종부세 공제 | 중국 로보택시",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260902.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260902.mp3"
+        },
+        {
+          "title": "[플러스] 9/1(화) 양자컴과 AI가 만나 췌장암을 잡습니다 - 정지훈 겸임교수 (디지스트)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260901.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260901.mp3"
+        },
+        {
           "title": "[손경제] 9/1(화) 노란봉투법 시행지침 | 미-중 무역전쟁 | 미국 시장 개입",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260901.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260901.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 8/7(금) 구마모토 지진 났지만 땅속 폭탄 그대로 있다 - 김기범 교수 (부산대 지질환경과학과)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260807.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260807.mp3"
-        },
-        {
-          "title": "[협찬인가] 국세청 캐비닛의 비밀",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/economy_sponsor_tax_RE.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/economy_sponsor_tax_RE.mp3"
-        },
-        {
-          "title": "[손경제] 8/7(금) 단일종목 레버리지 | 중국 세무조사 | 국유자산 관리",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260807.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260807.mp3"
         }
       ]
     },
