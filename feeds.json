@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/3(목) 국채금리 급등 | 증시 자금 유출 | SK 일본 반도체 공장",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260903.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260903.mp3"
+        },
+        {
+          "title": "[플러스] 9/2(수) 미국 명문대 위기 (하수정 경제전문기자) | K-뷰티 성장 (권우정 교보증권 책임연구원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260902.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260902.mp3"
+        },
+        {
           "title": "[손경제] 9/2(수) 베네수엘라 석유 | 종부세 공제 | 중국 로보택시",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260902.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260902.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 8/9(일) 테슬라 출신 영입해도 자율주행 안 되는 이유 - 권용주 교수 (국민대 자동차·운송디자인학과)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260809.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260809.mp3"
-        },
-        {
-          "title": "[플러스] 8/8(토) AI 시대 진짜 경쟁력, 끙끙 앓아본 경험입니다 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260808.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260808.mp3"
-        },
-        {
-          "title": "[플러스] 8/7(금) 구마모토 지진 났지만 땅속 폭탄 그대로 있다 - 김기범 교수 (부산대 지질환경과학과)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260807.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260807.mp3"
         }
       ]
     },
