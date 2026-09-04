@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 9/3(목) 국채 금리 잡을 카드, 미국은 차고 넘칩니다 - 성상현 부부장 (중소기업중앙회)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260903.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260903.mp3"
+        },
+        {
           "title": "[손경제] 9/3(목) 국채금리 급등 | 증시 자금 유출 | SK 일본 반도체 공장",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260903.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260903.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 8/10(월) 결혼 페널티 | 고신용자 대출 | 아마존 발전소",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260810.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260810.mp3"
-        },
-        {
-          "title": "[플러스] 8/9(일) 테슬라 출신 영입해도 자율주행 안 되는 이유 - 권용주 교수 (국민대 자동차·운송디자인학과)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260809.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260809.mp3"
         }
       ]
     },
