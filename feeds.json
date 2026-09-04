@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[커파타임] 내부고발｜여의도의 불꽃",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260904_2.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260904_2.mp3"
+        },
+        {
+          "title": "[커파타임] 치졸과 간절 사이｜플랫폼과 생태계",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260904_1.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260904_1.mp3"
+        },
+        {
           "title": "[손경제] 9/4(금) 공공기관 통폐합 | 美 반도체 관세 | 전기료 선납 | 환헤지",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260904.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260904.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 8/11(화) 밀레이는 왜 룰라를 모욕했나 - 임수진 교수 (대구가톨릭대학교 스페인어중남미학과)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260811.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260811.mp3"
-        },
-        {
-          "title": "[손경제] 8/11(화) 증권사 건전성 규제 | 해외 부동산 펀드 | 엔화 수요",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260811.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260811.mp3"
-        },
-        {
-          "title": "[플러스] 8/10(월) 구글 위기 (김덕진 소장) | 미국 병원 경영난 | 멕시코 아보카도 보호 | 우주 핵전쟁 (이혜인 기자)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260810.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260810.mp3"
         }
       ]
     },
