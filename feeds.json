@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 9/4(금) 도심 속 초대형 공원, 해외는 이렇게 만들었다 - 김영민 교수 (서울시립대 조경학과)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260904.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260904.mp3"
+        },
+        {
           "title": "[커파타임] 내부고발｜여의도의 불꽃",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260904_2.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260904_2.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 8/12(수) 매출 공제 축소 | 실업급여 확대 | 경기도 재정",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260812.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260812.mp3"
-        },
-        {
-          "title": "[플러스] 8/11(화) 밀레이는 왜 룰라를 모욕했나 - 임수진 교수 (대구가톨릭대학교 스페인어중남미학과)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260811.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260811.mp3"
         }
       ]
     },
