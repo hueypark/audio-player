@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 9/6(일) 네팔 덮친 빙하 붕괴, 재앙은 이제 시작입니다 - 안진호 교수 (서울대 지구환경과학부)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260906.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260906.mp3"
+        },
+        {
           "title": "[플러스] 9/5(토) 애널리스트의 찐심은 행간에 숨겨져 있습니다 -  박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260905.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260905.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 8/13(목) 개방형 AI | 아파트 교환거래 | 퇴직연금 30%룰",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260813.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260813.mp3"
-        },
-        {
-          "title": "[플러스] 8/12(수) 우주 쓰레기 (하수정 경제전문기자) | 코스닥 셀렉트 (나승두 SK증권 연구위원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260812.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260812.mp3"
         }
       ]
     },
