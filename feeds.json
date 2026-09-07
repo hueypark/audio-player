@@ -4,7 +4,12 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
-          "title": "[손경제] 9/7(월)",
+          "title": "[플러스] 9/7(월) 엔비디아와 허깅페이스 (김덕진 소장) | 캐나다 도난차 | 대리 자녀 | 전문직 몸값 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260907.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260907.mp3"
+        },
+        {
+          "title": "[손경제] 9/7(월) 국가부채 | 베어허그 M&A",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260907.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260907.mp3"
         },
@@ -247,11 +252,6 @@
           "title": "[손경제] 8/14(금) 8·13 부동산 대책 | 중국 반도체 | 전기요금 차등제",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260814.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260814.mp3"
-        },
-        {
-          "title": "[플러스] 8/13(목) 항공기 공급 대란 한국이 올라탈 기회입니다 - 이성일 실장 (한국우주항공산업협회)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260813.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260813.mp3"
         }
       ]
     },
