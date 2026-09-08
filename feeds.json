@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/8(화) 대미투자 1호 | 국민연금 달러 매수 | GPT6",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260908.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260908.mp3"
+        },
+        {
           "title": "[플러스] 9/7(월) 엔비디아와 허깅페이스 (김덕진 소장) | 캐나다 도난차 | 대리 자녀 | 전문직 몸값 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260907.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260907.mp3"
@@ -247,17 +252,16 @@
           "title": "[커피타임] 구조조정의 파도｜미국유람기",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_20260814_1.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_20260814_1.mp3"
-        },
-        {
-          "title": "[손경제] 8/14(금) 8·13 부동산 대책 | 중국 반도체 | 전기요금 차등제",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260814.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260814.mp3"
         }
       ]
     },
     {
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
+        {
+          "title": "Episode #752: Pre-BlizzCon Episode!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_752.mp3?dest-id=244124"
+        },
         {
           "title": "Episode #751: September Trading Post!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_751.mp3?dest-id=244124"
@@ -453,10 +457,6 @@
         {
           "title": "Episode #703: Midnight Alpha October 2nd!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_703.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #702: Brewfest is here!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_702.mp3?dest-id=244124"
         }
       ]
     }
