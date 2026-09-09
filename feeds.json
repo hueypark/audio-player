@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 9/8(화) 아파트 공사비, 왜 이렇게 올랐나 (최도영 교수)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260908.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260908.mp3"
+        },
+        {
           "title": "[손경제] 9/8(화) 대미투자 1호 | 국민연금 달러 매수 | GPT6",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260908.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260908.mp3"
@@ -247,11 +252,6 @@
           "title": "[협찬인가] 수천억 흔드는 소수 지분의 위력",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_20260814_2.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_20260814_2.mp3"
-        },
-        {
-          "title": "[커피타임] 구조조정의 파도｜미국유람기",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_20260814_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_20260814_1.mp3"
         }
       ]
     },
