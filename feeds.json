@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 9/11(금) 빅테크 고객 못 잡으면 대미 투자 적자 납니다 - 권효재 대표 (COR 에너지 인사이트)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260911.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260911.mp3"
+        },
+        {
           "title": "[커피타임] 어릴 적 도서관에서",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/260911_coffee.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/260911_coffee.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 8/19(수) 대만 AI 배당금 | 미국 국채금리",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260819.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260819.mp3"
-        },
-        {
-          "title": "[플러스] 8/18(화) 데이터센터 들어와도 물 없으면 끝입니다 - 한혜진 선임연구위원 (한국환경연구원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260818.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260818.mp3"
         }
       ]
     },
