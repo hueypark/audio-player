@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/14(월) 인공지능 감속론 | 중국차 미국 진출 | KRX 애프터마켓",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260914(1).mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260914(1).mp3"
+        },
+        {
+          "title": "[플러스] 9/13(일) 진입장벽 높은 위스키, 마진이 어마어마합니다 - 미스터 위스키 (위스키 콘텐츠 크리에이터)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260913.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260913.mp3"
+        },
+        {
           "title": "[플러스] 9/12(토) 중동의 세 맹주가 군사 동맹을 맺었다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260912.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260912.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 8/20(목) 북극항로를 둘러싼 치열한 눈치게임 - 김근섭 선임연구위원 (한국해양수산개발원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260820.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260820.mp3"
-        },
-        {
-          "title": "[손경제] 8/20(목) 자사주 소각 | K9 미국 수출 | 집단대출 | 가비아",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260820.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260820.mp3"
-        },
-        {
-          "title": "[플러스] 8/19(수) 엔진오일 품귀 (하수정 경제전문기자) | 조선업 성장동력 (엄경아 신영증권 연구위원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260819.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260819.mp3"
         }
       ]
     },
