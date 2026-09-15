@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/15(화) 재건축 초과이익 | 가상자산 과세 | 조폐공사",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260915.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260915.mp3"
+        },
+        {
+          "title": "[플러스] 9/14(월) AI 속도조절론 (김덕진 소장) | 중국 대리모 공장 | 캐나다 EU 밀착 | 우크라 포르노 합법화 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260914.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260914.mp3"
+        },
+        {
           "title": "[손경제] 9/14(월) 인공지능 감속론 | 중국차 미국 진출 | KRX 애프터마켓",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260914(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260914(1).mp3"
@@ -242,16 +252,6 @@
           "title": "[협찬인가] 엄마의 손맛을 수출하는 법",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffeesponsor_tumblesoup.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffeesponsor_tumblesoup.mp3"
-        },
-        {
-          "title": "[손경제] 8/21(금) 美 국채 바이백 | 전월세 안심신탁 | 일본 초과근무 규제 완화",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260821.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260821.mp3"
-        },
-        {
-          "title": "[플러스] 8/20(목) 북극항로를 둘러싼 치열한 눈치게임 - 김근섭 선임연구위원 (한국해양수산개발원)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260820.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260820.mp3"
         }
       ]
     },
