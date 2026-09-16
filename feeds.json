@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/16(수) 미국 경유값 | 토허제 실거주 | 의무공개매수제",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260916.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260916.mp3"
+        },
+        {
           "title": "[플러스] 9/15(화) 한국 주식 시장은 단단히 낙인찍혔습니다 - 홍춘욱 대표 (프리즘투자자문)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260915.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260915.mp3"
@@ -247,11 +252,6 @@
           "title": "[커피타임] 김덕진의 인생",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260821_2.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260821_2.mp3"
-        },
-        {
-          "title": "[커피타임] 용산 공원에 주택",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260821_1.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260821_1.mp3"
         }
       ]
     },
