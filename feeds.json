@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 9/15(화) 한국 주식 시장은 단단히 낙인찍혔습니다 - 홍춘욱 대표 (프리즘투자자문)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260915.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260915.mp3"
+        },
+        {
           "title": "[손경제] 9/15(화) 재건축 초과이익 | 가상자산 과세 | 조폐공사",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260915.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260915.mp3"
@@ -247,11 +252,6 @@
           "title": "[커피타임] 용산 공원에 주택",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260821_1.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260821_1.mp3"
-        },
-        {
-          "title": "[협찬인가] 엄마의 손맛을 수출하는 법",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffeesponsor_tumblesoup.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffeesponsor_tumblesoup.mp3"
         }
       ]
     },
