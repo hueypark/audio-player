@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/17(목) 미국 금리인상 | SK하이닉스 | 가계부채 비율 | 클래리티 법안",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260917.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260917.mp3"
+        },
+        {
+          "title": "[플러스] 9/16(수) 단백질 시장 (하수정 경제전문기자) | 노르웨이 국부펀드 (하수정 피터슨 솔루션 코리아 대표)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260916.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260916.mp3"
+        },
+        {
           "title": "[손경제] 9/16(수) 미국 경유값 | 토허제 실거주 | 의무공개매수제",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260916.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260916.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 8/22(토) 미중 정부가 버블을 강요하고 있습니다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260822.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260822.mp3"
-        },
-        {
-          "title": "[플러스] 8/21(금) 미국 금리 못 잡으면 주식은 파국입니다 - 김학균 리서치센터장 (신영증권)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260821.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260821.mp3"
-        },
-        {
-          "title": "[커피타임] 김덕진의 인생",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260821_2.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260821_2.mp3"
         }
       ]
     },
