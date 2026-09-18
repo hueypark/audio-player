@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[협찬인가] 'Oh Sticky' to 'Wow Sticky'",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_sponsor_ricecake.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_sponsor_ricecake.mp3"
+        },
+        {
           "title": "[손경제] 9/18(금) 석유 최고가격 | 토허제 실거주 | 정비사업 이주 | 이착륙수당",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260918.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260918.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 8/24(월) 피지컬 AI (김덕진 소장) | 캐나다 결집 | 인도네시아 니켈 | 유럽인 절약 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260824.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260824.mp3"
-        },
-        {
-          "title": "[손경제] 8/24(월) 미래대응기금 | 엔비디아 가격 인상",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260824.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260824.mp3"
         }
       ]
     },
