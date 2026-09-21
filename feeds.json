@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/21(월) 일본 금리 인상 | 비축유 | 태국 두리안",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260921.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260921.mp3"
+        },
+        {
           "title": "[플러스] 9/20(일) 2027 부동산 대전망 - 김경민 교수 (서울대 도시계획학과)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260920.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260920.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 8/27(목) 용산공원 | SK이노베이션 흡수합병 | 쿠팡 현장조사",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260827.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260827.mp3"
-        },
-        {
-          "title": "[플러스] 8/26(수) 미국 관세 환급 (하수정 경제전문기자) | 알트코인 (김준우 쟁글 대표)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260826.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260826.mp3"
         }
       ]
     },
