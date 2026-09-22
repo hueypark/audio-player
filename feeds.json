@@ -259,6 +259,10 @@
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
         {
+          "title": "Episode #754: Warcraft Forever..Beta!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_754.mp3?dest-id=244124"
+        },
+        {
           "title": "Episode #753: Returned from BlizzCon!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_753.mp3?dest-id=244124"
         },
@@ -453,10 +457,6 @@
         {
           "title": "Episode #705: Midnight Apex Talents!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_705.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #704: Turbo Boosting until Midnight!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_704.mp3?dest-id=244124"
         }
       ]
     }
