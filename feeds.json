@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/22(화) 공적주택 | 뮤즈 AI | AI 집단소송 | 소득재분배 최하위",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260922.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260922.mp3"
+        },
+        {
+          "title": "[플러스] 9/21(월) AI 속도조절론 반박 (김덕진 소장) | 중국 인재 출국 제한 | 미국 우편투표 | 워런버핏 경영 승계 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260921.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260921.mp3"
+        },
+        {
           "title": "[손경제] 9/21(월) 일본 금리 인상 | 비축유 | 태국 두리안",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260921.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260921.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 8/28(금) 기준금리 | 엔비디아 주가 | 메타 합의금 | 기초연금 개편",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260828.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260828.mp3"
-        },
-        {
-          "title": "[플러스] 8/27(목) 엔비디아가 입증했다 AI 투자 묻고 더블로 - 이선엽 대표 (AFW 파트너스)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260827.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260827.mp3"
-        },
-        {
-          "title": "[손경제] 8/27(목) 용산공원 | SK이노베이션 흡수합병 | 쿠팡 현장조사",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260827.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260827.mp3"
         }
       ]
     },
