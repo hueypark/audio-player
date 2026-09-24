@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/24(목) 메모리 반도체 전망 CEO들도 엇갈립니다 - 이형수 대표 (HSL 파트너스)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260924.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260924.mp3"
+        },
+        {
           "title": "[플러스] 9/23(수) 상속 싸움 커지면 건물도 둘로 쪼갭니다 - 신은숙 변호사 (법무법인 신)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260923.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260923.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 8/30(일) 어떤 사람들까지 친일파로 봐야 할까요? - 재원쌤",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260830.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260830.mp3"
-        },
-        {
-          "title": "[플러스] 8/29(토) 기업 성공의 치트키, 단연코 혈연입니다 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260829.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260829.mp3"
         }
       ]
     },
