@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/25(금) 추석 호구 탈출을 위한 최소한의 생존 지식 - 김나영 작가",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260925.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260925.mp3"
+        },
+        {
+          "title": "[플러스] 9/24(목) 곧 계획경제의 시대가 도래할지 모릅니다 - 한순구 교수 (연세대 경제학과)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260924.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260924.mp3"
+        },
+        {
           "title": "[손경제] 9/24(목) 메모리 반도체 전망 CEO들도 엇갈립니다 - 이형수 대표 (HSL 파트너스)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260924.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260924.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 8/31(월) 청소년 SNS 규제 (김덕진 소장) | 미국 집값 | 일본 운동부 | 호주 제3의 신분 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260831.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260831.mp3"
-        },
-        {
-          "title": "[손경제] 8/31(월) 미국 금리 인상 | 탈모 치료제 시장",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260831.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260831.mp3"
-        },
-        {
-          "title": "[플러스] 8/30(일) 어떤 사람들까지 친일파로 봐야 할까요? - 재원쌤",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260830.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260830.mp3"
         }
       ]
     },
