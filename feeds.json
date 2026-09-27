@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 9/26(토) 민족 대이동의 종말, 2050년의 추석 - 박정호 명지대 교수",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260926.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260926.mp3"
+        },
+        {
           "title": "[플러스] 9/25(금) 차세대 KTX의 위력 400km/h를 넘봅니다 - 김상수 실장 (한국철도기술연구원 고속철도실)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260925.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260925.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 9/1(화) 양자컴과 AI가 만나 췌장암을 잡습니다 - 정지훈 겸임교수 (디지스트)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260901.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260901.mp3"
-        },
-        {
-          "title": "[손경제] 9/1(화) 노란봉투법 시행지침 | 미-중 무역전쟁 | 미국 시장 개입",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260901.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260901.mp3"
         }
       ]
     },
