@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 9/28(월) 한국 전기차 가격 | 솔리다임 美 상장 | 경유값 상승",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260928.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260928.mp3"
+        },
+        {
+          "title": "[플러스] 9/27(일) 용산의 90%는 사실 일본인 땅이었습니다 - 재원쌤",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260927.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260927.mp3"
+        },
+        {
           "title": "[플러스] 9/26(토) 민족 대이동의 종말, 2050년의 추석 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260926.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260926.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 9/2(수) 미국 명문대 위기 (하수정 경제전문기자) | K-뷰티 성장 (권우정 교보증권 책임연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260902.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260902.mp3"
-        },
-        {
-          "title": "[손경제] 9/2(수) 베네수엘라 석유 | 종부세 공제 | 중국 로보택시",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260902.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260902.mp3"
-        },
-        {
-          "title": "[플러스] 9/1(화) 양자컴과 AI가 만나 췌장암을 잡습니다 - 정지훈 겸임교수 (디지스트)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260901.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260901.mp3"
         }
       ]
     },
