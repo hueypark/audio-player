@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 9/29(화) 중동 전쟁의 꽃놀이패, 후티반군 손에 있습니다 - 박현도 교수 (서강대 종교학과)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260929.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260929.mp3"
+        },
+        {
           "title": "[손경제] 9/29(화) 국가대표 AI | 국채 금리 | 명륜당 과징금",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260929.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260929.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 9/4(금) 공공기관 통폐합 | 美 반도체 관세 | 전기료 선납 | 환헤지",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260904.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260904.mp3"
-        },
-        {
-          "title": "[플러스] 9/3(목) 국채 금리 잡을 카드, 미국은 차고 넘칩니다 - 성상현 부부장 (중소기업중앙회)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260903.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260903.mp3"
         }
       ]
     },
