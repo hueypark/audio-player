@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/1(목) AI 뱅크런 | 괌행 비행기 | 프랑스 재정위기",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261001.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261001.mp3"
+        },
+        {
           "title": "[플러스] 9/30(수) 로보택시 (하수정 경제전문기자) | 전쟁 드론 (강태호 DS투자증권 연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260930.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260930.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 9/4(금) 도심 속 초대형 공원, 해외는 이렇게 만들었다 - 김영민 교수 (서울시립대 조경학과)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260904.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260904.mp3"
-        },
-        {
-          "title": "[커파타임] 내부고발｜여의도의 불꽃",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260904_2.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260904_2.mp3"
         }
       ]
     },
