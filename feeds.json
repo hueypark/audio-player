@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/2(금) 대미 투자 | 증권사 보고서 | 싱가포르 소개팅앱 | 흰 우유",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261002.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261002.mp3"
+        },
+        {
           "title": "[플러스] 10/1(목) 딸깍이면 다 되는 시대, 인간의 마지막 가치 - 송길영 작가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261001.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261001.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 9/6(일) 네팔 덮친 빙하 붕괴, 재앙은 이제 시작입니다 - 안진호 교수 (서울대 지구환경과학부)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260906.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260906.mp3"
-        },
-        {
-          "title": "[플러스] 9/5(토) 애널리스트의 찐심은 행간에 숨겨져 있습니다 -  박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260905.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260905.mp3"
         }
       ]
     },
