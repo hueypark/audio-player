@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 10/3(토) 미중 정상회담으로 본 자산 시장의 미래 - 박정호 명지대 교수",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261003.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261003.mp3"
+        },
+        {
           "title": "[플러스] 10/2(금) 독일인들의 히틀러 지지 결국 돈 때문이었습니다 - 최준영 박사 (법무법인 율촌)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261002.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261002.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 9/8(화) 대미투자 1호 | 국민연금 달러 매수 | GPT6",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260908.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260908.mp3"
-        },
-        {
-          "title": "[플러스] 9/7(월) 엔비디아와 허깅페이스 (김덕진 소장) | 캐나다 도난차 | 대리 자녀 | 전문직 몸값 (이혜인 기자)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260907.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260907.mp3"
         }
       ]
     },
