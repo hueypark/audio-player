@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/5(월) 코스닥 상장폐지 | 사모펀드",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261005.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261005.mp3"
+        },
+        {
           "title": "[플러스] 10/4(일) 인생 가장 슬픈 날에 가장 먼저 해야 하는 일 - 김범진 장례지도사",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261004.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261004.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 9/9(수) 건강보험료 | 엔화 환율 | 역외펀드",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260909.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260909.mp3"
-        },
-        {
-          "title": "[플러스] 9/8(화) 아파트 공사비, 왜 이렇게 올랐나 (최도영 교수)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260908.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260908.mp3"
         }
       ]
     },
