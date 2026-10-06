@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/6(화) 사우디 원유 가격 인하 | 그린벨트 해제 | 고속도로 데이터센터 | 명품회사 주가",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261006.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261006.mp3"
+        },
+        {
+          "title": "[플러스] 10/5(월) 뮤즈 vs 닷츠 (김덕진 소장) | 프랑스 학생 시위 | 브라질 대통령 선거 | 일본 연봉의 벽 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261005.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261005.mp3"
+        },
+        {
           "title": "[손경제] 10/5(월) 코스닥 상장폐지 | 사모펀드",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261005.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261005.mp3"
@@ -25,8 +35,8 @@
         },
         {
           "title": "[커피타임] 김현우 앱｜암살자들｜능력주의｜홍콩여행｜",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_261002.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_261002.mp3"
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_1006.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_1006.mp3"
         },
         {
           "title": "[손경제] 10/2(금) 대미 투자 | 증권사 보고서 | 싱가포르 소개팅앱 | 흰 우유",
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/10(목) 국제유가 | 오염토 반출정화 | 국제 설탕값",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260910.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260910.mp3"
-        },
-        {
-          "title": "[플러스] 9/9(수) 텅스텐의 경제학 (하수정 경제전문기자) | 흔들리는 쿠팡천하 (신승윤 커넥터스 편집장)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260909.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260909.mp3"
-        },
-        {
-          "title": "[손경제] 9/9(수) 건강보험료 | 엔화 환율 | 역외펀드",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260909.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260909.mp3"
         }
       ]
     },
