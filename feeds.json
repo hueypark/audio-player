@@ -259,6 +259,10 @@
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
         {
+          "title": "Episode #756: 12.1.5 October 13th!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_756.mp3?dest-id=244124"
+        },
+        {
           "title": "Episode #755: Talebound and Eclipse from Blizzcon!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_755.mp3?dest-id=244124"
         },
@@ -453,10 +457,6 @@
         {
           "title": "Episode #707: Combat Addons",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_707.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #706: The True Turbo Boost is Live!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_706.mp3?dest-id=244124"
         }
       ]
     }
