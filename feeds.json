@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/7(수) GPU ABS | 전세사기 피해자 지원",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261007.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261007.mp3"
+        },
+        {
+          "title": "[플러스] 10/6(화) 궁극의 반도체, 뉴로모픽의 잠재력 - 정대성 교수 (포스텍 화학공학과)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261006.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261006.mp3"
+        },
+        {
           "title": "[손경제] 10/6(화) 사우디 원유 가격 인하 | 그린벨트 해제 | 고속도로 데이터센터 | 명품회사 주가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261006.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261006.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/11(금) 지식산업센터 주거시설 | 애플 폴더블폰 | 미국 노동 계급",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260911.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260911.mp3"
-        },
-        {
-          "title": "[플러스] 9/10(목) 국채 시장 안정을 위한 세 가지 선결 요건 - 김명실 연구위원 (iM증권)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260910.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260910.mp3"
-        },
-        {
-          "title": "[손경제] 9/10(목) 국제유가 | 오염토 반출정화 | 국제 설탕값",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260910.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260910.mp3"
         }
       ]
     },
