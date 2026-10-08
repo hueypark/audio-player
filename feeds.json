@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/8(목) 삼성전자 잠정 실적 | 누리호 발사 | 장기수선충당금 | 일본 기름값 보조금",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261008.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261008.mp3"
+        },
+        {
+          "title": "[플러스] 10/7(수) 맥도날드 가격 (하수정 경제전문기자) | 한국 게임산업 (게임제너레이션 이경혁 편집장)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261007.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261007.mp3"
+        },
+        {
           "title": "[손경제] 10/7(수) GPU ABS | 전세사기 피해자 지원",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261007.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261007.mp3"
@@ -242,16 +252,6 @@
           "title": "[커피타임] 어릴 적 도서관에서",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/260911_coffee.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/260911_coffee.mp3"
-        },
-        {
-          "title": "[협찬인가] 당신의 양치는 잇몸을 구할 수 없다",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/econ_spon_0911.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/econ_spon_0911.mp3"
-        },
-        {
-          "title": "[손경제] 9/11(금) 지식산업센터 주거시설 | 애플 폴더블폰 | 미국 노동 계급",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260911.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260911.mp3"
         }
       ]
     },
