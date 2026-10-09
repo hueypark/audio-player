@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[커피타임] 털을 뽑는 일 (29금주의)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_20261009_2.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_20261009_2.mp3"
+        },
+        {
+          "title": "[커피타임] 공자님도 피하는 사람",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_20261009_1.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_20261009_1.mp3"
+        },
+        {
           "title": "[손경제] 10/9(금) 서울 아파트값 | 농지법 위반 | 솔리다임 상장",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261009.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261009.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/14(월) 인공지능 감속론 | 중국차 미국 진출 | KRX 애프터마켓",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260914(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260914(1).mp3"
-        },
-        {
-          "title": "[플러스] 9/13(일) 진입장벽 높은 위스키, 마진이 어마어마합니다 - 미스터 위스키 (위스키 콘텐츠 크리에이터)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260913.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260913.mp3"
-        },
-        {
-          "title": "[플러스] 9/12(토) 중동의 세 맹주가 군사 동맹을 맺었다 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260912.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260912.mp3"
         }
       ]
     },
