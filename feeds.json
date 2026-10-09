@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/9(금) 서울 아파트값 | 농지법 위반 | 솔리다임 상장",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261009.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261009.mp3"
+        },
+        {
+          "title": "[플러스] 10/8(목) 시진핑 위기론 왜 반복되는가? - 조영남 교수 (서울대 국제대학원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261008.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261008.mp3"
+        },
+        {
           "title": "[손경제] 10/8(목) 삼성전자 잠정 실적 | 누리호 발사 | 장기수선충당금 | 일본 기름값 보조금",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261008.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261008.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 9/12(토) 중동의 세 맹주가 군사 동맹을 맺었다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260912.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260912.mp3"
-        },
-        {
-          "title": "[플러스] 9/11(금) 빅테크 고객 못 잡으면 대미 투자 적자 납니다 - 권효재 대표 (COR 에너지 인사이트)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260911.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260911.mp3"
-        },
-        {
-          "title": "[커피타임] 어릴 적 도서관에서",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/260911_coffee.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/260911_coffee.mp3"
         }
       ]
     },
