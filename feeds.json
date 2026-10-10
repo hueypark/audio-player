@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 10/9(금) 영국이 다시 EU 합류를 꿈꾼다 - 윤영휘 교수 (경북대 사학과)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261009.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261009.mp3"
+        },
+        {
           "title": "[커피타임] 털을 뽑는 일 (29금주의)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_1009_2_re.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_1009_2_re.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 9/14(월) AI 속도조절론 (김덕진 소장) | 중국 대리모 공장 | 캐나다 EU 밀착 | 우크라 포르노 합법화 (이혜인 기자)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260914.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260914.mp3"
-        },
-        {
-          "title": "[손경제] 9/14(월) 인공지능 감속론 | 중국차 미국 진출 | KRX 애프터마켓",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260914(1).mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260914(1).mp3"
         }
       ]
     },
