@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/12(월) 오픈AI 매출 | 마이크론 파업 | 좀비ETF",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261012.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261012.mp3"
+        },
+        {
+          "title": "[플러스] 10/11(일) 데이터센터 늦춰져도 전력 투자는 못 멈춥니다 - 서병수 PB (메리츠증권)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261011.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261011.mp3"
+        },
+        {
           "title": "[플러스] 10/10(토) AI 시대 생존 전략 회사 밖에는 답 없습니다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261010.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261010.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/16(수) 미국 경유값 | 토허제 실거주 | 의무공개매수제",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260916.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260916.mp3"
-        },
-        {
-          "title": "[플러스] 9/15(화) 한국 주식 시장은 단단히 낙인찍혔습니다 - 홍춘욱 대표 (프리즘투자자문)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260915.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260915.mp3"
-        },
-        {
-          "title": "[손경제] 9/15(화) 재건축 초과이익 | 가상자산 과세 | 조폐공사",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260915.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260915.mp3"
         }
       ]
     },
