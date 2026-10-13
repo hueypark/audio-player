@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/13(화) 환율 | 중고 유조선 | 중국 하이브리드차",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261013.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261013.mp3"
+        },
+        {
+          "title": "[플러스] 10/12(월) AI 안전기능 (김덕진 소장) | 인도 Z세대 시위 | 긱 이코노미 전쟁 | 쿠바 경제난 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261012.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261012.mp3"
+        },
+        {
           "title": "[손경제] 10/12(월) 오픈AI 매출 | 마이크론 파업 | 좀비ETF",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261012.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261012.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/17(목) 미국 금리인상 | SK하이닉스 | 가계부채 비율 | 클래리티 법안",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260917.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260917.mp3"
-        },
-        {
-          "title": "[플러스] 9/16(수) 단백질 시장 (하수정 경제전문기자) | 노르웨이 국부펀드 (하수정 피터슨 솔루션 코리아 대표)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260916.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260916.mp3"
-        },
-        {
-          "title": "[손경제] 9/16(수) 미국 경유값 | 토허제 실거주 | 의무공개매수제",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260916.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260916.mp3"
         }
       ]
     },
