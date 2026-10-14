@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/14(수) 창신메모리 D램 | 행정기관 이전 | 한국 경제성장률",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261014.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261014.mp3"
+        },
+        {
+          "title": "[플러스] 10/13(화) 착시를 걷어낸 한국 경제의 현주소 - 조영무 소장 (NH금융연구소)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261013.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261013.mp3"
+        },
+        {
           "title": "[손경제] 10/13(화) 환율 | 중고 유조선 | 중국 하이브리드차",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261013.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261013.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/18(금) 석유 최고가격 | 토허제 실거주 | 정비사업 이주 | 이착륙수당",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260918.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260918.mp3"
-        },
-        {
-          "title": "[플러스] 9/17(목) 후발주자 에어버스가 보잉을 넘어선 비결 - 이성일 실장 (한국우주항공산업협회)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260917.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260917.mp3"
-        },
-        {
-          "title": "[손경제] 9/17(목) 미국 금리인상 | SK하이닉스 | 가계부채 비율 | 클래리티 법안",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260917.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260917.mp3"
         }
       ]
     },
