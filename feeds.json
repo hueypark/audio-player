@@ -259,6 +259,10 @@
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
         {
+          "title": "Episode #757: The Promise of Tomorrow!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_757.mp3?dest-id=244124"
+        },
+        {
           "title": "Episode #756: 12.1.5 October 13th!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_756.mp3?dest-id=244124"
         },
@@ -453,10 +457,6 @@
         {
           "title": "Episode #708: Midnight Interrupted!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_708.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #707: Combat Addons",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_707.mp3?dest-id=244124"
         }
       ]
     }
