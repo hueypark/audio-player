@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/15(목) 美 브라질 국채 | 美 드론 대만 생산 | 9월 CPI | 엔캐리 청산",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261015.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261015.mp3"
+        },
+        {
+          "title": "[플러스] 10/14(수) 퍼머스 상장 철회 (하수정 경제전문기자) | 반도체 급락 (노근창 세미콘리서치랩 대표)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261014.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261014.mp3"
+        },
+        {
           "title": "[손경제] 10/14(수) 창신메모리 D램 | 행정기관 이전 | 한국 경제성장률",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261014.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261014.mp3"
@@ -242,16 +252,6 @@
           "title": "[커피타임] 자영업자 수난시대",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260918.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260918.mp3"
-        },
-        {
-          "title": "[협찬인가] 'Oh Sticky' to 'Wow Sticky'",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_sponsor_ricecake.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_sponsor_ricecake.mp3"
-        },
-        {
-          "title": "[손경제] 9/18(금) 석유 최고가격 | 토허제 실거주 | 정비사업 이주 | 이착륙수당",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260918.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260918.mp3"
         }
       ]
     },
