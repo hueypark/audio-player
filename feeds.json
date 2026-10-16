@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[커피타임] 신탁이 내려왔다",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_261016.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_261016.mp3"
+        },
+        {
           "title": "협찬인가 - 위험한 치과 (꿀잼)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/sponsorship_yeodentist.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/sponsorship_yeodentist.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 9/21(월) 일본 금리 인상 | 비축유 | 태국 두리안",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260921.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260921.mp3"
-        },
-        {
-          "title": "[플러스] 9/20(일) 2027 부동산 대전망 - 김경민 교수 (서울대 도시계획학과)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260920.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260920.mp3"
         }
       ]
     },
