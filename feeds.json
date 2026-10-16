@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/16(금) 코스피 폭락 | 대미 투자 계획 | 브라질산 계란값",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261016.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261016.mp3"
+        },
+        {
+          "title": "[플러스] 10/15(목) 코스피 대폭락 투자는 끝났나 - 김학균 리서치센터장 (신영증권)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261015.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261015.mp3"
+        },
+        {
           "title": "[손경제] 10/15(목) 美 브라질 국채 | 美 드론 대만 생산 | 9월 CPI | 엔캐리 청산",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261015.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261015.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 9/19(토) 대책 없는 속도조절론, 무책임의 끝판왕입니다 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260919.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260919.mp3"
-        },
-        {
-          "title": "[플러스] 9/18(금) 입신양명의 썩은 사다리 인도 청년들이 폭발했다  - 전명윤 편집장 (주간 인도 동향)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260918.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260918.mp3"
-        },
-        {
-          "title": "[커피타임] 자영업자 수난시대",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_260918.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_260918.mp3"
         }
       ]
     },
