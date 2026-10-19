@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/19(월) 미국 기준금리 | 1인당 국민소득 | 에이피알",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261019.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261019.mp3"
+        },
+        {
           "title": "[플러스] 10/18(일) 헤즈볼라의 성공 비결은 쓰레기였다 - 곽재식 작가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261018.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261018.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 9/23(수) 미국 원전 | 우버 배민 인수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260923.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260923.mp3"
-        },
-        {
-          "title": "[플러스] 9/22(화) AI 빅2의 IPO, 더 늦추면 위험합니다 - 윤지호 경제평론가",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260922.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260922.mp3"
         }
       ]
     },
