@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/20(화)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261020.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261020.mp3"
+        },
+        {
+          "title": "[플러스] 10/19(월) 구글 AI (김아람 이사) | 아프리카 도시화 | 중국 먹거리 저가 공세 | 중국 인구 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261019.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261019.mp3"
+        },
+        {
           "title": "[손경제] 10/19(월) 미국 기준금리 | 1인당 국민소득 | 에이피알",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261019.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261019.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/24(목) 메모리 반도체 전망 CEO들도 엇갈립니다 - 이형수 대표 (HSL 파트너스)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260924.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260924.mp3"
-        },
-        {
-          "title": "[플러스] 9/23(수) 상속 싸움 커지면 건물도 둘로 쪼갭니다 - 신은숙 변호사 (법무법인 신)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260923.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260923.mp3"
-        },
-        {
-          "title": "[손경제] 9/23(수) 미국 원전 | 우버 배민 인수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260923.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260923.mp3"
         }
       ]
     },
