@@ -259,6 +259,10 @@
       "title": "The Starting Zone: The World of Warcraft Podcast!",
       "episodes": [
         {
+          "title": "Episode #758: 12.1.7 On The Horizon!",
+          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_758.mp3?dest-id=244124"
+        },
+        {
           "title": "Episode #757: The Promise of Tomorrow!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/TSZ_757.mp3?dest-id=244124"
         },
@@ -453,10 +457,6 @@
         {
           "title": "Episode #709: Hearthstealing Housing!",
           "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_709.mp3?dest-id=244124"
-        },
-        {
-          "title": "Episode #708: Midnight Interrupted!",
-          "audio_url": "https://traffic.libsyn.com/secure/thestartingzone/ep_708.mp3?dest-id=244124"
         }
       ]
     }
