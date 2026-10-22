@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/22(목) 테슬라·스페이스X 합병 | 2차전지 | 중국 경제",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261022.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261022.mp3"
+        },
+        {
+          "title": "[플러스] 10/21(수) 美 선거 돈잔치 (하수정 경제전문기자) | 美 중간선거와 증시 (이윤수 에릭의 거장연구소 대표)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261021.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261021.mp3"
+        },
+        {
           "title": "[손경제] 10/21(수) 지역가입자 건강보험료 | AI 학습 저작권",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261021.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261021.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 9/26(토) 민족 대이동의 종말, 2050년의 추석 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260926.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260926.mp3"
-        },
-        {
-          "title": "[플러스] 9/25(금) 차세대 KTX의 위력 400km/h를 넘봅니다 - 김상수 실장 (한국철도기술연구원 고속철도실)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260925.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260925.mp3"
-        },
-        {
-          "title": "[손경제] 9/25(금) 추석 호구 탈출을 위한 최소한의 생존 지식 - 김나영 작가",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260925.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260925.mp3"
         }
       ]
     },
