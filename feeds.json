@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/23(금) 기준금리 동결 | 솔리다임 상장 철회 | 쌀값 상승 | 싱가포르 금",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261023.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261023.mp3"
+        },
+        {
+          "title": "[플러스] 10/22(목) 6월에 판 코스피 다시 사모은 이유 - 홍춘욱 대표 (프리즘투자자문)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261022.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261022.mp3"
+        },
+        {
           "title": "[손경제] 10/22(목) 테슬라·스페이스X 합병 | 2차전지 | 중국 경제",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261022.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261022.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/28(월) 한국 전기차 가격 | 솔리다임 美 상장 | 경유값 상승",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260928.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260928.mp3"
-        },
-        {
-          "title": "[플러스] 9/27(일) 용산의 90%는 사실 일본인 땅이었습니다 - 재원쌤",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260927.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260927.mp3"
-        },
-        {
-          "title": "[플러스] 9/26(토) 민족 대이동의 종말, 2050년의 추석 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260926.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260926.mp3"
         }
       ]
     },
