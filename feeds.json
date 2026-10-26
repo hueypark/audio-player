@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/26(월) SK하이닉스 특별배당 | 주식-부동산 | 한전 사채 | 가상자산 과세",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261026.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261026.mp3"
+        },
+        {
+          "title": "[플러스] 10/25(일) 서울은 지금이 고점이다 - 김경민 교수 (서울대 도시계획학과)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261025.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261025.mp3"
+        },
+        {
           "title": "[플러스] 10/24(토) 친중 로비를 주도했던 뜻밖의 흑막 - 박정호 명지대 교수",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261024.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261024.mp3"
@@ -242,16 +252,6 @@
           "title": "[손경제] 9/30(수) 의무공개매수제도 | 앤스로픽 투자설명서",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260930(1).mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260930(1).mp3"
-        },
-        {
-          "title": "[플러스] 9/29(화) 중동 전쟁의 꽃놀이패, 후티반군 손에 있습니다 - 박현도 교수 (서강대 종교학과)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260929.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260929.mp3"
-        },
-        {
-          "title": "[손경제] 9/29(화) 국가대표 AI | 국채 금리 | 명륜당 과징금",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260929.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260929.mp3"
         }
       ]
     },
