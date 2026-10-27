@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 10/26(월) 엔비디아 GTC (김덕진 소장) | 중국 저가 항생제 | 일본 고령화 | 미국 부유세 (이혜인 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261026.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261026.mp3"
+        },
+        {
           "title": "[손경제] 10/26(월) SK하이닉스 특별배당 | 주식-부동산 | 한전 사채 | 가상자산 과세",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261026.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261026.mp3"
@@ -247,11 +252,6 @@
           "title": "[플러스] 9/30(수) 로보택시 (하수정 경제전문기자) | 전쟁 드론 (강태호 DS투자증권 연구원)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20260930.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20260930.mp3"
-        },
-        {
-          "title": "[손경제] 9/30(수) 의무공개매수제도 | 앤스로픽 투자설명서",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20260930(1).mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20260930(1).mp3"
         }
       ]
     },
