@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/28(수) 석유 최고가격제 | 넷플릭스 구조조정",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261028.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261028.mp3"
+        },
+        {
           "title": "[플러스] 10/27(화) 트럼프의 미치광이 전략, 왜 실패했나 - 한순구 교수 (연세대 경제학부)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261027.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261027.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 10/2(금) 대미 투자 | 증권사 보고서 | 싱가포르 소개팅앱 | 흰 우유",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261002.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261002.mp3"
-        },
-        {
-          "title": "[플러스] 10/1(목) 딸깍이면 다 되는 시대, 인간의 마지막 가치 - 송길영 작가",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261001.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261001.mp3"
         }
       ]
     },
