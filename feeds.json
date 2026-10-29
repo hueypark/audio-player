@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/29(목) FOMC | 알파벳·MS 실적 | SK하이닉스 | 이스라엘 총선",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261029.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261029.mp3"
+        },
+        {
+          "title": "[플러스] 10/28(수) 뷔페의 부활 (하수정 경제전문기자) | 공모주 투자 (배지원 딜사이트 기자)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261028.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261028.mp3"
+        },
+        {
           "title": "[손경제] 10/28(수) 석유 최고가격제 | 넷플릭스 구조조정",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261028.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261028.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 10/2(금) 독일인들의 히틀러 지지 결국 돈 때문이었습니다 - 최준영 박사 (법무법인 율촌)",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261002.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261002.mp3"
-        },
-        {
-          "title": "[커피타임] 김현우 앱｜암살자들｜능력주의｜홍콩여행｜",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_1006.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_1006.mp3"
-        },
-        {
-          "title": "[손경제] 10/2(금) 대미 투자 | 증권사 보고서 | 싱가포르 소개팅앱 | 흰 우유",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261002.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261002.mp3"
         }
       ]
     },
