@@ -4,6 +4,16 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[손경제] 10/30(금) 삼전 폭락 | 체코 원전 사업 | 그린벨트 주택 공급 | 계층 이동",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261030.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261030.mp3"
+        },
+        {
+          "title": "[플러스] 10/29(목) 목숨 건 빅테크 투자 더 늘린다 - 이선엽 대표 (AFW 파트너스)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261029.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261029.mp3"
+        },
+        {
           "title": "[손경제] 10/29(목) FOMC | 알파벳·MS 실적 | SK하이닉스 | 이스라엘 총선",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261029.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261029.mp3"
@@ -242,16 +252,6 @@
           "title": "[플러스] 10/4(일) 인생 가장 슬픈 날에 가장 먼저 해야 하는 일 - 김범진 장례지도사",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261004.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261004.mp3"
-        },
-        {
-          "title": "[플러스] 10/3(토) 미중 정상회담으로 본 자산 시장의 미래 - 박정호 명지대 교수",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261003.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261003.mp3"
-        },
-        {
-          "title": "[플러스] 10/2(금) 독일인들의 히틀러 지지 결국 돈 때문이었습니다 - 최준영 박사 (법무법인 율촌)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261002.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261002.mp3"
         }
       ]
     },
