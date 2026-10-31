@@ -4,6 +4,11 @@
       "title": "손에 잡히는 경제 (MBC)",
       "episodes": [
         {
+          "title": "[플러스] 10/30(금) 뭉치는 미중러 우크라의 운명은 - 이문영 교수 (서울대 통일평화연구원)",
+          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261030.mp3",
+          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261030.mp3"
+        },
+        {
           "title": "커파타임 - 지하권 말고 지상권",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/coffee_261030_2.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/coffee_261030_2.mp3"
@@ -247,11 +252,6 @@
           "title": "[손경제] 10/6(화) 사우디 원유 가격 인하 | 그린벨트 해제 | 고속도로 데이터센터 | 명품회사 주가",
           "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMY_20261006.mp3",
           "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMY_20261006.mp3"
-        },
-        {
-          "title": "[플러스] 10/5(월) 뮤즈 vs 닷츠 (김덕진 소장) | 프랑스 학생 시위 | 브라질 대통령 선거 | 일본 연봉의 벽 (이혜인 기자)",
-          "audio_url": "https://podcastfile.imbc.com/cgi-bin/podcast.fcgi/podcast/economy/ECONOMYPLUS_20261005.mp3",
-          "download_url": "https://podcastfiledown.imbc.com/originaldata/economy/ECONOMYPLUS_20261005.mp3"
         }
       ]
     },
